@@ -6,12 +6,12 @@
 
 #gallery-cu{          
             list-style-type: none;
-            margin: 100px;
+            margin: 0;
 }
 
 #gallery-cu::after{content: ""; display: block; clear: both;}
 
-#gallery-cu > li{float: left; margin: 0 10px;}
+#gallery-cu > li{float: left; margin: 0 1px;}
 
 #gallery-cu > li > a{display: block; text-decoration: none;}
 
@@ -19,7 +19,7 @@
 display: block; 
 width: 200px; 
 height: 200px; 
-border: 5px solid transparent; 
+border: 3px solid transparent; 
 /* box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6); */
 }
 
