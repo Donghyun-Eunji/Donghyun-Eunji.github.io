@@ -84,6 +84,21 @@
 
 
 
+	    var overlay = document.getElementById("overlay-cu");
+	    var photo = document.getElementById("photo-cu");
+	    var Thumbnails = document.querySelectorAll("#gallery-cu > li > a");
+	 
+	    for(var i=0; i<Thumbnails.length; i++){
+	    	Thumbnails[i].addEventListener("click", function(e){
+	    	e.preventDefault();
+	    	photo.src = this.href;
+	    	overlay.style.display = "block";
+	    });
+	 
+	    overlay.addEventListener("click", function(){
+				this.removeAttribute("style");
+			});
+	    }
 
     </script>
 </head>
