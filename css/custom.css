@@ -8,6 +8,9 @@
             list-style-type: none;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-wrap: wrap; /* 이미지가 줄을 넘어가면 다음 줄로 넘어가도록 설정 */
+            justify-content: center;
 }
 
 #gallery-cu::after{content: ""; display: block; clear: both;}
