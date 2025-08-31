@@ -4,22 +4,22 @@
             grid-gap: 1em;
 }
 
-#gallery{margin: 100px;}
+#gallery-cu{margin: 100px;}
 
-#gallery::after{content: ""; display: block; clear: both;}
+#gallery-cu::after{content: ""; display: block; clear: both;}
 
-#gallery > li{float: left; margin: 0 10px;}
+#gallery-cu > li{float: left; margin: 0 10px;}
 
-#gallery > li > a{display: block; text-decoration: none;}
+#gallery-cu > li > a{display: block; text-decoration: none;}
 
-#gallery > li > a > img{
+#gallery-cu > li > a > img{
 display: block; 
 width: 200px; 
 border: 5px solid black; 
 box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
 }
 
-#overlay{
+#overlay-cu{
 position: fixed;
 top: 0; right: 0; left: 0; bottom: 0;
 
@@ -28,7 +28,7 @@ background-color: rgba(0, 0, 0, 0.8);
 display: none;
 }
 
-#photo{
+#photo-cu{
 position: absolute;
 top: 50%; left: 50%;
 transform: translate(-50%, -50%);
