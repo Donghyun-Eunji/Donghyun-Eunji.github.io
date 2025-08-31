@@ -91,10 +91,14 @@
 				e.preventDefault();
 				photo_cu.src = this.href;
 				overlay_cu.style.display = "block";
+				document.body.style.overflow = 'hidden';
+				document.documentElement.style.overflow = 'hidden';
 			});
 		 
 			overlay_cu.addEventListener("click", function(){
 					this.removeAttribute("style");
+					document.body.style.overflow = '';
+					document.documentElement.style.overflow = '';
 				});
 			}
         });
