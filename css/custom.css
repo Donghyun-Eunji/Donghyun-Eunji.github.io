@@ -1,10 +1,13 @@
 .main_image_k {
-    
+
     background-size: cover; /* 이미지를 비율 유지하며 화면을 덮음 */
     background-position: center; /* 이미지 중앙 정렬 */
     background-repeat: no-repeat; /* 이미지 반복 안함 */
 }
 
+.k-section {
+    padding: 10px;
+}
 
 .photo-grid {
             display: grid;
