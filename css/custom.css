@@ -133,7 +133,7 @@
     background-position: center; 
     background-repeat: no-repeat; 
 
-    background-image: url(images/main.jpg);
+    background-image: url(./../images/main.jpg);
     background-size: cover;
 }
 /* 사라진 후의 스타일 (투명도 0, 보이지 않음) */
