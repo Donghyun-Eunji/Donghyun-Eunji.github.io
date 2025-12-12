@@ -145,7 +145,7 @@
 
     background-image: url(./../images/main.jpg);
     background-size: cover;
-    height: 100%
+    height: calc(100vh - 20px)
     /*background-position: center center;*/
 }
 
