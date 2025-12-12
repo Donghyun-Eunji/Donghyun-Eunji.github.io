@@ -6,6 +6,8 @@ body {
 }
 
 .k-top {
+
+    display: flex;  
     max-width: 480px;
   width: 100%;      /* 작은 화면에서 부모 너비를 모두 사용하도록 설정 */
   margin: 0 auto;   /* 좌우 마진을 자동으로 설정하여 가운데 정렬 */
@@ -50,7 +52,6 @@ body {
     /*background-color: lightcoral;*/
     padding: 20px;
     display: flex; align-items: center;
-    justify-content: center; /* 가로축 기준으로 가운데 정렬 */
     text-align: center;
     color: lightcoral;
     /*font-size: 12px;*/
@@ -152,6 +153,7 @@ body {
 
 #main-box {
     padding: 20px;
+    max-width: 480px;
 }
 /* 사라진 후의 스타일 (투명도 0, 보이지 않음) */
 .showkk {
