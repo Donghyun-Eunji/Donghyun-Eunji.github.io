@@ -129,6 +129,7 @@
 }
 
 #main-box {
+    display: flex; align-items: center;
 }
 /* 사라진 후의 스타일 (투명도 0, 보이지 않음) */
 .showkk {
