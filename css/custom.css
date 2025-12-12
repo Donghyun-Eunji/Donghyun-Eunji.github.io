@@ -51,6 +51,9 @@ body {
 #message-box {
     /*background-color: lightcoral;*/
     padding: 20px;
+    
+    max-width: 480px;
+
     display: flex; align-items: center;
     text-align: center;
     color: lightcoral;
