@@ -34,6 +34,7 @@
     /*background-color: lightcoral;*/
     padding: 20px;
     display: flex; align-items: center;
+    justify-content: center; /* 가로축 기준으로 가운데 정렬 */
     text-align: center;
     color: lightcoral;
     /*font-size: 12px;*/
