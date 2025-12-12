@@ -1,3 +1,10 @@
+body {
+    /* 기본 margin과 padding을 제거하여 일관된 시작점을 만듭니다 */
+    margin: 0;
+    padding: 0;
+    /* (선택 사항) 배경색을 설정하여 컨테이너 바깥쪽 공간을 구분할 수 있습니다 */
+}
+
 .k-top {
     max-width: 480px;
     margin: 0 auto; /* 위아래 여백 0, 좌우 여백 'auto'로 자동 중앙 정렬 */
