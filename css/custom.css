@@ -1,15 +1,48 @@
 .k-main-image {
 
-    background-position: center; /* 이미지 중앙 정렬 */
-    background-repeat: no-repeat; /* 이미지 반복 안함 */
+    /*background-position: center; 
+    /*background-repeat: no-repeat; 
 
-    background-image: url(images/main.jpg);
-    background-size: cover;
-    background-position: center center;
+    /*background-image: url(images/main.jpg);*/
+    /*background-size: cover;*/
+    /*background-position: center center;*/
+
+
+  width: 100%;
+  height: auto;
 }
 
 .k-section {
     padding: 10px;
+}
+
+/* 사라질 요소의 초기 스타일 */
+#message-box {
+    /*background-color: lightcoral;*/
+    padding: 20px;
+    text-align: center;
+    color: lightcoral;
+    font-size: 18px;
+    /* 부드러운 전환 효과를 위한 transition 설정 */
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+/* 사라진 후의 스타일 (투명도 0, 보이지 않음) */
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#main-box {
+    opacity: 0;
+    visibility: hidden;
+}
+/* 사라진 후의 스타일 (투명도 0, 보이지 않음) */
+.show {
+    opacity: 1;
+    visibility: visible;
+    /* 부드러운 전환 효과를 위한 transition 설정 */
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
 }
 
 .photo-grid {
