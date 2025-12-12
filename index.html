@@ -37,20 +37,53 @@
 
 <div class="page-content">
     <div class="div">
-        
-        <div class="k-section">
+
+        <div id="message-box">
+            저희, 결혼합니다. <span style="color: red;">♥</span>
+        </div>
+            
+        <script>
+            // 페이지 로드 후 3000ms (3초) 후에 실행될 함수
+            setTimeout(function() {
+                // 'message-box' ID를 가진 요소를 가져옴
+                const messageBox = document.getElementById('message-box');
+                // 요소에 'hidden' 클래스를 추가하여 사라지게 함
+                if (messageBox) {
+                    messageBox.classList.add('hidden');
+                }
+            }, 3000); // 3000ms = 3초
+
+
+            // 페이지 로드 후 3000ms (3초) 후에 실행될 함수
+            setTimeout(function() {
+                // 'message-box' ID를 가진 요소를 가져옴
+                const main = document.getElementById('main-box');
+                // 요소에 'hidden' 클래스를 추가하여 사라지게 함
+                if (messageBox) {
+                    messageBox.classList.add('show');
+                }
+            }, 3000); // 3000ms = 3초
+        </script>
+
+        <div class="k-section" id="main-box">
             <div class="ww-gift-section">
                 <div class="container">
                     <!-- <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">Happy Wedding</h2> -->
                     <div class="col text-center mb-5">
-                        <h6 style="font-family: 'Noto Serif KR', serif;">
-                            고동현 & 이은지
-                        </h6>
+                        <div style="display: flex;">
+                          <div style="width: 50%;">
+                            <h6 style="font-family: 'Noto Serif KR', serif;">
+                                고동현 & 이은지
+                            </h6>
+                          </div>
+                          <div style="width: 50%;">
+                            <h6 style="font-family: 'Noto Serif KR', serif;">
+                                01<br>
+                                23
+                            </h6>
+                          </div>
+                        </div>
 
-                        <h6 style="font-family: 'Noto Serif KR', serif;">
-                            01<br>
-                            23
-                        </h6>
                     </div>
                 </div>
             </div>
@@ -68,7 +101,7 @@
 
 <div class="page-content">
     <div class="div">
-        <div class="ww-home-page" id="home">
+        <div class="ww-home-page" id="">
             <div class="ww-wedding-announcement d-flex align-items-center justify-content-start">
                 <div class="container ww-announcement-container">
                     <p class="ww-couple-name ww-title" style="font-size:2.0em">동현 & 은지</p>
