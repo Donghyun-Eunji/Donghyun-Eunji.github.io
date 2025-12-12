@@ -1,8 +1,11 @@
-.main_image_k {
+.k-main-image {
 
-    background-size: cover; /* 이미지를 비율 유지하며 화면을 덮음 */
     background-position: center; /* 이미지 중앙 정렬 */
     background-repeat: no-repeat; /* 이미지 반복 안함 */
+
+    background-image: url(images/main.jpg);
+    background-size: cover;
+    background-position: center center;
 }
 
 .k-section {
