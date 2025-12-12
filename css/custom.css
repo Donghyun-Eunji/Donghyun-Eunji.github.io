@@ -31,7 +31,7 @@
     display: flex; align-items: center;
     text-align: center;
     color: lightcoral;
-    font-size: 18px;
+    /*font-size: 12px;*/
     /* 부드러운 전환 효과를 위한 transition 설정 */
     transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
 }
@@ -45,7 +45,7 @@
 
 .fade-in-box {
   display: inline-block;
-  background: yellow;
+  /*background: yellow;*/
   padding: 10px;
   animation: fadein 3s;
   -moz-animation: fadein 3s; /* Firefox */
@@ -87,7 +87,7 @@
 
 .fade-out-box {
   display: inline-block;
-  background: yellow;
+  /*background: yellow;*/
   padding: 10px;
   animation: fadeout 3s;
   -moz-animation: fadeout 3s; /* Firefox */
