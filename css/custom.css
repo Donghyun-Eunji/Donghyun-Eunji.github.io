@@ -24,7 +24,8 @@
     padding: 10px;
 }
 .k-container {
-    position: relative
+    position: relative;
+    height: 100%;
 }
 
 /* 사라질 요소의 초기 스타일 */
