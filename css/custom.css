@@ -38,11 +38,11 @@
     visibility: hidden;
 }
 /* 사라진 후의 스타일 (투명도 0, 보이지 않음) */
-.show {
+.showkk {
     opacity: 1;
     visibility: visible;
     /* 부드러운 전환 효과를 위한 transition 설정 */
-    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 .photo-grid {
