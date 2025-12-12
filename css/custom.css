@@ -129,16 +129,18 @@
 }
 
 #main-box {
-    opacity: 0;
-    visibility: hidden;
 }
 /* 사라진 후의 스타일 (투명도 0, 보이지 않음) */
 .showkk {
-    opacity: 1;
-    visibility: visible;
-    display: block;
-    /* 부드러운 전환 효과를 위한 transition 설정 */
-    transition: opacity 0.5s ease, visibility 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+    
+    background-position: center; 
+    background-repeat: no-repeat; 
+
+    background-image: url(images/main.jpg);
+    background-size: cover;
+    /*background-position: center center;*/
 }
 
 
@@ -177,8 +179,8 @@
             list-style-type: none;
             margin: 0;
             padding: 0;
-/*             display: flex; */
-/*             flex-wrap: wrap; /* 이미지가 줄을 넘어가면 다음 줄로 넘어가도록 설정 */ 
+/*             display: flex; 
+/*             flex-wrap: wrap; /* 이미지가 줄을 넘어가면 다음 줄로 넘어가도록 설정  
 /*             justify-content: center; */
             
     display: flex; /* 이미지를 가로로 나열하기 위한 flex 컨테이너 */
