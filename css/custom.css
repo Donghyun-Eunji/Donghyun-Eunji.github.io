@@ -234,7 +234,7 @@ position: relative;
   }
 }
 
-
+/*
 
 .slider {
     margin: 0 auto;
@@ -254,18 +254,16 @@ position: relative;
 
 .slick-track {
     display: flex !important;
-    align-items: center; /* Vertically aligns items in the center */
-    /* Optional: If you need to justify horizontally as well, add: */
-    /* justify-content: center; */
+    align-items: center; 
 }
 
 .slick-slide {
     display: flex !important;
-    height: inherit !important; /* Ensures all slides take the height of the track */
-    align-items: center; /* Centers content within the slide div */
-    justify-content: center; /* Centers content horizontally within the slide div */
+    height: inherit !important; 
+    align-items: center; 
+    justify-content: center;
 }
-
+*/
 
 .k-calendar {
     padding: 40px;
