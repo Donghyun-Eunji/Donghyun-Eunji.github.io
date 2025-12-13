@@ -237,6 +237,15 @@
             <h4>갤러리</h4>
         </div>
 
+        <div class="k-photo-gallery-content">
+            <div class="slider-for"></div>
+            <div class="slider-nav" id="">
+                <img src="./../images/pic1_ex1.jpg" alt="Image 1">
+                <img src="./../images/pic2_ex1.jpg" alt="Image 2">
+                <img src="./../images/pic3_ex1.jpg" alt="Image 3">
+                <img src="./../images/pic4_ex1.jpg" alt="Image 4">
+            </div>
+        </div>
 
         <button class="btn-open-modal">Modal열기</button>
         <div class="k-modal" style="display: none">
@@ -283,18 +292,35 @@
 
 
         <script>
-            $('.slider').slick({
-                // autoplay: true,
-                // autoplaySpeed: 200000,
-                dots: true,
-                infinite: true,
-                speed: 500,
-                fade: true,
-                // cssEase: 'linear',
-                adaptiveHeight: false,
-                // initialSlide: 2,
-                centerMode: true
+            $('.slider-for').slick({
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: false,
+              fade: true,
+              asNavFor: '.slider-nav'
             });
+            $('.slider-nav').slick({
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              asNavFor: '.slider-for',
+              dots: true,
+              centerMode: true,
+              focusOnSelect: true
+            });
+
+            // $('.slider').slick({
+            //     autoplay: true,
+            //     autoplaySpeed: 2000,
+            //     dots: true,
+            //     infinite: true,
+            //     variableWidth: true,
+            //     speed: 500,
+            //     fade: true,
+            //     // cssEase: 'linear',
+            //     adaptiveHeight: false,
+            //     // initialSlide: 2,
+            //     centerMode: true
+            // });
         </script>
 
         <div class="ww-section" id="gallery">
