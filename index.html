@@ -239,7 +239,7 @@
             <div class="k-modal-body">
                 
                 <div class="k-photo-gallery-content">
-                    <div class="slider">
+                    <div class="slider" id="k-image-gallery-modal">
                         <img src="./../images/pic1_ex1.jpg" alt="Image 1">
                         <img src="./../images/pic2_ex1.jpg" alt="Image 2">
                         <img src="./../images/pic3_ex1.jpg" alt="Image 3">
@@ -263,19 +263,29 @@
             btnCloseModal.addEventListener("click", ()=>{
                 modal.style.display="none";
             });
+
+
+            // 'message-box' ID를 가진 요소를 가져옴
+            const sliderModalOption = document.getElementById('k-image-gallery-modal');
+            // 요소에 'hidden' 클래스를 추가하여 사라지게 함
+            if (sliderModalOption) {
+                sliderModalOption.slick('setPosition', 3);
+            }
         </script>
 
 
         <script>
             $('.slider').slick({
-                autoplay: true,
+                autoplay: false,
                 autoplaySpeed: 20000,
                 dots: true,
                 infinite: true,
                 speed: 500,
                 fade: true,
                 cssEase: 'linear',
-                adaptiveHeight: true
+                adaptiveHeight: true,
+                initialSlide: 2,
+
             });
         </script>
 
