@@ -376,8 +376,8 @@ table th{
     align-items: center;
     height: calc(90vh);
 }
-.k-photo-gallery-content img{
-  margin: 0 auto; /* it centers any block level element */
+.slider img{
+    margin: 0 auto; /* it centers any block level element */
     display:flex;
     height: 100%;
     max-height: calc(100vh - 200px);
