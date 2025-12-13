@@ -234,7 +234,65 @@ position: relative;
 }
 
 
-
+@import url("https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Roboto:ital,wght@0,300;0,400;1,300&display=swap");
+ 
+.holiday {
+  color: red;
+}
+.important {
+    /* 너비와 높이를 같게 설정하여 정사각형으로 만듭니다 */
+    width: 100px;
+    height: 100px;
+    
+    /* 배경색을 분홍색으로 설정합니다 */
+    background-color: #ff69b4; /* 핫핑크 색상 예시 */
+    
+    /* border-radius를 50%로 설정하여 원 모양으로 만듭니다 */
+    border-radius: 50%;
+    
+    /* flexbox를 사용하여 텍스트를 원의 정중앙에 배치합니다 */
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center;     /* 세로 중앙 정렬 */
+    
+    /* 선택 사항: 텍스트 스타일링 */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+ 
+h1 {
+  text-align: center;
+  font-family: grape nuts;
+  margin-top: 50px;
+  font-size: 50px;
+  color: azure;
+}
+ 
+caption {
+  margin-bottom: 15px;
+  font-size: 25px;
+}
+ 
+td:nth-child(1),
+th:nth-child(1) {
+  color: red;
+}
+ 
+.wrapper {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: grape nuts;
+}
+ 
+table {
+  margin-right: 20px;
+  color: azure;
+}
+ 
 
 .photo-grid {
             display: grid;
