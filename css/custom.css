@@ -67,7 +67,7 @@ position: relative;
 }
 .k-parents-box {
     margin-top: 25px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     padding-left: 40px;
     padding-right: 40px;
 }
@@ -234,9 +234,8 @@ position: relative;
 }
 
 .k-calendar {
-    margin-top: 15px;
     margin-bottom: 20px;
-    padding: 20px;
+    padding: 40px;
     display: flex;
     text-align: center;
     justify-content: center;
