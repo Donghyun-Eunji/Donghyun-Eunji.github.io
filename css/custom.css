@@ -52,6 +52,9 @@ position: relative;
     position: relative;
     height: 100%;
 }
+.k-date-location-box {
+    margin-top: 20px;
+}
 .k-text-box {
     text-align: center;
 }
