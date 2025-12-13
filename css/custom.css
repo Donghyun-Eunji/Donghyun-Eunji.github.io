@@ -364,6 +364,12 @@ table th{
     justify-content: center;
 }
  
+.k-photo-gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
 
 .photo-grid {
             display: grid;
