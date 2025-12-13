@@ -358,6 +358,11 @@ table td{
 table th{
     width: 20px;    
 }
+.k-countdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
  
 
 .photo-grid {
