@@ -241,8 +241,8 @@ position: relative;
 }
 .important {
     /* 너비와 높이를 같게 설정하여 정사각형으로 만듭니다 */
-    width: 100px;
-    height: 100px;
+    width: 20px;
+    height: 20px;
     
     /* 배경색을 분홍색으로 설정합니다 */
     background-color: #ff69b4; /* 핫핑크 색상 예시 */
@@ -279,6 +279,10 @@ td:nth-child(1),
 th:nth-child(1) {
   color: red;
 }
+td:nth-child(7),
+th:nth-child(7) {
+  color: blue;
+}
  
 .wrapper {
   margin-top: 60px;
@@ -290,7 +294,10 @@ th:nth-child(1) {
  
 table {
   margin-right: 20px;
-  color: azure;
+  color: black;
+}
+table td{
+    font-size: 16px;    
 }
  
 
