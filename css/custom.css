@@ -372,6 +372,7 @@ table th{
 }
 .k-photo-gallery-content {
     flex-direction: row;
+    height: calc(100vh - 300px);
 }
  
  .k-modal {
