@@ -234,14 +234,37 @@
         </div>
 
 
-        <div class="k-photo-gallery-content">
-            <div class="slider">
-                <img src="./../images/pic1_ex1.jpg" alt="Image 1">
-                <img src="./../images/pic2_ex1.jpg" alt="Image 2">
-                <img src="./../images/pic3_ex1.jpg" alt="Image 3">
-                <img src="./../images/pic4_ex1.jpg" alt="Image 4">
+        <button class="btn-open-modal">Modal열기</button>
+        <div class="k-modal">
+            <div class="k-modal-body">
+                
+                <div class="k-photo-gallery-content">
+                    <div class="slider">
+                        <img src="./../images/pic1_ex1.jpg" alt="Image 1">
+                        <img src="./../images/pic2_ex1.jpg" alt="Image 2">
+                        <img src="./../images/pic3_ex1.jpg" alt="Image 3">
+                        <img src="./../images/pic4_ex1.jpg" alt="Image 4">
+                    </div>
+                </div>
+
+                <button class="btn-close-modal">닫기</button>
             </div>
         </div>
+
+        <script>
+            const modal = document.querySelector('.k-modal');
+            const btnOpenModal=document.querySelector('.btn-open-modal');
+
+            btnOpenModal.addEventListener("click", ()=>{
+                modal.style.display="flex";
+            });
+            const btnCloseModal=document.querySelector('.btn-close-modal');
+
+            btnCloseModal.addEventListener("click", ()=>{
+                modal.style.display="none";
+            });
+        </script>
+
 
         <script>
             $('.slider').slick({
