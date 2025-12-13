@@ -234,6 +234,7 @@ position: relative;
 }
 
 .k-calendar {
+    margin-top: 35px;
     display: flex;
     text-align: center;
     justify-content: center;
