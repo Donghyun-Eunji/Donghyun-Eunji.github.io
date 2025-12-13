@@ -389,7 +389,7 @@ table th{
  }
  .k-modal-body{
             position:absolute;
-            top:50%; //모달을 화면가운데 놓기위함. 
+            /*top:50%; //모달을 화면가운데 놓기위함. */
         
 
             width:400px;  //모달의 가로크기 
