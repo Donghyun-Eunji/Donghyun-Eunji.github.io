@@ -68,6 +68,11 @@ position: relative;
 .k-parents-box {
     margin-top: 25px;
     margin-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.broom-bride {
+
 }
 .k-parents-relation-box {
     width: 20px;
