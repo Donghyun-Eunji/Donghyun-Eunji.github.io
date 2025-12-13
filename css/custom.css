@@ -370,6 +370,9 @@ table th{
     align-items: center;
     justify-content: center;
 }
+.k-photo-gallery-content {
+    flex-direction: row;
+}
  
  .k-modal {
     position:absolute;
