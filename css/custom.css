@@ -266,12 +266,6 @@ position: relative;
     justify-content: center; /* Centers content horizontally within the slide div */
 }
 
-.slick-slide img {
-    /* Optional: Ensures images fit nicely within their container */
-    object-fit: contain;
-    max-height: 100%;
-    max-width: 100%;
-}
 
 .k-calendar {
     padding: 40px;
