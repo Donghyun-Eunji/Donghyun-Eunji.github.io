@@ -373,11 +373,12 @@ table th{
 }
 .k-photo-gallery-content {
     flex-direction: row;
-    height: calc(100vh - 300px);
+    height: calc(90vh);
 }
 .k-photo-gallery-content img{
+    display:flex;
     height: 100%;
-    max-height: calc(100vh - 300px);
+    max-height: calc(100vh - 200px);
     width: auto;
     object-fit: cover; /* 이미지가 컨테이너를 꽉 채우되 비율 유지 (잘림 발생) */ 
     object-position: center; /* 이미지가 중앙을 기준으로 표시됨 */
@@ -386,6 +387,7 @@ table th{
  .k-modal {
     /*position:absolute;*/
     display:none;
+    align-items: center;
     
     position:fixed;     
     z-index: 1; /* 모달창을 제일 앞에 두기 */
@@ -403,7 +405,7 @@ table th{
         
             top: 150px;
             width: 100%;
-            height: 600px;
+            height: 90%;
 
             padding:40px;  
 
