@@ -233,7 +233,12 @@ position: relative;
   }
 }
 
-
+.k-calendar {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
 @import url("https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Roboto:ital,wght@0,300;0,400;1,300&display=swap");
  
 .holiday {
