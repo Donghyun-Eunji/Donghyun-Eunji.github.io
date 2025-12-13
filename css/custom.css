@@ -64,6 +64,9 @@ position: relative;
 
     display: flex; align-items: center;
     text-align: center;
+    
+    justify-content: center;
+
     color: lightcoral;
     /*font-size: 12px;*/
     /* 부드러운 전환 효과를 위한 transition 설정 */
