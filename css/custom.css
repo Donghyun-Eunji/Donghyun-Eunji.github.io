@@ -213,7 +213,7 @@ position: relative;
 }
 .typing {
   width: 20ch;
-  animation: typing 1.5s steps(20), blink .5s step-end infinite alternate;
+  animation: typing 1.5s steps(15), blink .5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
