@@ -398,7 +398,7 @@ table th{
             position:absolute;
             /*top:50%; //모달을 화면가운데 놓기위함. */
         
-
+            top: 150px;
             width:400px;  //모달의 가로크기 
             height:600px; //모달의 세로크기 
 
