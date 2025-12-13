@@ -365,7 +365,7 @@ table th{
 }
  
 .k-photo-gallery {
-    flex-direction: row;
+    flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: center;
