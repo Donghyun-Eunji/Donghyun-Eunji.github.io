@@ -374,6 +374,9 @@ table th{
     flex-direction: row;
     height: calc(100vh - 300px);
 }
+.k-photo-gallery-content img{
+    height: calc(100vh - 300px);
+}
  
  .k-modal {
     /*position:absolute;*/
