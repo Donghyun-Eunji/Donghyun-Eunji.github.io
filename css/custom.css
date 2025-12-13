@@ -45,8 +45,8 @@ position: relative;
 
 .k-main-image-container {
     height: calc(100vh - 50px); /* 뷰포트(화면) 높이의 100% */
+    max-height: calc(100vh - 50px); /* 뷰포트(화면) 높이의 100% */
     overflow: hidden;
-
 }
 
 .k-section {
