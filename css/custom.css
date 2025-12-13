@@ -373,6 +373,7 @@ table th{
 }
 .k-photo-gallery-content {
     flex-direction: row;
+    align-items: center;
     height: calc(90vh);
 }
 .k-photo-gallery-content img{
