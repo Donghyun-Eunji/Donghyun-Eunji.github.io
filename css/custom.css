@@ -249,8 +249,8 @@ position: relative;
 }
 .important {
     /* 너비와 높이를 같게 설정하여 정사각형으로 만듭니다 */
-    width: 24px;
-    height: 24px;
+    width: 26px;
+    height: 26px;
     
     /* 배경색을 분홍색으로 설정합니다 */
     background-color: #ff69b4; /* 핫핑크 색상 예시 */
