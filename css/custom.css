@@ -387,6 +387,8 @@ table th{
     /*position:absolute;*/
     display:none;
     
+    position:fixed;     
+    z-index: 1; /* 모달창을 제일 앞에 두기 */
     justify-content: center;
     /*top:0;*/
     /*left:0;*/
@@ -396,7 +398,6 @@ table th{
     background-color: rgba(0,0,0,0.4);      
  }
  .k-modal-body{
-            position:absolute;
             /*top:50%; //모달을 화면가운데 놓기위함. */
         
             top: 150px;
