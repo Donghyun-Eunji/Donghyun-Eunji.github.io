@@ -1,484 +1,489 @@
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-    <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <!-- <meta content="width=device-width, initial-scale=1" name="viewport"> -->
-    <title>동현 ♥ 은지 ♡ 결혼식 </title>
-    <meta content="동현이와 은지의 결혼식을 알립니다~!" name="description"/>
-    <meta property="og:image" content="images/pic4_ex1.jpg">
-<!--     <meta property="fb:app_id" content="781066922265598" /> -->
-    <meta property="fb:app_id" content="32132132135598" />
-    <meta property="fb:admins" content="Choi.Anderson"/>
-    <link href="images/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
-    <link href="images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
-    <link href="images/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
-    <link href="https://fonts.googleapis.com/css?family=Dosis:400,500" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
-    <link href="css/ekko-lightbox.css" rel="stylesheet">
-    <link href="styles/main.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Gamja+Flower|Gugi|Noto+Serif+KR|Stylish|Sunflower:300"
-          rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-2.2.1.js"></script>
+body {
+    /* 기본 margin과 padding을 제거하여 일관된 시작점을 만듭니다 */
+    margin: 0;
+    padding: 0;
+    /* (선택 사항) 배경색을 설정하여 컨테이너 바깥쪽 공간을 구분할 수 있습니다 */
+}
+.page-content {
+    width: 100%;
+}
+.page-content * {
+    width: 100%;
+}
+.k-top {
+position: relative;
+    display: flex;  
+    max-width: 480px;
+  width: 100%;      /* 작은 화면에서 부모 너비를 모두 사용하도록 설정 */
+  margin: 0 auto;   /* 좌우 마진을 자동으로 설정하여 가운데 정렬 */
+  box-sizing: border-box; /* 패딩이 너비에 포함되도록 설정 */
+/*    display: flex;
+    justify-content: center; /* 가로축 기준으로 가운데 정렬 */*/
+}
+
+.k-full-div {
+    width: 100%;
+    height: 100vh;
+}
+
+.k-main-image {
+
+    /*background-position: center; 
+    /*background-repeat: no-repeat; 
+
+    /*background-image: url(images/main.jpg);*/
+    /*background-size: cover;*/
+    /*background-position: center center;*/
 
 
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.js" type="text/javascript"></script>
-       <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-</head>
+  max-width: 100%; /* Ensures it doesn't overflow its container */
+  width: 100%;
+  height: 100%;
+    object-fit: cover; /* 이미지가 컨테이너를 꽉 채우되 비율 유지 (잘림 발생) */ 
+  object-position: center; /* 이미지가 중앙을 기준으로 표시됨 */
+}
 
-<body id="top" style="background-color: white">
-    <div  class="k-top">
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.2"></script>
+.k-main-image-container {
+    height: calc(100vh - 50px); /* 뷰포트(화면) 높이의 100% */
+    max-height: calc(100vh - 50px); /* 뷰포트(화면) 높이의 100% */
+    overflow: hidden;
+}
+
+.k-section {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+.k-container {
+    position: relative;
+    height: 100%;
+}
+.k-date-location-box {
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+.k-text-box {
+    color: lightcoral;
+    text-align: center;
+}
+.k-parents-box {
+    margin-top: 25px;
+    margin-bottom: 0px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.broom-bride {
+
+}
+.k-parents-relation-box {
+    width: 20px;
+    text-align: center;
+}
+/* 사라질 요소의 초기 스타일 */
+#message-box {
+    /*background-color: lightcoral;*/
+    padding: 20px;
+    
+    max-width: 480px;
+
+    display: flex; align-items: center;
+    text-align: center;
+
+    justify-content: center;
+
+    color: lightcoral;
+    /*font-size: 12px;*/
+    /* 부드러운 전환 효과를 위한 transition 설정 */
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+/* 사라진 후의 스타일 (투명도 0, 보이지 않음) */
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
+.fade-in-box {
+  display: inline-block;
+  /*background: yellow;*/
+  padding: 10px;
+  animation: fadein 1s;
+  -moz-animation: fadein 1s; /* Firefox */
+  -webkit-animation: fadein 1s; /* Safari and Chrome */
+  -o-animation: fadein 1s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-out-box {
+  display: inline-block;
+  /*background: yellow;*/
+  padding: 10px;
+  animation: fadeout 1s;
+  -moz-animation: fadeout 1s; /* Firefox */
+  -webkit-animation: fadeout 1s; /* Safari and Chrome */
+  -o-animation: fadeout 1s; /* Opera */
+  animation-fill-mode: forwards;
+}
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@-moz-keyframes fadeout { /* Firefox */
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@-webkit-keyframes fadeout { /* Safari and Chrome */
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@-o-keyframes fadeout { /* Opera */
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+#main-box {
+    padding: 20px;
+    max-width: 480px;
+}
+/* 사라진 후의 스타일 (투명도 0, 보이지 않음) */
+.showkk {
+    /*opacity: 0;*/
+    /*visibility: hidden;*/
+
+    background-position: center; 
+    background-repeat: no-repeat; 
+
+    background-image: url(./../images/main.jpg);
+    background-size: cover;
+    height: calc(100vh - 20px)
+    /*background-position: center center;*/
+}
+
+.k-bottom {
+    height: 10px;
+    position: absolute;
+    bottom: 0;
+}
+.typing {
+  width: 20ch;
+  animation: typing 1.5s steps(15), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 1.5em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
 
 
-<div class="page-content">
-    <div class="k-full-div" >
-        <script>
-            // 페이지 로드 후 3000ms (3초) 후에 실행될 함수
-            setTimeout(function() {
-                // 'message-box' ID를 가진 요소를 가져옴
-                const messageBox = document.getElementById('message-box');
-                // 요소에 'hidden' 클래스를 추가하여 사라지게 함
-                if (messageBox) {
-                    messageBox.classList.add('fade-out-box');
-                }
-            }, 2500); // 3000ms = 3초
 
+.slider {
+    margin: 0 auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
 
-            // 페이지 로드 후 3000ms (3초) 후에 실행될 함수
-            setTimeout(function() {
-                // 'message-box' ID를 가진 요소를 가져옴
-                const main = document.getElementById('main-box');
-                // 요소에 'hidden' 클래스를 추가하여 사라지게 함
-                if (main) {
-                    main.classList.remove('hidden');
-                    main.classList.add('fade-in-box');
-                }
-            }, 2500); // 3000ms = 3초
-        </script>
+.slick-dots {
+    bottom: 10px;
+}
 
-        <div class="k-section" id="message-box">
-            <div class="typing">저희, 결혼합니다<span style="color: red;">♥</span></div>
-        </div>
+.slick-dots li button:before {
+    font-size: 10px;
+    line-height: 10px;
+    color: #fff;
+}
 
-        <div class="k-section hidden" id="main-box">
-            <div class="ww-gift-section">
-                <div class="container" style="padding: 0">
-                    <!-- <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">Happy Wedding</h2> -->
-                    <div class="col">
-                        <div style="display: flex; align-items: center;">
-                          <div style="width: 50%; text-align: left;">
-                            <h6 style="font-family: 'Noto Serif KR', serif;">
-                                고동현 & 이은지
-                            </h6>
-                          </div>
-                          <div style="width: 50%; text-align: right;">
-                            <h6 style="font-family: 'Noto Serif KR', serif;">
-                                01<br>
-                                23
-                            </h6>
-                          </div>
-                        </div>
-
-                    </div>
-                    <div class="k-main-image-container">
-                        <img src="images/main.jpg" class="k-main-image">
-                    </div>
-                </div>
-            </div>
-<!--             <div class="ww-gift-section showkk"></div> -->
-
-        </div>
-
-        <!-- <div class="k-main-image" data-parallax="scroll">
-            <div class="ww-gift-section">
-                <div class="container">
-                </div>
-            </div>
-        </div> -->
-
-    </div>
-
-    <div class="k-date-location-box" >
-        <div class="k-text-box" style="color: black" id="">
-            <div class="">2026년 1월 23일 금요일</div>
-        </div>
-        <div class="k-text-box" style="color: black" id="">
-            <div class="">제주 정원</div>
-        </div>
-    </div>
-
-    <div class="" >
-        <div class="k-text-box notice-ment" id=""><div class="">꽃이 피고 지는 계절 속,</div></div>
-        <div class="k-text-box notice-ment" id=""><div class="">두 마음이 만나 서로를 품고자 합니다.</div></div>
-        <div class="k-text-box notice-ment" id=""><div class="">가족들만 모여 도란도란 조용히 나누는</div></div>
-        <div class="k-text-box notice-ment" id=""><div class="">연을 마음을 담아 전합니다.</div></div>
-        <br>
-        <div class="k-text-box notice-ment" id=""><div class="">햇살 머무는 뜰과 달빛 스미는 창 사이에서</div></div>
-        <div class="k-text-box notice-ment" id=""><div class="">서로의 마음을 살피며</div></div>
-        <div class="k-text-box notice-ment" id=""><div class="">겸손하게 길을 나서는 저희를</div></div>
-        <div class="k-text-box notice-ment" id=""><div class="">멀리서나마 마음으로 함께 지켜봐 주시길 바랍니다.</div></div>
-    </div>
-
-    <div class="k-parents-box" >
-        <div class="k-text-box broom-bride" id="" style="color: black">
-            <div style="display: flex; align-items: center;">
-              <div style="width: 50%; text-align: center;">
-                <h6">고성수·김영자 의</h6>
-              </div>
-              <div style="width: 20%; text-align: center;">
-                <h6">아들</h6>
-              </div>
-              <div style="width: 30%; text-align: center; margin-bottom: 0;">
-                <h6 style="margin-bottom: 0;">고동현</h6>
-              </div>
-            </div>
-        </div>
-        <div class="k-text-box broom-bride" id="" style="color: black">
-            <div style="display: flex; align-items: center;">
-              <div style="width: 50%; text-align: center;">
-                <h6">이청길·신길순 의</h6>
-              </div>
-              <div style="width: 20%; text-align: center;">
-                <h6">딸</h6>
-              </div>
-              <div style="width: 30%; text-align: center; margin-bottom: 0;">
-                <h6 style="margin-bottom: 0;">이은지</h6>
-              </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="k-calendar">
-        <div class="k-text-box ">
-            <h4>Wedding Day</h4>
-        </div>
-
-        <div class="k-text-box " style="color: black">
-            <h5>Jan</h5>
-        </div>
-      <table class="Jan">
+.k-calendar {
+    padding: 40px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+@import url("https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Roboto:ital,wght@0,300;0,400;1,300&display=swap");
  
-        <tr>
-          <th scope="col">Sun</th>
-          <th scope="col">Mon</th>
-          <th scope="col">Tue</th>
-          <th scope="col">Wed</th>
-          <th scope="col">Thur</th>
-          <th scope="col">Fri</th>
-          <th scope="col">Sat</th>
-        </tr>
+.holiday {
+  color: red;
+}
+.important {
+    /* 너비와 높이를 같게 설정하여 정사각형으로 만듭니다 */
+    width: 26px;
+    height: 26px;
+    
+    /* 배경색을 분홍색으로 설정합니다 */
+    background-color: #ff69b4; /* 핫핑크 색상 예시 */
+    
+    /* border-radius를 50%로 설정하여 원 모양으로 만듭니다 */
+    border-radius: 50%;
+    
+    /* flexbox를 사용하여 텍스트를 원의 정중앙에 배치합니다 */
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center;     /* 세로 중앙 정렬 */
+    
+    /* 선택 사항: 텍스트 스타일링 */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
  
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td class="holiday" class="holiday">1</td>
-          <td>2</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>5</td>
-          <td>6</td>
-          <td>7</td>
-          <td>8</td>
-          <td>9</td>
-          <td>10</td>
-        </tr>
-        <tr>
-          <td>11</td>
-          <td>12</td>
-          <td>13</td>
-          <td>14</td>
-          <td>15</td>
-          <td>16</td>
-          <td>17</td>
-        </tr>
-        <tr>
-          <td>18</td>
-          <td>19</td>
-          <td>20</td>
-          <td>21</td>
-          <td>22</td>
-          <td class="important" style="width: 26px;">23</td>
-          <td>24</td>
-        </tr>
-        <tr>
-          <td>25</td>
-          <td>26</td>
-          <td>27</td>
-          <td>28</td>
-          <td>29</td>
-          <td>30</td>
-          <td>31</td>
-        </tr>
-      </table>
+h1 {
+  text-align: center;
+  font-family: grape nuts;
+  margin-top: 50px;
+  font-size: 50px;
+  color: azure;
+}
+ 
+caption {
+  margin-bottom: 15px;
+  font-size: 25px;
+}
+ 
+td:nth-child(1),
+th:nth-child(1) {
+  color: red;
+  width: 20px;
+  margin:auto;
+}
+td:nth-child(2),
+th:nth-child(2) {
+  width: 20px;
+  margin:auto;
+}
+td:nth-child(3),
+th:nth-child(3) {
+  width: 20px;
+  margin:auto;
+}
+td:nth-child(4),
+th:nth-child(4) {
+  width: 20px;
+  margin:auto;
+}
+td:nth-child(5),
+th:nth-child(5) {
+  width: 20px;
+  margin:auto;
+}
+td:nth-child(6),
+th:nth-child(6) {
+  width: 20px;
+  margin:auto;
+}
+td:nth-child(7),
+th:nth-child(7) {
+  width: 20px;
+  margin:auto;
+  color: blue;
+}
+ 
+.wrapper {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: grape nuts;
+}
+ 
+table {
+  color: black;
+}
+table td{
+    font-size: 16px;  
+    width: 20px;      
+}
+table th{
+    width: 20px;    
+}
+.k-countdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+ 
+.k-photo-gallery {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.k-photo-gallery-content {
+    flex-direction: row;
+    align-items: center;
+    height: calc(90vh);
+}
+.k-photo-gallery-content img{
+    margin: 0 auto; /* it centers any block level element */
+    display:flex;
+    height: 100%;
+    max-height: calc(100vh - 200px);
+    width: auto;
+    object-fit: cover; /* 이미지가 컨테이너를 꽉 채우되 비율 유지 (잘림 발생) */ 
+    object-position: center; /* 이미지가 중앙을 기준으로 표시됨 */
+}
+ 
+ .k-modal {
+    /*position:absolute;*/
+    display:none;
+    align-items: center;
+    
+    position:fixed;     
+    z-index: 1; /* 모달창을 제일 앞에 두기 */
+    left: 0; top: 0;
+    justify-content: center;
+    /*top:0;*/
+    /*left:0;*/
 
-    </div>
-
-    <div class="k-countdown">
-        <h6 style="font-family: 'Noto Serif KR', serif;">
-            316 (만난지 315일+1일 되는날 결혼 = 316일)
-        </h6>
-    </div>
-
-    <div class="k-photo-gallery">
-        <div class="k-text-box ">
-            <h4>갤러리</h4>
-        </div>
-
-
-        <button class="btn-open-modal">Modal열기</button>
-        <div class="k-modal" style="display: none">
-            <div class="k-modal-body">
-                <button class="btn-close-modal"><span class="close">&times;</span></button>
-                
-                <div class="k-photo-gallery-content">
-                    <div class="slider" id="k-image-gallery-modal">
-                        <img src="./../images/pic1_ex1.jpg" alt="Image 1">
-                        <img src="./../images/pic2_ex1.jpg" alt="Image 2">
-                        <img src="./../images/pic3_ex1.jpg" alt="Image 3">
-                        <img src="./../images/pic4_ex1.jpg" alt="Image 4">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <script>
-            const modal = document.querySelector('.k-modal');
-            const btnOpenModal=document.querySelector('.btn-open-modal');
-
-            btnOpenModal.addEventListener("click", ()=>{
-                // modal.style.position="absolute";
-                modal.style.display="flex";
-                document.body.style.overflow = 'hidden';
-            });
-            const btnCloseModal=document.querySelector('.btn-close-modal');
-
-            btnCloseModal.addEventListener("click", ()=>{
-                // modal.style.position="absolute";
-                modal.style.display="none";
-                document.body.style.overflow = 'auto';
-            });
-
-
-            // 'message-box' ID를 가진 요소를 가져옴
-            const sliderModalOption = document.getElementById('k-image-gallery-modal');
-            // 요소에 'hidden' 클래스를 추가하여 사라지게 함
-            if (sliderModalOption) {
-                // sliderModalOption.slick('setPosition', 3);
-            }
-        </script>
-
-
-        <script>
-            $('.slider').slick({
-                autoplay: true,
-                autoplaySpeed: 200000,
-                dots: true,
-                infinite: true,
-                speed: 500,
-                fade: true,
-                cssEase: 'linear',
-                adaptiveHeight: false,
-                initialSlide: 2,
-
-            });
-        </script>
-
-        <div class="ww-section" id="gallery">
-            <div class="ww-photo-gallery">
-                <div class="container">
-                    <div class="ww-gallery">
-
-                        <div class="gallery-container photo-grid22">
-                            <ul id="gallery-cu">
-                              <li><a href="images/pic1_ex1.jpg"><img src="images/pic1_ex1.jpg" alt="Thumbnail"></a></li>
-                              <li><a href="images/pic2_ex1.jpg"><img src="images/pic2_ex1.jpg" alt="Thumbnail"></a></li>
-                              <li><a href="images/pic3_ex1.jpg"><img src="images/pic3_ex1.jpg" alt="Thumbnail"></a></li>
-                              <li><a href="images/pic4_ex1.jpg"><img src="images/pic4_ex1.jpg" alt="Thumbnail"></a></li>
-                              <li><a href="images/pic5_ex1.jpg"><img src="images/pic5_ex1.jpg" alt="Thumbnail"></a></li>
-                              <li><a href="images/pic6_ex1.jpg"><img src="images/pic6_ex1.jpg" alt="Thumbnail"></a></li>
-                              <li><a href="images/pic1_ex1.jpg"><img src="images/pic1_ex1.jpg" alt="Thumbnail"></a></li>
-                              <li><a href="images/pic2_ex1.jpg"><img src="images/pic2_ex1.jpg" alt="Thumbnail"></a></li>
-                              <li><a href="images/pic3_ex1.jpg"><img src="images/pic3_ex1.jpg" alt="Thumbnail"></a></li>
-                              <li><a href="images/pic4_ex1.jpg"><img src="images/pic4_ex1.jpg" alt="Thumbnail"></a></li>
-                              <li><a href="images/pic5_ex1.jpg"><img src="images/pic5_ex1.jpg" alt="Thumbnail"></a></li>
-                              <li><a href="images/pic6_ex1.jpg"><img src="images/pic6_ex1.jpg" alt="Thumbnail"></a></li>
-                            </ul>
-                             
-                            <div id="overlay-cu">
-                                <img src="img/img1.png" alt="photo" id="photo-cu">
-                            </div>
-                        </div>
-                             
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="div">
-
-
-            <div class="ww-section bg-light" id="events">
-            
-                <div class="k-vanue">
-                <div class="row">
-                    <div class="col-md-7 col-sm-12">
-                        <div class="my-3">
-                            <div class="h4">웨딩 본식</div>
-                            <ul>
-                                <li>
-                                    <i class="text-muted fas fa-map-marker-alt"></i>
-                                    <span class="pl-2 text-muted">제주 어느 정원</span>
-                                </li>
-                                <li class="pt-2">
-                                    <i class="text-muted far fa-calendar-alt"></i>
-                                    <span class="pl-2 text-muted">2026년 1월 23일, 11:00 AM</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-5 col-sm-12">
-                        <div class="my-3">
-                            <img alt="Wedding Party" class="img-fluid" src="images/wedding-party.jpg"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-7 col-sm-12">
-                        <div class="my-3">
-                            <div class="h4">식사</div>
-                            <ul>
-                                <li>
-                                    <i class="text-muted fas fa-map-marker-alt "></i>
-                                    <span class="pl-2 text-muted">제주 제주시 호텔 파라다이스</span>
-                                </li>
-                                <li class="pt-2">
-                                    <i class="text-muted far fa-calendar-alt "></i>
-                                    <span class="pl-2 text-muted">2026년 1월 24일, 11:30AM - 5:30PM</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-5 col-sm-12">
-                        <div class="my-3"><img alt="Reception" class="img-fluid" src="images/reception.jpg"/></div>
-                    </div>
-                </div>
-                </div>
-            </div>
+    width:100%;
+    height:100vh;
+    background-color: rgba(0,0,0,0.4);      
+ }
+ .k-modal-body{
+            /*top:50%; //모달을 화면가운데 놓기위함. */
         
-            <div class="ww-section ww-rsvp-detail" id="map">
-                <div class="container">
-                    <div class="col text-center">
-                        <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">오시는 길</h2>
-                        <div>
-                            <h5 style="font-family: 'Noto Serif KR', serif;">제주시 호텔 파라다이스 3층 어느홀</h5>
-                            <h6 style="font-family: 'Noto Serif KR', serif;">(제주시 연동 이제로 79)</h6>
-                        </div>
-                    </div>
+            top: 150px;
+            width: 100%;
+            height: 90%;
 
-                    <div class="form-group">
-                        <div class="col-md-12">
-                            <div class="my-3 text-center">
-                                <a href="http://naver.me/5pTy3HCa">
-                                    <img alt="naver-map" class="map-icon" id="naver-map"
-                                         src="images/map/naver-map.png"/>
-                                </a>
-                                <a href="http://dmaps.kr/2bms8">
-                                    <img alt="kakao-map" class="map-icon" id="kakao-map"
-                                         src="images/map/kakao-map.png"/>
-                                </a>
-                                <a href="https://maps.app.goo.gl/jfDxw">
-                                    <img alt="google-map" class="map-icon" id="google-map"
-                                         src="images/map/google-map.png"/>
-                                </a>
-                            </div>
-                            <div class="col text-center">
-                                <label style="font-family: 'Noto Serif KR', serif; font-size: 15px;">
-                                    셔틀버스 - 센텀시티역 4번출구앞에서 15분 간격으로 운행
-                                </label>
-                            </div>
-                            <div class="col text-center my-3 ">
-                                <!-- * 카카오맵 - 지도퍼가기 -->
-                                <!-- 1. 지도 노드 -->
-                                <div id="daumRoughmapContainer1756558884179" class="root_daum_roughmap root_daum_roughmap_landing"></div>
-                                
-                                <!--
-                                    2. 설치 스크립트
-                                    * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
-                                -->
-                                <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-                                
-                                <!-- 3. 실행 스크립트 -->
-                                <script charset="UTF-8">
-                                    new daum.roughmap.Lander({
-                                        "timestamp" : "1756558884179",
-                                        "key" : "vg5v46pxbxe",
-                                        "mapWidth" : "300",
-                                        "mapHeight" : "240"
-                                    }).render();
-                                </script>
-                                
-    <!--                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13329.437346591607!2d126.51886683648611!3d33.36168359671939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x350cff51e4901447%3A0x9e789970e40c6824!2z7ZWc65287IKw!5e0!3m2!1sko!2skr!4v1756550653626!5m2!1sko!2skr" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe> -->
-                            </div>
-                        </div>
-                    </div>
+            padding:40px;  
 
+            text-align: center;
 
-                </div>
-            </div>
+            background-color: rgb(255,255,255); //모달창 배경색 흰색
+            border-radius:10px; //테두리 
+            box-shadow:0 2px 3px 0 rgba(34,36,38,0.15); //테두리 그림자 
 
-            <div class="ww-section bg-light" id="comment">
-                <div class="ww-photo-gallery">
-                    <div class="container">
-                        <div class="col text-center">
-                            <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">축하 연락하기</h2><br>
-                            <div class="col text-center mb-5">
-                                <h6 style="font-family: 'Noto Serif KR', serif;">
-                                    OOO & OOO 의 아들 고동현<br>
-                                    OOO & OOO 의   딸 이은지<br>
-                                </h6>
-                            </div>
-                            <br>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+            transform:translateY(-50%); //모듈창열었을때 위치설정 가운데로 
+        }
 
-    </div>
+.photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 1em;
+}
 
-<footer></footer>
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="js/aos.js"></script>
-<script src="js/parallax.min.js"></script>
-<script src="js/ekko-lightbox.min.js"></script>
-<script src="scripts/main.js"></script>
+#gallery-cu{          
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+/*             display: flex; 
+/*             flex-wrap: wrap; /* 이미지가 줄을 넘어가면 다음 줄로 넘어가도록 설정  
+/*             justify-content: center; */
+            
+    display: flex; /* 이미지를 가로로 나열하기 위한 flex 컨테이너 */
+    flex-wrap: wrap; /* 이미지가 줄을 넘어가면 다음 줄로 넘어가도록 설정 */
+    width: 100%; /* 갤러리 컨테이너의 너비 설정 */
+    gap: 2px; /* 이미지 간의 간격 */
+}
 
-<div class="bottom_right"><i class="fa fa-arrow-up fa-2x" id="go-to-top"></i>
-</div>
+#gallery-cu::after{content: ""; display: block; clear: both;}
 
-<div class="bottom_left">
-    <audio id="player" src="mus.mp3"></audio>
-    <div>
-        <i class="fa fa-music fa-2x" onclick="document.getElementById('player').play()"></i>
-    </div>
-</div>
-</div>
-</body>
-</html>
+#gallery-cu > li{
+            float: left; margin: 0 1px;
+
+    flex: 1 1 calc(30% - 1px); /* 3x4 그리드를 만들기 위해 가로 폭을 25%로 설정 (간격 고려) */
+    box-sizing: border-box; /* 패딩과 테두리가 요소의 너비에 포함되도록 설정 */
+    overflow: hidden; /* 이미지 밖으로 넘치는 부분을 숨김 */
+    aspect-ratio: 1 / 1; /* 이미지를 정사각형으로 만들기 위한 가로세로 비율 설정 */
+    position: relative; /* 이미지 내에서 요소 배치를 위한 기준점 */
+}
+
+#gallery-cu > li > a{display: block; text-decoration: none;}
+
+#gallery-cu > li > a > img{
+            
+    display: block; /* 이미지를 블록 요소로 만들어 여백 제거 */
+    width: 100%; /* 이미지의 너비를 부모 요소(wrapper)에 맞춤 */
+    height: 100%; /* 이미지의 높이를 부모 요소(wrapper)에 맞춤 */
+    object-fit: cover; /* 이미지의 가로세로 비율을 유지하며 컨테이너를 꽉 채우도록 설정 */
+/*     border-radius: 8px; /* 이미지 모서리를 둥글게 처리 */ 
+/* display: block;  */
+/* width: 120px;  */
+/* height: 120px;  */
+border: 3px solid transparent; 
+/* box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6); */
+}
+
+#overlay-cu{
+position: fixed;
+top: 0; right: 0; left: 0; bottom: 0;
+
+background-color: rgba(0, 0, 0, 0.8);
+
+display: none;
+z-index: 100;
+}
+
+#photo-cu{
+position: absolute;
+top: 50%; left: 50%;
+transform: translate(-50%, -50%);
+
+max-width: 80%;
+max-height: 80%;
+border: 10px solid white;
+}
