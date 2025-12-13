@@ -241,7 +241,7 @@
         <button class="btn-open-modal">Modal열기</button>
         <div class="k-modal" style="display: none">
             <div class="k-modal-body">
-                <button class="btn-close-modal">닫기</button>
+                <button class="btn-close-modal"><span class="close">&times;</span></button>
                 
                 <div class="k-photo-gallery-content">
                     <div class="slider" id="k-image-gallery-modal">
@@ -262,14 +262,14 @@
             btnOpenModal.addEventListener("click", ()=>{
                 // modal.style.position="absolute";
                 modal.style.display="flex";
-                // document.body.style.overflow = 'hidden';
+                document.body.style.overflow = 'hidden';
             });
             const btnCloseModal=document.querySelector('.btn-close-modal');
 
             btnCloseModal.addEventListener("click", ()=>{
                 // modal.style.position="absolute";
                 modal.style.display="none";
-                // document.body.style.overflow = 'auto';
+                document.body.style.overflow = 'auto';
             });
 
 
