@@ -64,6 +64,14 @@ position: relative;
 .k-text-box {
     text-align: center;
 }
+.k-parents-box {
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+.k-parents-relation-box {
+    width: 20px;
+    text-align: center;
+}
 /* 사라질 요소의 초기 스타일 */
 #message-box {
     /*background-color: lightcoral;*/
