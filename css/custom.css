@@ -284,6 +284,7 @@ caption {
 td:nth-child(1),
 th:nth-child(1) {
   color: red;
+  width: 20px;
 }
 td:nth-child(7),
 th:nth-child(7) {
