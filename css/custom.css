@@ -388,6 +388,7 @@ table th{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20px;
 }
 .k-photo-gallery-content {
     flex-direction: row;
