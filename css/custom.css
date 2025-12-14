@@ -216,7 +216,9 @@ position: relative;
     height: calc(100vh - 20px)
     /*background-position: center center;*/
 }
-
+.k-vanue  {
+    margin-bottom: 20px;
+}
 .k-bottom {
     height: 10px;
     position: absolute;
