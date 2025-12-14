@@ -12,7 +12,11 @@ body {
     width: 100%;
 }
 .k-kakao-map {
-    width: 300px;
+    display: flex;
+    justify-content: center;
+}
+.k-kakao-map * {
+    width: 300px !important;
 }
 .k-top {
 position: relative;
