@@ -2,6 +2,7 @@ body {
     /* 기본 margin과 padding을 제거하여 일관된 시작점을 만듭니다 */
     margin: 0;
     padding: 0;
+    background-color: white;
     /* (선택 사항) 배경색을 설정하여 컨테이너 바깥쪽 공간을 구분할 수 있습니다 */
 }
 .page-content {
@@ -44,8 +45,8 @@ position: relative;
 }
 
 .k-main-image-container {
-    height: calc(100svh - 50px); /* 뷰포트(화면) 높이의 100% */
-    max-height: calc(100svh - 50px); /* 뷰포트(화면) 높이의 100% */
+    height: calc(100lvh - 50px); /* 뷰포트(화면) 높이의 100% */
+    max-height: calc(100lvh - 50px); /* 뷰포트(화면) 높이의 100% */
     overflow: hidden;
 }
 
@@ -435,7 +436,7 @@ table th{
 
 
 .slidera {
-  height: calc(100svh - 300px)  !important;
+  height: calc(100lvh - 300px)  !important;
   display: flex  !important;
   text-align: center  !important;
   align-items : center  !important;
@@ -445,7 +446,7 @@ table th{
 .slidera img {
 /*   width: 100%; */
   max-width: 100%;
-  max-height: 100svh;
+  max-height: 100lvh;
   margin: 0 auto;
   vertical-align:middle;
   width: 100%;
