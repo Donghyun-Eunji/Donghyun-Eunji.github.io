@@ -41,7 +41,8 @@ position: relative;
   max-width: 100%; /* Ensures it doesn't overflow its container */
   width: 100%;
   height: 100%;
-    object-fit: contain; /* 이미지가 컨테이너를 꽉 채우되 비율 유지 (잘림 발생) */ 
+    /*object-fit: contain; */
+    object-fit: cover; /* 이미지가 컨테이너를 꽉 채우되 비율 유지 (잘림 발생) */ 
   object-position: center; /* 이미지가 중앙을 기준으로 표시됨 */
 }
 
