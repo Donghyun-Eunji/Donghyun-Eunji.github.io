@@ -338,37 +338,37 @@ caption {
 td:nth-child(1),
 th:nth-child(1) {
   color: red;
-  width: 20px;
+  width: 20px !important;
   margin:auto;
 }
 td:nth-child(2),
 th:nth-child(2) {
-  width: 20px;
+  width: 20px !important;
   margin:auto;
 }
 td:nth-child(3),
 th:nth-child(3) {
-  width: 20px;
+  width: 20px !important;
   margin:auto;
 }
 td:nth-child(4),
 th:nth-child(4) {
-  width: 20px;
+  width: 20px !important;
   margin:auto;
 }
 td:nth-child(5),
 th:nth-child(5) {
-  width: 20px;
+  width: 20px !important;
   margin:auto;
 }
 td:nth-child(6),
 th:nth-child(6) {
-  width: 20px;
+  width: 20px !important;
   margin:auto;
 }
 td:nth-child(7),
 th:nth-child(7) {
-  width: 20px;
+  width: 20px !important;
   margin:auto;
   color: blue;
 }
