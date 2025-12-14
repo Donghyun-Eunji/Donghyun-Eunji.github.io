@@ -388,7 +388,7 @@ table th{
 .k-photo-gallery-content {
     flex-direction: row;
     align-items: center;
-    height: calc(90vh);
+    /*height: calc(90vh);*/
 }
 .slider img{
     margin: 0 auto; /* it centers any block level element */
