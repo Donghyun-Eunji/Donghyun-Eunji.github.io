@@ -535,6 +535,17 @@ table th{
   transition: all .5s;
 }
 
+.k-various-map {
+    display: flex;
+    flex-direction: row;
+}
+
+.k-various-map a {
+    width: 70px;
+    margin: 8px;
+
+}
+
 .photo-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
