@@ -8,8 +8,11 @@ body {
 .page-content {
     width: 100%;
 }
-.page-content * :not(.k-kakao-map) {
+.page-content * {
     width: 100%;
+}
+.k-kakao-map {
+    width: 300px;
 }
 .k-top {
 position: relative;
@@ -64,7 +67,7 @@ position: relative;
     height: 100%;
 }
 .k-delimeter {
-    margin-top: 10px;
+    margin-top: 15px;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -338,37 +341,37 @@ caption {
 td:nth-child(1),
 th:nth-child(1) {
   color: red;
-  width: 20px !important;
+  width: 20px;
   margin:auto;
 }
 td:nth-child(2),
 th:nth-child(2) {
-  width: 20px !important;
+  width: 20px;
   margin:auto;
 }
 td:nth-child(3),
 th:nth-child(3) {
-  width: 20px !important;
+  width: 20px;
   margin:auto;
 }
 td:nth-child(4),
 th:nth-child(4) {
-  width: 20px !important;
+  width: 20px;
   margin:auto;
 }
 td:nth-child(5),
 th:nth-child(5) {
-  width: 20px !important;
+  width: 20px;
   margin:auto;
 }
 td:nth-child(6),
 th:nth-child(6) {
-  width: 20px !important;
+  width: 20px;
   margin:auto;
 }
 td:nth-child(7),
 th:nth-child(7) {
-  width: 20px !important;
+  width: 20px;
   margin:auto;
   color: blue;
 }
