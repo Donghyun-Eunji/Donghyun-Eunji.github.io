@@ -71,6 +71,11 @@ position: relative;
     color: lightcoral;
     text-align: center;
 }
+.k-detail-vanue {    
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
 .k-parents-box {
     margin-top: 25px;
     margin-bottom: 0px;
