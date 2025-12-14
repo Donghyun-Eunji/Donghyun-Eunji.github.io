@@ -636,13 +636,13 @@
 
                 toggleButton.addEventListener("click", function() {
                     // 오디오가 일시 정지 상태(paused가 true)이면 재생합니다.
-                    if (myAudio.paused) {
-                        myAudio.play();
+                    if (audio.paused) {
+                        audio.play();
                         // toggleButton.textContent = "음악 일시 정지";
                     }
                     // 오디오가 재생 중 상태(paused가 false)이면 일시 정지합니다.
                     else {
-                        myAudio.pause();
+                        audio.pause();
                         // toggleButton.textContent = "음악 재생";
                     }
                 });
