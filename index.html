@@ -479,7 +479,7 @@
             <div class="k-text-box ">
                 <h5>웨딩 본식</h5>
             </div>
-            <div class="k-text-box k-detail-vanue;" style="color: black;">
+            <div class="k-text-box k-detail-vanue" style="color: black;">
                 <span class="pl-2 text-muted">제주 정원</span>
                 <span class="pl-2 text-muted">2026년 1월 23일, 11:00 AM</span>
             </div>
@@ -491,7 +491,7 @@
             <div class="k-text-box ">
                 <h5>피로연(서울)</h5>
             </div>
-            <div class="k-text-box k-detail-vanue;" style="color: black;">
+            <div class="k-text-box k-detail-vanue" style="color: black;">
                 <span class="pl-2 text-muted">그리츠</span>
                 <span class="pl-2 text-muted">2026년 1월 17일, 11:00 AM</span>
             </div>
@@ -522,7 +522,26 @@
 
             <div class="k-kakao-map">
                 <div style="font:normal normal 400 12px/normal dotum, sans-serif; width:360px; height:272px; color:#333; position:relative"><div style="height: 240px;"><a href="https://map.kakao.com/?urlX=481719.9999999983&amp;urlY=1118866.000000001&amp;itemId=27334632&amp;q=%EA%B7%B8%EB%A6%AC%EC%B8%A0&amp;srcid=27334632&amp;map_type=TYPE_MAP&amp;from=roughmap" target="_blank"><img class="map" src="http://t1.daumcdn.net/roughmap/imgmap/0921dd88c12bf84521778d21675e2da65ae3b299cde871904c1f5965b499933f" width="358px" height="238px" style="border:1px solid #ccc;"></a></div><div style="overflow: hidden; padding: 7px 11px; border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 0px 0px 2px 2px; background-color: rgb(249, 249, 249);"><a href="https://map.kakao.com" target="_blank" style="float: left;"><img src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/common/logo_kakaomap.png" width="72" height="16" alt="카카오맵" style="display:block;width:72px;height:16px"></a><div style="float: right; position: relative; top: 1px; font-size: 11px;"><a target="_blank" href="https://map.kakao.com/?from=roughmap&amp;srcid=27334632&amp;confirmid=27334632&amp;q=%EA%B7%B8%EB%A6%AC%EC%B8%A0&amp;rv=on" style="float:left;height:15px;padding-top:1px;line-height:15px;color:#000;text-decoration: none;">로드뷰</a><span style="width: 1px;padding: 0;margin: 0 8px 0 9px;height: 11px;vertical-align: top;position: relative;top: 2px;border-left: 1px solid #d0d0d0;float: left;"></span><a target="_blank" href="https://map.kakao.com/?from=roughmap&amp;eName=%EA%B7%B8%EB%A6%AC%EC%B8%A0&amp;eX=481719.9999999983&amp;eY=1118866.000000001" style="float:left;height:15px;padding-top:1px;line-height:15px;color:#000;text-decoration: none;">길찾기</a><span style="width: 1px;padding: 0;margin: 0 8px 0 9px;height: 11px;vertical-align: top;position: relative;top: 2px;border-left: 1px solid #d0d0d0;float: left;"></span><a target="_blank" href="https://map.kakao.com?map_type=TYPE_MAP&amp;from=roughmap&amp;srcid=27334632&amp;itemId=27334632&amp;q=%EA%B7%B8%EB%A6%AC%EC%B8%A0&amp;urlX=481719.9999999983&amp;urlY=1118866.000000001" style="float:left;height:15px;padding-top:1px;line-height:15px;color:#000;text-decoration: none;">지도 크게 보기</a></div></div><div><span style="border-bottom:0px none #333333;position:absolute;left:-25px;top:-136px;width:0px;height:40px"></span></div></div>
-                
+
+                <!-- * 카카오맵 - 지도퍼가기 -->
+                <!-- 1. 지도 노드 -->
+                <div id="daumRoughmapContainer1765729083111" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+                <!--
+                    2. 설치 스크립트
+                    * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+                -->
+                <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                <!-- 3. 실행 스크립트 -->
+                <script charset="UTF-8">
+                    new daum.roughmap.Lander({
+                        "timestamp" : "1765729083111",
+                        "key" : "eazisru8kw8",
+                        "mapWidth" : "300",
+                        "mapHeight" : "200"
+                    }).render();
+                </script>
             </div>
         </div>
 
@@ -530,7 +549,7 @@
             <div class="k-text-box ">
                 <h5>피로연(제주)</h5>
             </div>
-            <div class="k-text-box k-detail-vanue;" style="color: black;">
+            <div class="k-text-box k-detail-vanue" style="color: black;">
                 <span class="pl-2 text-muted">제주 식당</span>
                 <span class="pl-2 text-muted">2026년 1월 24일, 11:00 AM - 4:30 PM</span>
             </div>
