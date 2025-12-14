@@ -15,9 +15,9 @@ body {
     display: flex;
     justify-content: center;
 }
-.k-kakao-map * {
+/*.k-kakao-map * {
     width: 300px !important;
-}
+}*/
 .k-top {
 position: relative;
     display: flex;  
