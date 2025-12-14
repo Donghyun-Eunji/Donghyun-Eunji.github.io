@@ -63,8 +63,17 @@ position: relative;
     position: relative;
     height: 100%;
 }
+.k-delimeter {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.k-delimeter-image {
+    width: 60%;
+}
 .k-date-location-box {
-    margin-top: 35px;
+    margin-top: 15px;
     margin-bottom: 20px;
 }
 .k-text-box {
