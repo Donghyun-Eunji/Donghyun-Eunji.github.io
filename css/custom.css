@@ -520,7 +520,7 @@ table th{
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 80%;
   /*height: 100vh;*/
   height: calc(var(--vh, 1vh) * 100); /* JS로 계산된 높이 사용 */ 
   background-color: rgba(0, 0, 0, 0.3);
