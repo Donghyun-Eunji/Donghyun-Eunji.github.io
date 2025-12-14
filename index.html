@@ -242,7 +242,7 @@
 
     <div class="k-countdown fade-class">
         <h6 style="font-family: 'Noto Serif KR', serif;">
-            316 (만난지 315일+1일 되는날 결혼 = 316일)
+            <span id="result"></span></p>
         </h6>
 
         <script type="text/javascript">
@@ -265,6 +265,12 @@
             const target = "2026-1-23"; // 2025년 12월 31일
             const remainingDays = getRemainingDays(target);
 
+            const resultElement = document.getElementById('result');
+            if (remainingDays <= 0) {
+                resultElement.textContent = "동현♥은지의 결혼 생활이 " + (remainingDays * -1)+ "일 되었습니다."; 
+            } else {
+                resultElement.textContent = "동현♥은지의 결혼식이 " + remainingDays+ "일 남았습니다."; 
+            }
         </script>
     </div>
 
