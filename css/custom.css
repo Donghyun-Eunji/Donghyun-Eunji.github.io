@@ -565,12 +565,16 @@ table th{
 .k-various-map {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .k-various-map a {
-    width: 70px;
+    width: 45px;
     margin: 8px;
 
+}
+.k-lunch-location {
+    margin-top: 130px;
 }
 
 .photo-grid {
