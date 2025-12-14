@@ -8,7 +8,7 @@ body {
 .page-content {
     width: 100%;
 }
-.page-content *:not(.k-kakao-map>*) {
+.page-content * {
     width: 100%;
 }
 .k-kakao-map {
