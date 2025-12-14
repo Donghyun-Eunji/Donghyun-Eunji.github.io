@@ -440,7 +440,7 @@ table th{
 
 
 .slidera {
-  height: calc(100lvh - 300px)  !important;
+  height: calc(var(--vh, 1vh) * 100 - 250px) !important;
   display: flex  !important;
   text-align: center  !important;
   align-items : center  !important;
