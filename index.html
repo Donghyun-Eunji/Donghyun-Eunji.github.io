@@ -31,6 +31,16 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+      function setScreenSize() {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+      }
+      
+      // 페이지 로드 시 및 창 크기 변경 시 실행
+      window.addEventListener('resize', setScreenSize);
+      setScreenSize();
+    </script>
 </head>
 
 <body id="top" style="background-color: white">
@@ -234,6 +244,28 @@
         <h6 style="font-family: 'Noto Serif KR', serif;">
             316 (만난지 315일+1일 되는날 결혼 = 316일)
         </h6>
+
+        <script type="text/javascript">
+            function getRemainingDays(targetDateString) {
+              // 목표 날짜 (예: "2025-12-25")
+              const targetDate = new Date(targetDateString);
+
+              // 현재 날짜와 시간
+              const now = new Date();
+
+              // 두 날짜의 밀리초 차이 구하기
+              const timeDiff = targetDate.getTime() - now.getTime();
+
+              // 밀리초를 일(day)로 변환 (1000ms * 60s * 60m * 24h)
+              const daysDiff = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+
+              return daysDiff;
+            }
+            const today = new Date(); // 오늘 날짜
+            const target = "2026-1-23"; // 2025년 12월 31일
+            const remainingDays = getRemainingDays(target);
+
+        </script>
     </div>
 
     <div class="k-photo-gallery fade-class">
