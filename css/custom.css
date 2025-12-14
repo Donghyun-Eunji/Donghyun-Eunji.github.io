@@ -46,8 +46,9 @@ position: relative;
 }
 
 .k-main-image-container {
-    height: 90%; /* 뷰포트(화면) 높이의 100% */
-    max-height: 600px;
+    /*height: 90%; */
+    /*max-height: 600px;*/
+    height: calc(var(--vh, 1vh) * 100 - 300px);
     overflow: hidden;
 }
 
