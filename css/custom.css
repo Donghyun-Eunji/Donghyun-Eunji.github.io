@@ -24,7 +24,8 @@ position: relative;
 
 .k-full-div {
     width: 100%;
-    height: 100vh;
+    /*height: 100vh;*/
+    height: calc(var(--vh, 1vh) * 100); /* JS로 계산된 높이 사용 */
 }
 
 .k-main-image {
@@ -53,7 +54,8 @@ position: relative;
 .k-section {
     position: absolute;
     width: 100%;
-    height: 100vh;
+    /*height: 100vh;*/
+    height: calc(var(--vh, 1vh) * 100); /* JS로 계산된 높이 사용 */
 }
 .k-container {
     position: relative;
