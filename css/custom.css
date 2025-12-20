@@ -604,6 +604,11 @@ padding-top: 5px;
 
 }
 .k-modal-close {
+    color: black;
+    background: white;
+    border-color: green;
+    box-shadow: none;
+
     margin-left: 30px;
     /*margin-right: 30px;*/
     width: calc(100% - 60px);
