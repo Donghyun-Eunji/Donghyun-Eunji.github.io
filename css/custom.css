@@ -523,7 +523,7 @@ table th{
     margin-top: 0px;
 }
 .k-account-info {
-
+    margin-bottom: 15px;
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -586,6 +586,7 @@ padding-top: 5px;
     padding-left: 30px;
 }
 .k-name-account{
+    margin-bottom: 0;
     padding-left: 30px;
 
 }
@@ -604,9 +605,10 @@ padding-top: 5px;
 
 }
 .k-modal-close {
+        margin-top: 20px;
     color: black;
     background: white;
-    border-color: green;
+    border-color: skyblue;
     box-shadow: none;
 
     margin-left: 30px;
@@ -618,6 +620,7 @@ padding-top: 5px;
   /*position: relative;*/
   width: 90%;
   height: 90%;
+  max-height: 500px;
 }
 
 .show {
