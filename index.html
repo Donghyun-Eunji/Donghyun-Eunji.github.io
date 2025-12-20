@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
 
     <script>
       function setScreenSize() {
@@ -730,11 +731,17 @@
      </div> 
 
      <div class="k-music">    
-         <div class="k-music-content">     
+
+         <div class="k-music-content">  
+             <div id="player"></div>
+
             <iframe width="360" height="240" src="https://www.youtube.com/embed/KHKMfZpozQ4?si=FvDZwhkhDdMozDRe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
          </div>
      </div>
+     <script type="text/javascript">
+        
+     </script>
 </div>
 
 
@@ -755,10 +762,40 @@
                 <i class="fa fa-music fa-2x" style="color: lightcoral;" id="toggleButton"></i>
             </div>
             <script type="text/javascript">
+                var player;
+                function onYouTubeIframeAPIReady() {
+                    player = new YT.Player('player', { // 'player'는 위 HTML div의 id
+                        height: '360',
+                        width: '640',
+                        videoId: 'VIDEO_ID', // 여기에 유튜브 영상 ID를 넣으세요 (예: 'dQw4w9WgXcQ')
+                        playerVars: {
+                            'playsinline': 1 // 모바일 환경에서 인라인 재생
+                        },
+                        events: {
+                            'onReady': onPlayerReady,
+                            'onStateChange': onPlayerStateChange
+                        }
+                    });
+                }
+
+                function onPlayerReady(event) {
+        // 영상이 준비되면 실행할 코드
+                    playVideo();
+                }
+
+
+                function playVideo() {
+                    player.unMute();
+                    player.playVideo();
+                }
+                function pauseVideo() {
+                    player.pauseVideo();
+                }
 
                 const audio = document.getElementById("player");
                 audio.autoplay = true;
                 audio.loop = true;
+                audio.muted = true;
                 audio.play();
 
                 const toggleButton = document.getElementById("toggleButton");
@@ -767,11 +804,13 @@
                     // 오디오가 일시 정지 상태(paused가 true)이면 재생합니다.
                     if (audio.paused) {
                         audio.play();
+                        playVideo();
                         // toggleButton.textContent = "음악 일시 정지";
                     }
                     // 오디오가 재생 중 상태(paused가 false)이면 일시 정지합니다.
                     else {
                         audio.pause();
+                        pauseVideo();
                         // toggleButton.textContent = "음악 재생";
                     }
                 });
