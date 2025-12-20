@@ -757,13 +757,13 @@
     <div class="k-audio-onoff">
         <div class="bottom_left">
 
-            <audio id="player" src="mus.mp3"></audio>
+            <audio id="player2" src="mus.mp3"></audio>
             <div>
                 <i class="fa fa-music fa-2x" style="color: lightcoral;" id="toggleButton"></i>
             </div>
             <script type="text/javascript">
                 // https://www.youtube.com/watch?v=SZgoyHtBoUA&list=RDSZgoyHtBoUA&start_radio=1
-                
+
                 var player;
                 function onYouTubeIframeAPIReady() {
                     player = new YT.Player('player', { // 'player'는 위 HTML div의 id
@@ -794,7 +794,7 @@
                     player.pauseVideo();
                 }
 
-                const audio = document.getElementById("player");
+                const audio = document.getElementById("player2");
                 audio.autoplay = true;
                 audio.loop = true;
                 audio.muted = true;
