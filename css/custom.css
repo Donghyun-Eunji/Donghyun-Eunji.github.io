@@ -518,7 +518,7 @@ table th{
 }
 .k-hr {
     margin-left: 30px;
-    width: 80%;
+    width: calc(80% - 30px);
     margin-bottom: 0px;
     margin-top: 0px;
 }
