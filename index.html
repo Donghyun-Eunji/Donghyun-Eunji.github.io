@@ -611,7 +611,7 @@
                     <!--복사할 텍스트 만들기-->
                     <button class="k-copy-button btn-hover.color-8" onclick="copyToClipboard('text3')">계좌번호 복사</button>
                 </div>
-                <button class="k-modal-close" id="close2">닫기</button>
+                <button class="k-modal-close" id="close">닫기</button>
               </div>
             </div>
           </div>
@@ -620,23 +620,30 @@
             <div class="window">
               <div class="k-popup">
                 <div>
-                  <span>신부 계좌</span>
-
+                  <p class="k-name">신부 계좌</p>
+                  <hr>
+                  <p class="k-name-bank">은행 (예금주: 이은지)</p>
+                  <p class="k-name-account" id="text4">12345654321</p>
                     <!--복사할 텍스트 만들기-->
-                    <p id="text3">텍스트 복사에 성공 하였습니다. </p>
+                    <button class="k-copy-button btn-hover.color-8" onclick="copyToClipboard('text4')">계좌번호 복사</button>
 
-                      <!--// 버튼 만들기-->
-                    <button onclick="copyToClipboard('text3')">텍스트 복사하기</button>
+
+                  <p class="k-name">신부 부 계좌</p>
+                  <hr>
+                  <p class="k-name-bank">은행 (예금주: 이청길)</p>
+                  <p class="k-name-account" id="text5">1234567890</p>
                     <!--복사할 텍스트 만들기-->
-                    <p id="text4">텍스트2 복사에 성공 하였습니다. </p>
-
-                      <!--// 버튼 만들기-->
-                    <button onclick="copyToClipboard('text4')">텍스트 복사하기</button>
+                    <button class="k-copy-button btn-hover.color-8" onclick="copyToClipboard('text5')">계좌번호 복사</button>
 
 
-                  신랑측
+                  <p class="k-name">신부 모 계좌</p>
+                  <hr>
+                  <p class="k-name-bank">은행 (예금주: 신길순)</p>
+                  <p class="k-name-account" id="text6">0987654321</p>
+                    <!--복사할 텍스트 만들기-->
+                    <button class="k-copy-button btn-hover.color-8" onclick="copyToClipboard('text6')">계좌번호 복사</button>
                 </div>
-                <button id="close2">닫기</button>
+                <button class="k-modal-close" id="close2">닫기</button>
               </div>
             </div>
           </div>
