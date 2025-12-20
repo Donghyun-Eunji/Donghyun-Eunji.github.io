@@ -516,8 +516,29 @@ table th{
   bottom: 0px;
   opacity: 1;
 }
+.k-hr {
+    margin-left: 30px;
+    width: 80%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.k-account-info {
 
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.k-account-info-detail {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 .k-background {
+
+    display: flex;
+    justify-content: center;
+
   position: fixed;
   top: 0;
   left: 0;
@@ -533,6 +554,9 @@ table th{
 }
 
 .k-background2 {
+
+    display: flex;
+    justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -586,7 +610,7 @@ padding-top: 5px;
     flex-direction: column;
     display: flex;
     width: 90%;
-    height: 80%;
+    height: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
