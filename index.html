@@ -762,12 +762,14 @@
                 <i class="fa fa-music fa-2x" style="color: lightcoral;" id="toggleButton"></i>
             </div>
             <script type="text/javascript">
+                // https://www.youtube.com/watch?v=SZgoyHtBoUA&list=RDSZgoyHtBoUA&start_radio=1
+                
                 var player;
                 function onYouTubeIframeAPIReady() {
                     player = new YT.Player('player', { // 'player'는 위 HTML div의 id
                         height: '360',
                         width: '640',
-                        videoId: 'VIDEO_ID', // 여기에 유튜브 영상 ID를 넣으세요 (예: 'dQw4w9WgXcQ')
+                        videoId: 'SZgoyHtBoUA', // 여기에 유튜브 영상 ID를 넣으세요 (예: 'dQw4w9WgXcQ')
                         playerVars: {
                             'playsinline': 1 // 모바일 환경에서 인라인 재생
                         },
