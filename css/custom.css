@@ -1,778 +1,788 @@
-body {
-    /* 기본 margin과 padding을 제거하여 일관된 시작점을 만듭니다 */
-    margin: 0;
-    padding: 0;
-    background-color: white;
-    /* (선택 사항) 배경색을 설정하여 컨테이너 바깥쪽 공간을 구분할 수 있습니다 */
-}
-.page-content {
-    width: 100%;
-}
-.page-content * {
-    width: 100%;
-}
-.k-kakao-map {
-    display: flex;
-    justify-content: center;
-}
-/*.k-kakao-map * {
-    width: 300px !important;
-}*/
-/*.k-kakao-map * {
-    width: 300px !important;
-}*/
-.k-top {
-position: relative;
-    display: flex;  
-    max-width: 480px;
-  width: 100%;      /* 작은 화면에서 부모 너비를 모두 사용하도록 설정 */
-  margin: 0 auto;   /* 좌우 마진을 자동으로 설정하여 가운데 정렬 */
-  box-sizing: border-box; /* 패딩이 너비에 포함되도록 설정 */
-/*    display: flex;
-    justify-content: center; /* 가로축 기준으로 가운데 정렬 */*/
-}
-
-.k-full-div {
-    width: 100%;
-    /*height: 100vh;*/
-    height: calc(var(--vh, 1vh) * 100); /* JS로 계산된 높이 사용 */
-}
-
-.k-main-image {
-
-    /*background-position: center; 
-    /*background-repeat: no-repeat; 
-
-    /*background-image: url(images/main.jpg);*/
-    /*background-size: cover;*/
-    /*background-position: center center;*/
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <!-- <meta content="width=device-width, initial-scale=1" name="viewport"> -->
+    <title>동현 ♥ 은지 ♡ 결혼식 </title>
+    <meta content="동현이와 은지의 결혼식을 알립니다~!" name="description"/>
+    <meta property="og:image" content="images/out/p01.jpg">
+<!--     <meta property="fb:app_id" content="781066922265598" /> -->
+    <meta property="fb:app_id" content="32132132135598" />
+    <meta property="fb:admins" content="Choi.Anderson"/>
+    <link href="images/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="images/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+    <link href="css/ekko-lightbox.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gamja+Flower|Gugi|Noto+Serif+KR|Stylish|Sunflower:300"
+          rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.1.js"></script>
 
 
-  max-width: 100%; /* Ensures it doesn't overflow its container */
-  width: 100%;
-  height: 100%;
-    /*object-fit: contain; */
-    object-fit: cover; /* 이미지가 컨테이너를 꽉 채우되 비율 유지 (잘림 발생) */ 
-  object-position: center; /* 이미지가 중앙을 기준으로 표시됨 */
-}
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.js" type="text/javascript"></script>
+       <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-.k-main-image-container {
-    /*height: 90%; */
-    /*max-height: 600px;*/
-    height: calc(var(--vh, 1vh) * 100 - 100px);
-    overflow: hidden;
-}
+    <script>
+      function setScreenSize() {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+      }
+      
+      // 페이지 로드 시 및 창 크기 변경 시 실행
+      // window.addEventListener('resize', setScreenSize);
+      setScreenSize();
+    </script>
+</head>
 
-.k-section {
-    position: absolute;
-    width: 100%;
-    /*height: 100vh;*/
-    height: calc(var(--vh, 1vh) * 100); /* JS로 계산된 높이 사용 */
-}
-.k-container {
-    position: relative;
-    height: 100%;
-}
-.k-delimeter {
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-.k-delimeter-image {
-    width: 60%;
-}
-.k-date-location-box {
-    margin-top: 15px;
-    margin-bottom: 20px;
-}
-.k-text-box {
-    color: lightcoral;
-    text-align: center;
-}
-.k-detail-vanue {    
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-}
-.k-parents-box {
-    margin-top: 25px;
-    margin-bottom: 0px;
-    padding-left: 40px;
-    padding-right: 40px;
-}
-.broom-bride {
+<body id="top" style="background-color: white">
+<div class="k-top">    
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.2"></script>
 
-}
-.k-parents-relation-box {
-    width: 20px;
-    text-align: center;
-}
-/* 사라질 요소의 초기 스타일 */
-#message-box {
-    /*background-color: lightcoral;*/
-    padding: 20px;
-    
-    max-width: 480px;
 
-    display: flex; align-items: center;
-    text-align: center;
+<div class="page-content">
+    <div class="k-full-div" >
+        <script>
+            // 페이지 로드 후 3000ms (3초) 후에 실행될 함수
+            setTimeout(function() {
+                // 'message-box' ID를 가진 요소를 가져옴
+                const messageBox = document.getElementById('message-box');
+                // 요소에 'hidden' 클래스를 추가하여 사라지게 함
+                if (messageBox) {
+                    messageBox.classList.add('fade-out-box');
+                }
+            }, 2500); // 3000ms = 3초
 
-    justify-content: center;
 
-    color: lightcoral;
-    /*font-size: 12px;*/
-    /* 부드러운 전환 효과를 위한 transition 설정 */
-    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
-}
+            // 페이지 로드 후 3000ms (3초) 후에 실행될 함수
+            setTimeout(function() {
+                // 'message-box' ID를 가진 요소를 가져옴
+                const main = document.getElementById('main-box');
+                // 요소에 'hidden' 클래스를 추가하여 사라지게 함
+                if (main) {
+                    main.classList.remove('hidden');
+                    main.classList.add('fade-in-box');
+                }
+            }, 2500); // 3000ms = 3초
+        </script>
 
-/* 사라진 후의 스타일 (투명도 0, 보이지 않음) */
-.hidden {
-    opacity: 0;
-    visibility: hidden;
-    display: none;
-}
+        <div class="k-section" id="message-box">
+            <div class="typing">저희, 결혼합니다<span style="color: red;">♥</span></div>
+        </div>
 
-.fade-in-box {
-  display: inline-block;
-  /*background: yellow;*/
-  padding: 10px;
-  animation: fadein 1s;
-  -moz-animation: fadein 1s; /* Firefox */
-  -webkit-animation: fadein 1s; /* Safari and Chrome */
-  -o-animation: fadein 1s; /* Opera */
-}
-@keyframes fadein {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-@-moz-keyframes fadein { /* Firefox */
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-@-webkit-keyframes fadein { /* Safari and Chrome */
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-@-o-keyframes fadein { /* Opera */
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
+        <div class="k-section hidden" id="main-box">
+            <div class="">
+                <div class="container" style="padding: 0">
+                    <!-- <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">Happy Wedding</h2> -->
+                    <div class="col" style="margin-top: 20px;">
+                        <div style="display: flex; align-items: center;">
+                          <div style="width: 50%; text-align: left;">
+                            <h6 style="font-family: 'Noto Serif KR', serif;">
+                                고동현 & 이은지
+                            </h6>
+                          </div>
+                          <div style="width: 50%; text-align: right;">
+                            <h6 style="font-family: 'Noto Serif KR', serif;">
+                                01<br>
+                                23
+                            </h6>
+                          </div>
+                        </div>
 
-.fade-out-box {
-  display: inline-block;
-  /*background: yellow;*/
-  padding: 10px;
-  animation: fadeout 1s;
-  -moz-animation: fadeout 1s; /* Firefox */
-  -webkit-animation: fadeout 1s; /* Safari and Chrome */
-  -o-animation: fadeout 1s; /* Opera */
-  animation-fill-mode: forwards;
-}
-@keyframes fadeout {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-@-moz-keyframes fadeout { /* Firefox */
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-@-webkit-keyframes fadeout { /* Safari and Chrome */
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-@-o-keyframes fadeout { /* Opera */
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
+                    </div>
+                    <div class="k-main-image-container">
+                        <img src="images/main.jpg" class="k-main-image">
+                    </div>
 
-#main-box {
-    padding: 20px;
-    max-width: 480px;
-}
-/* 사라진 후의 스타일 (투명도 0, 보이지 않음) */
-.showkk {
-    /*opacity: 0;*/
-    /*visibility: hidden;*/
+                    <div class="k-text-box" style="margin-top: 10px;" id="">
+                        <div class="">결혼 소식을 알립니다.</div>
 
-    background-position: center; 
-    background-repeat: no-repeat; 
+                    </div>
+                </div>
+            </div>
+<!--             <div class="ww-gift-section showkk"></div> -->
 
-    background-image: url(./../images/main.jpg);
-    background-size: cover;
-    height: calc(100vh - 20px)
-    /*background-position: center center;*/
-}
-.k-vanue  {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-.k-bottom {
-    height: 10px;
-    position: absolute;
-    bottom: 0;
-}
-.typing {
-  width: 20ch;
-  animation: typing 1.5s steps(15), blink .5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  font-family: monospace;
-  font-size: 1.5em;
-}
+        </div>
 
-@keyframes typing {
-  from {
-    width: 0
-  }
-}
-    
-@keyframes blink {
-  50% {
-    border-color: transparent
-  }
-}
+        <!-- <div class="k-main-image" data-parallax="scroll">
+            <div class="ww-gift-section">
+                <div class="container">
+                </div>
+            </div>
+        </div> -->
 
-/*
+    </div>
 
-.slider {
-    margin: 0 auto;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-}
+    <div class="k-delimeter fade-class" >
+        <img src="images/out/cross_line_01.png" class="k-delimeter-image">
+    </div>
 
-.slick-dots {
-    bottom: 10px;
-}
+    <div class="k-date-location-box fade-class" >
+        <div class="k-text-box" style="color: black" id="">
+            <div class="">2026년 1월 23일 금요일</div>
+        </div>
+        <div class="k-text-box" style="color: black" id="">
+            <div class="">제주 정원</div>
+        </div>
+    </div>
 
-.slick-dots li button:before {
-    font-size: 10px;
-    line-height: 10px;
-    color: lightcoral;
-}
+    <div class="fade-class" >
+        <div class="k-text-box notice-ment" id=""><div class="">꽃이 피고 지는 계절 속,</div></div>
+        <div class="k-text-box notice-ment" id=""><div class="">두 마음이 만나 서로를 품고자 합니다.</div></div>
+        <div class="k-text-box notice-ment" id=""><div class="">가족들만 모여 도란도란 조용히 나누는</div></div>
+        <div class="k-text-box notice-ment" id=""><div class="">연을 마음을 담아 전합니다.</div></div>
+        <br>
+        <div class="k-text-box notice-ment" id=""><div class="">햇살 머무는 뜰과 달빛 스미는 창 사이에서</div></div>
+        <div class="k-text-box notice-ment" id=""><div class="">서로의 마음을 살피며</div></div>
+        <div class="k-text-box notice-ment" id=""><div class="">겸손하게 길을 나서는 저희를</div></div>
+        <div class="k-text-box notice-ment" id=""><div class="">멀리서나마 마음으로 함께 지켜봐 주시길 바랍니다.</div></div>
+    </div>
 
-.slick-track {
-    display: flex !important;
-    align-items: center; 
-}
+    <div class="k-parents-box fade-class" >
+        <div class="k-text-box broom-bride" id="" style="color: black">
+            <div style="display: flex; align-items: center;">
+              <div style="width: 50%; text-align: center;">
+                <h6">고성수 · 김영자 의</h6>
+              </div>
+              <div style="width: 20%; text-align: center;">
+                <h6">아들</h6>
+              </div>
+              <div style="width: 30%; text-align: center; margin-bottom: 0;">
+                <h6 style="margin-bottom: 0;">고동현</h6>
+              </div>
+            </div>
+        </div>
+        <div class="k-text-box broom-bride" id="" style="color: black">
+            <div style="display: flex; align-items: center;">
+              <div style="width: 50%; text-align: center;">
+                <h6">이청길 · 신길순 의</h6>
+              </div>
+              <div style="width: 20%; text-align: center;">
+                <h6">딸</h6>
+              </div>
+              <div style="width: 30%; text-align: center; margin-bottom: 0;">
+                <h6 style="margin-bottom: 0;">이은지</h6>
+              </div>
+            </div>
+        </div>
+    </div>
 
-.slick-slide {
-    display: flex !important;
-    height: inherit !important; 
-    align-items: center; 
-    justify-content: center;
-}
-*/
+    <div class="k-calendar fade-class">
+        <div class="k-text-box ">
+            <h4>Wedding Day</h4>
+        </div>
 
-.k-calendar {
-    padding: 40px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-@import url("https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Roboto:ital,wght@0,300;0,400;1,300&display=swap");
+        <div class="k-text-box " style="color: black">
+            <h5>Jan</h5>
+        </div>
+      <table class="Jan">
  
-.holiday {
-  color: red;
-}
-.important {
-    /* 너비와 높이를 같게 설정하여 정사각형으로 만듭니다 */
-    width: 26px;
-    height: 26px;
-    
-    /* 배경색을 분홍색으로 설정합니다 */
-    background-color: #ff69b4; /* 핫핑크 색상 예시 */
-    
-    /* border-radius를 50%로 설정하여 원 모양으로 만듭니다 */
-    border-radius: 50%;
-    
-    /* flexbox를 사용하여 텍스트를 원의 정중앙에 배치합니다 */
-    display: flex;
-    justify-content: center; /* 가로 중앙 정렬 */
-    align-items: center;     /* 세로 중앙 정렬 */
-    
-    /* 선택 사항: 텍스트 스타일링 */
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-}
+        <tr>
+          <th scope="col">Sun</th>
+          <th scope="col">Mon</th>
+          <th scope="col">Tue</th>
+          <th scope="col">Wed</th>
+          <th scope="col">Thur</th>
+          <th scope="col">Fri</th>
+          <th scope="col">Sat</th>
+        </tr>
  
-h1 {
-  text-align: center;
-  font-family: grape nuts;
-  margin-top: 50px;
-  font-size: 50px;
-  color: azure;
-}
- 
-caption {
-  margin-bottom: 15px;
-  font-size: 25px;
-}
- 
-td:nth-child(1),
-th:nth-child(1) {
-  color: red;
-  width: 20px;
-  margin:auto;
-}
-td:nth-child(2),
-th:nth-child(2) {
-  width: 20px;
-  margin:auto;
-}
-td:nth-child(3),
-th:nth-child(3) {
-  width: 20px;
-  margin:auto;
-}
-td:nth-child(4),
-th:nth-child(4) {
-  width: 20px;
-  margin:auto;
-}
-td:nth-child(5),
-th:nth-child(5) {
-  width: 20px;
-  margin:auto;
-}
-td:nth-child(6),
-th:nth-child(6) {
-  width: 20px;
-  margin:auto;
-}
-td:nth-child(7),
-th:nth-child(7) {
-  width: 20px;
-  margin:auto;
-  color: blue;
-}
- 
-.wrapper {
-  margin-top: 60px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  font-family: grape nuts;
-}
- 
-table {
-  color: black;
-}
-table td{
-    font-size: 16px;  
-    width: 20px;      
-}
-table th{
-    width: 20px;    
-}
-.k-countdown {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 20px;
-}
- 
-.k-photo-gallery {
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-.k-photo-gallery-content {
-    flex-direction: row;
-    align-items: center;
-    /*height: calc(90vh);*/
-}
-.slider img{
-    margin: 0 auto; /* it centers any block level element */
-    display:flex;
-    height: 100%;
-    max-height: calc(100vh - 200px);
-    width: auto;
-    object-fit: cover; /* 이미지가 컨테이너를 꽉 채우되 비율 유지 (잘림 발생) */ 
-    object-position: center; /* 이미지가 중앙을 기준으로 표시됨 */
-}
- 
- .k-modal {
-    /*position:absolute;*/
-    display:none;
-    align-items: center;
-    
-    position:fixed;     
-    z-index: 1; /* 모달창을 제일 앞에 두기 */
-    left: 0; top: 0;
-    justify-content: center;
-    /*top:0;*/
-    /*left:0;*/
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="holiday" class="holiday">1</td>
+          <td>2</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>12</td>
+          <td>13</td>
+          <td>14</td>
+          <td>15</td>
+          <td>16</td>
+          <td>17</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>19</td>
+          <td>20</td>
+          <td>21</td>
+          <td>22</td>
+          <td class="important" style="width: 26px;">23</td>
+          <td>24</td>
+        </tr>
+        <tr>
+          <td>25</td>
+          <td>26</td>
+          <td>27</td>
+          <td>28</td>
+          <td>29</td>
+          <td>30</td>
+          <td>31</td>
+        </tr>
+      </table>
 
-    width:100%;
-    height:100vh;
-    background-color: rgba(0,0,0,0.4);      
- }
- .k-modal-body{
-            /*top:50%; //모달을 화면가운데 놓기위함. */
-        
-            top: 150px;
-            width: 100%;
-            height: 90%;
+    </div>
 
-            padding:40px;  
+    <div class="k-countdown fade-class">
+        <h6 style="font-family: 'Noto Serif KR', serif;">
+            <span id="result"></span></p>
+        </h6>
 
-            text-align: center;
+        <script type="text/javascript">
+            function getRemainingDays(targetDateString) {
+              // 목표 날짜 (예: "2025-12-25")
+              const targetDate = new Date(targetDateString);
 
-            background-color: rgb(255,255,255); //모달창 배경색 흰색
-            border-radius:10px; //테두리 
-            box-shadow:0 2px 3px 0 rgba(34,36,38,0.15); //테두리 그림자 
+              // 현재 날짜와 시간
+              const now = new Date();
 
-            transform:translateY(-50%); //모듈창열었을때 위치설정 가운데로 
-        }
+              // 두 날짜의 밀리초 차이 구하기
+              const timeDiff = targetDate.getTime() - now.getTime();
 
+              // 밀리초를 일(day)로 변환 (1000ms * 60s * 60m * 24h)
+              const daysDiff = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
 
-.slidera {
-  height: calc(var(--vh, 1vh) * 100 - 250px) !important;
-  display: flex  !important;
-  text-align: center  !important;
-  align-items : center  !important;
-  justify-content: center; /* 가로 중앙 정렬 (필요 시) */
-/*    width: 300px; */
-}
-.slidera img {
-/*   width: 100%; */
-  max-width: 100%;
-  max-height: 100lvh;
-  margin: 0 auto;
-  vertical-align:middle;
-  width: 100%;
-  height: 100%;
-    object-fit: contain; /* 가로/세로 비율을 유지하며 컨테이너를 꽉 채우도록 크기 조절 (넘치는 부분은 잘림) */
-  object-position: center; /* 이미지를 중앙에 위치시킴 (기본값이지만 명시적으로 설정 가능) */
+              return daysDiff;
+            }
+            const today = new Date(); // 오늘 날짜
+            const target = "2026-1-23"; // 2025년 12월 31일
+            const remainingDays = getRemainingDays(target);
 
-}
+            const resultElement = document.getElementById('result');
+            if (remainingDays <= 0) {
+                resultElement.textContent = "동현♥은지의 결혼 생활이 " + (remainingDays * -1)+ "일 되었습니다."; 
+            } else {
+                resultElement.textContent = "동현♥은지의 결혼식이 " + remainingDays+ "일 남았습니다."; 
+            }
+        </script>
+    </div>
 
-.slidert {
-  display: flex;
-  width: 100px  !important;
-  height: 100px  !important;
-  padding: 5px;
-}
-.slidert img {
-  width: 100%;
-  height: 100%;
+    <div class="k-photo-gallery fade-class">
+        <div class="k-text-box ">
+            <h4>Gallery</h4>
+        </div>
 
-  display: block;
-  margin: 0 auto;
-    object-fit: cover; /* 가로/세로 비율을 유지하며 컨테이너를 꽉 채우도록 크기 조절 (넘치는 부분은 잘림) */
-  object-position: center; /* 이미지를 중앙에 위치시킴 (기본값이지만 명시적으로 설정 가능) */
+        <div class="k-photo-gallery-content">
+            <div class="slider slider-for">
+                <div class="slidera"><img src="./../images/out/p01.jpg" alt="Image 01"></div>
+                <div class="slidera"><img src="./../images/out/p02.jpg" alt="Image 02"></div>
+                <div class="slidera"><img src="./../images/out/p03.jpg" alt="Image 03"></div>
+                <div class="slidera"><img src="./../images/out/p04.jpg" alt="Image 04"></div>
+                <div class="slidera"><img src="./../images/out/p05.jpg" alt="Image 05"></div>
+                <div class="slidera"><img src="./../images/out/p06.jpg" alt="Image 06"></div>
+                <div class="slidera"><img src="./../images/out/p07.jpg" alt="Image 07"></div>
+                <div class="slidera"><img src="./../images/out/p08.jpg" alt="Image 08"></div>
+                <div class="slidera"><img src="./../images/out/p09.jpg" alt="Image 09"></div>
+                <div class="slidera"><img src="./../images/out/p10.jpg" alt="Image 10"></div>
 
-}
+                <div class="slidera"><img src="./../images/out/p11.jpg" alt="Image 11"></div>
+                <div class="slidera"><img src="./../images/out/p12.jpg" alt="Image 12"></div>
+                <div class="slidera"><img src="./../images/out/p13.jpg" alt="Image 13"></div>
+                <div class="slidera"><img src="./../images/out/p14.jpg" alt="Image 14"></div>
+                <div class="slidera"><img src="./../images/out/p15.jpg" alt="Image 15"></div>
+                <div class="slidera"><img src="./../images/out/p16.jpg" alt="Image 16"></div>
+                <div class="slidera"><img src="./../images/out/p17.jpg" alt="Image 17"></div>
+                <div class="slidera"><img src="./../images/out/p18.jpg" alt="Image 18"></div>
+                <div class="slidera"><img src="./../images/out/p19.jpg" alt="Image 19"></div>
+                <div class="slidera"><img src="./../images/out/p20.jpg" alt="Image 20"></div>
 
-.fade-class {
-  position: relative;
-  top: 15px;
-  opacity: 0;
-  transition: top 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s linear;
-}
-.fade-in {
-  transition: top 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s linear;
-  bottom: 0px;
-  opacity: 1;
-}
-.k-hr {
-    margin-left: 30px;
-    width: 80%;
-    margin-bottom: 0px;
-    margin-top: 0px;
-}
-.k-account-info {
+                <div class="slidera"><img src="./../images/out/p21.jpg" alt="Image 21"></div>
+                <div class="slidera"><img src="./../images/out/p22.jpg" alt="Image 22"></div>
+                <div class="slidera"><img src="./../images/out/p23.jpg" alt="Image 23"></div>
+                <div class="slidera"><img src="./../images/out/p24.jpg" alt="Image 24"></div>
+                <div class="slidera"><img src="./../images/out/p25.jpg" alt="Image 25"></div>
+                <div class="slidera"><img src="./../images/out/p26.jpg" alt="Image 26"></div>
+                <div class="slidera"><img src="./../images/out/p27.jpg" alt="Image 27"></div>
+                <div class="slidera"><img src="./../images/out/p28.jpg" alt="Image 28"></div>
+                <div class="slidera"><img src="./../images/out/p29.jpg" alt="Image 29"></div>
+                <div class="slidera"><img src="./../images/out/p30.jpg" alt="Image 30"></div>
 
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-}
-.k-account-info-detail {
+                <div class="slidera"><img src="./../images/out/p31.jpg" alt="Image 31"></div>
+                <div class="slidera"><img src="./../images/out/p32.jpg" alt="Image 32"></div>
+                <div class="slidera"><img src="./../images/out/p33.jpg" alt="Image 33"></div>
+                <div class="slidera"><img src="./../images/out/p34.jpg" alt="Image 34"></div>
+                <div class="slidera"><img src="./../images/out/p35.jpg" alt="Image 35"></div>
+                <div class="slidera"><img src="./../images/out/p36.jpg" alt="Image 36"></div>
+            </div>
+            <div class="slider slider-nav" id="">
+                <div class="slidert"><img src="./../images/out/p01.jpg" alt="Image 01"></div>
+                <div class="slidert"><img src="./../images/out/p02.jpg" alt="Image 02"></div>
+                <div class="slidert"><img src="./../images/out/p03.jpg" alt="Image 03"></div>
+                <div class="slidert"><img src="./../images/out/p04.jpg" alt="Image 04"></div>
+                <div class="slidert"><img src="./../images/out/p05.jpg" alt="Image 05"></div>
+                <div class="slidert"><img src="./../images/out/p06.jpg" alt="Image 06"></div>
+                <div class="slidert"><img src="./../images/out/p07.jpg" alt="Image 07"></div>
+                <div class="slidert"><img src="./../images/out/p08.jpg" alt="Image 08"></div>
+                <div class="slidert"><img src="./../images/out/p09.jpg" alt="Image 09"></div>
+                <div class="slidert"><img src="./../images/out/p10.jpg" alt="Image 10"></div>
 
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-.k-background {
+                <div class="slidert"><img src="./../images/out/p11.jpg" alt="Image 11"></div>
+                <div class="slidert"><img src="./../images/out/p12.jpg" alt="Image 12"></div>
+                <div class="slidert"><img src="./../images/out/p13.jpg" alt="Image 13"></div>
+                <div class="slidert"><img src="./../images/out/p14.jpg" alt="Image 14"></div>
+                <div class="slidert"><img src="./../images/out/p15.jpg" alt="Image 15"></div>
+                <div class="slidert"><img src="./../images/out/p16.jpg" alt="Image 16"></div>
+                <div class="slidert"><img src="./../images/out/p17.jpg" alt="Image 17"></div>
+                <div class="slidert"><img src="./../images/out/p18.jpg" alt="Image 18"></div>
+                <div class="slidert"><img src="./../images/out/p19.jpg" alt="Image 19"></div>
+                <div class="slidert"><img src="./../images/out/p20.jpg" alt="Image 20"></div>
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+                <div class="slidert"><img src="./../images/out/p21.jpg" alt="Image 21"></div>
+                <div class="slidert"><img src="./../images/out/p22.jpg" alt="Image 22"></div>
+                <div class="slidert"><img src="./../images/out/p23.jpg" alt="Image 23"></div>
+                <div class="slidert"><img src="./../images/out/p24.jpg" alt="Image 24"></div>
+                <div class="slidert"><img src="./../images/out/p25.jpg" alt="Image 25"></div>
+                <div class="slidert"><img src="./../images/out/p26.jpg" alt="Image 26"></div>
+                <div class="slidert"><img src="./../images/out/p27.jpg" alt="Image 27"></div>
+                <div class="slidert"><img src="./../images/out/p28.jpg" alt="Image 28"></div>
+                <div class="slidert"><img src="./../images/out/p29.jpg" alt="Image 29"></div>
+                <div class="slidert"><img src="./../images/out/p30.jpg" alt="Image 30"></div>
 
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  /*height: calc(var(--vh, 1vh) * 100); */
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 1000;
-  
-  /* 숨기기 */
-  z-index: -1;
-  opacity: 0;
-}
+                <div class="slidert"><img src="./../images/out/p31.jpg" alt="Image 31"></div>
+                <div class="slidert"><img src="./../images/out/p32.jpg" alt="Image 32"></div>
+                <div class="slidert"><img src="./../images/out/p33.jpg" alt="Image 33"></div>
+                <div class="slidert"><img src="./../images/out/p34.jpg" alt="Image 34"></div>
+                <div class="slidert"><img src="./../images/out/p35.jpg" alt="Image 35"></div>
+                <div class="slidert"><img src="./../images/out/p36.jpg" alt="Image 36"></div>
+            </div>
+        </div>
+<!-- 
+        <button class="btn-open-modal">Modal열기</button>
+        <div class="k-modal" style="display: none">
+            <div class="k-modal-body">
+                <button class="btn-close-modal"><span class="close">&times;</span></button>
+                
+                <div class="k-photo-gallery-content">
+                    <div class="slider" id="k-image-gallery-modal">
+                        <img src="./../images/pic1_ex1.jpg" alt="Image 1">
+                        <img src="./../images/pic2_ex1.jpg" alt="Image 2">
+                        <img src="./../images/pic3_ex1.jpg" alt="Image 3">
+                        <img src="./../images/pic4_ex1.jpg" alt="Image 4">
+                    </div>
+                </div>
 
-.k-background2 {
+            </div>
+        </div> -->
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  /*height: calc(var(--vh, 1vh) * 100); */
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 1000;
-  
-  /* 숨기기 */
-  z-index: -1;
-  opacity: 0;
-}
-.k-name {
-margin-bottom: 0px;
-padding-bottom: 5px;
-padding-top: 5px;
-  font-weight: bold;
-    padding-left: 30px;
-}
-.k-name-bank {
-    margin-bottom: 0;
-    padding-left: 30px;
-}
-.k-name-account{
-    padding-left: 30px;
+        <script>
+            const modal = document.querySelector('.k-modal');
+            // const btnOpenModal=document.querySelector('.btn-open-modal');
 
-}
-.k-copy-div {
-    padding-right: 30px;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-}
-.k-copy-button {
+            // btnOpenModal.addEventListener("click", ()=>{
+            //     // modal.style.position="absolute";
+            //     modal.style.display="flex";
+            //     document.body.style.overflow = 'hidden';
+            // });
+            // const btnCloseModal=document.querySelector('.btn-close-modal');
 
-}
-.k-modal-close {
-    margin-left: 30px;
-    /*margin-right: 30px;*/
-    width: calc(100% - 60px);
-}
-
-.window {
-  /*position: relative;*/
-  width: 90%;
-  height: 90%;
-}
-
-.show {
-  opacity: 1;
-  z-index: 1000;
-  transition: all .5s;
-}
-.k-popup {
-    justify-content: center;
-    flex-direction: column;
-    display: flex;
-    width: 100%;
-    height: 100%;
-  /*position: absolute;*/
-  /*top: 50%;*/
-  /*left: 50%;*/
-  /*transform: translate(-50%, -50%);*/
-  background-color: #ffffff;
-  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
-  
-  /* 임시 지정 */
-  /*width: 100%;*/
-  
-  /* 초기에 약간 아래에 배치 */
-  /*transform: translate(-50%, -40%);*/
-}
-
-.show .popup {
-  transform: translate(-50%, -50%);
-  transition: all .5s;
-}
-
-.k-various-map {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.k-for-mind {
-
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
+            // btnCloseModal.addEventListener("click", ()=>{
+            //     // modal.style.position="absolute";
+            //     modal.style.display="none";
+            //     document.body.style.overflow = 'auto';
+            // });
 
 
-.buttons {
-    margin: 10%;
-    text-align: center;
-}
+            // 'message-box' ID를 가진 요소를 가져옴
+            const sliderModalOption = document.getElementById('k-image-gallery-modal');
+            // 요소에 'hidden' 클래스를 추가하여 사라지게 함
+            if (sliderModalOption) {
+                // sliderModalOption.slick('setPosition', 3);
+            }
+            $(function(){
+            const targets = document.querySelectorAll(".fade-class");
+              const options = { root: null, threshold: 0.1, rootMargin: "-0px" };
+              const observer = new IntersectionObserver(function (entries, observer) {
+                entries.forEach((entry) => {
+                  const container = entry.target;
+                  if (entry.isIntersecting) {
+                    container.classList.add("fade-in");
+                  } else {
+                    container.classList.remove("fade-in");
+                  }
+                });
+              }, options);
 
-.btn-hover {
-    width: 200px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #fff;
-    cursor: pointer;
-    margin: 20px;
-    height: 55px;
-    text-align:center;
-    border: none;
-    background-size: 300% 100%;
+              targets.forEach((target) => {
+                observer.observe(target);
+              });
+            });
 
-    border-radius: 50px;
-    moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-}
+        </script>
 
-.btn-hover:hover {
-    background-position: 100% 0;
-    moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-}
+        <script>
+             $('.slider-for').slick({
+              autoplay: true,
+              autoplaySpeed: 2000,
+           slidesToShow: 1,
+           slidesToScroll: 1,
+           arrows: false,
+           fade: true,
+           asNavFor: '.slider-nav'
+         });
+         $('.slider-nav').slick({
+           slidesToShow: 3,
+           slidesToScroll: 1,
+           asNavFor: '.slider-for',
+           dots: false,
+           arrows: false,
+           centerMode: true,
+           variableWidth: true,
+           draggable: false,
+           focusOnSelect: true,
+          // cssEase: 'linear',
+         });
 
-.btn-hover:focus {
-    outline: none;
-}
-.btn-hover.color-8 {
-    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
-    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
-}
-.btn-hover.color-9 {
-    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
-    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
-}
-.btn-hover.color-10 {
-        background-image: linear-gradient(to right, #ed6ea0, #ec8c69, #f7186a , #FBB03B);
-    box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
-}
 
-.k-various-map a {
-    width: 45px;
-    margin: 8px;
+            // $('.slider').slick({
+            //     autoplay: true,
+            //     autoplaySpeed: 2000,
+            //     dots: true,
+            //     infinite: true,
+            //     variableWidth: true,
+            //     speed: 500,
+            //     fade: true,
+            //     // cssEase: 'linear',
+            //     adaptiveHeight: false,
+            //     // initialSlide: 2,
+            //     centerMode: true
+            // });
+        </script>
 
-}
-.k-lunch-location {
-    margin-top: 100px;
-}
+    </div>
 
-.photo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            grid-gap: 1em;
-}
+    <div class="k-vanue fade-class">
+        <div class="k-text-box ">
+            <h4>Location</h4>
+        </div>
 
-#gallery-cu{          
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-/*             display: flex; 
-/*             flex-wrap: wrap; /* 이미지가 줄을 넘어가면 다음 줄로 넘어가도록 설정  
-/*             justify-content: center; */
+        <div class="k-wedding-location">
+            <div class="k-text-box ">
+                <h5>웨딩 본식</h5>
+            </div>
+            <div class="k-text-box k-detail-vanue" style="color: black;">
+                <span class="pl-2 text-muted">제주 정원</span>
+                <span class="pl-2 text-muted">2026년 1월 23일</span>
+            </div>
+
+            <img alt="Wedding Party" class="img-fluid" style="padding: 20px;" src="images/out/location.jpg"/>
+        </div>
+
+        <div class="k-lunch-location" style="margin-top: 30px">
+            <div class="k-text-box ">
+                <h5>피로연(서울)</h5>
+            </div>
+            <div class="k-text-box k-detail-vanue" style="color: black;">
+                <span class="pl-2 text-muted">2026년 1월 17일, 11:00 AM</span>
+                <span class="pl-2 text-muted">그리츠</span>
+                <span class="pl-2 text-muted">(서울 영등포구 여의도동 17-5)</span>
+            </div>
+
+            <div class="k-text-box broom-bride" id="" style="color: black">
+                <div style="display: flex; align-items: center;">
+                  <div style="width: 20%; text-align: center;">
+                     
+                  </div>
+                  <div class="k-various-map" style="width: 60%; text-align: center;">
+                    <a href="https://naver.me/xucpPdSG">
+                        <img alt="naver-map" class="map-icon" id="naver-map"
+                             src="images/map/naver-map.png"/>
+                    </a>
+                    <a href="https://kko.to/ECZj1u2VXY">
+                        <img alt="kakao-map" class="map-icon" id="kakao-map"
+                             src="images/map/kakao-map.png"/>
+                    </a>
+                    <a href="https://maps.app.goo.gl/phonH4xu7E5qiKcb9">
+                        <img alt="google-map" class="map-icon" id="google-map"
+                             src="images/map/google-map.png"/>
+                    </a>
+                  </div>
+                  <div style="width: 20%; text-align: center; margin-bottom: 0;">
+                  </div>
+                </div>
+            </div>
+
+            <div class="k-kakao-map">
+                <div style="font:normal normal 400 12px/normal dotum, sans-serif; width:360px; height:272px; color:#333; position:relative"><div style="height: 240px;"><a href="https://map.kakao.com/?urlX=481719.9999999983&amp;urlY=1118866.000000001&amp;itemId=27334632&amp;q=%EA%B7%B8%EB%A6%AC%EC%B8%A0&amp;srcid=27334632&amp;map_type=TYPE_MAP&amp;from=roughmap" target="_blank"><img class="map" src="http://t1.daumcdn.net/roughmap/imgmap/0921dd88c12bf84521778d21675e2da65ae3b299cde871904c1f5965b499933f" width="358px" height="238px" style="border:1px solid #ccc;"></a></div><div style="overflow: hidden; padding: 7px 11px; border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 0px 0px 2px 2px; background-color: rgb(249, 249, 249);"><a href="https://map.kakao.com" target="_blank" style="float: left;"><img src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/common/logo_kakaomap.png" width="72" height="16" alt="카카오맵" style="display:block;width:72px;height:16px"></a><div style="float: right; position: relative; top: 1px; font-size: 11px;"><a target="_blank" href="https://map.kakao.com/?from=roughmap&amp;srcid=27334632&amp;confirmid=27334632&amp;q=%EA%B7%B8%EB%A6%AC%EC%B8%A0&amp;rv=on" style="float:left;height:15px;padding-top:1px;line-height:15px;color:#000;text-decoration: none;">로드뷰</a><span style="width: 1px;padding: 0;margin: 0 8px 0 9px;height: 11px;vertical-align: top;position: relative;top: 2px;border-left: 1px solid #d0d0d0;float: left;"></span><a target="_blank" href="https://map.kakao.com/?from=roughmap&amp;eName=%EA%B7%B8%EB%A6%AC%EC%B8%A0&amp;eX=481719.9999999983&amp;eY=1118866.000000001" style="float:left;height:15px;padding-top:1px;line-height:15px;color:#000;text-decoration: none;">길찾기</a><span style="width: 1px;padding: 0;margin: 0 8px 0 9px;height: 11px;vertical-align: top;position: relative;top: 2px;border-left: 1px solid #d0d0d0;float: left;"></span><a target="_blank" href="https://map.kakao.com?map_type=TYPE_MAP&amp;from=roughmap&amp;srcid=27334632&amp;itemId=27334632&amp;q=%EA%B7%B8%EB%A6%AC%EC%B8%A0&amp;urlX=481719.9999999983&amp;urlY=1118866.000000001" style="float:left;height:15px;padding-top:1px;line-height:15px;color:#000;text-decoration: none;">지도 크게 보기</a></div></div><div><span style="border-bottom:0px none #333333;position:absolute;left:-25px;top:-136px;width:0px;height:40px"></span></div></div>
+
+            </div>
+        </div>
+
+        <div class="k-lunch-location">
+            <div class="k-text-box ">
+                <h5>피로연(제주)</h5>
+            </div>
+            <div class="k-text-box k-detail-vanue" style="color: black;">
+                <span class="pl-2 text-muted">2026년 1월 24일, 11:00 AM - 4:00 PM</span>
+                <span class="pl-2 text-muted">전원예식장</span>
+                <span class="pl-2 text-muted">(제주 제주시 이도이동 321)</span>
+            </div>
             
-    display: flex; /* 이미지를 가로로 나열하기 위한 flex 컨테이너 */
-    flex-wrap: wrap; /* 이미지가 줄을 넘어가면 다음 줄로 넘어가도록 설정 */
-    width: 100%; /* 갤러리 컨테이너의 너비 설정 */
-    gap: 2px; /* 이미지 간의 간격 */
-}
+            <div class="k-text-box broom-bride" id="" style="color: black">
+                <div style="display: flex; align-items: center;">
+                  <div style="width: 20%; text-align: center;">
+                     
+                  </div>
+                  <div class="k-various-map" style="width: 60%; text-align: center;">
+                    <a href="https://naver.me/GHvT8HOH">
+                        <img alt="naver-map" class="map-icon" id="naver-map"
+                             src="images/map/naver-map.png"/>
+                    </a>
+                    <a href="https://kko.to/8F2rLEy3c0">
+                        <img alt="kakao-map" class="map-icon" id="kakao-map"
+                             src="images/map/kakao-map.png"/>
+                    </a>
+                    <a href="https://maps.app.goo.gl/nZJZnNMoTHfMCrb37">
+                        <img alt="google-map" class="map-icon" id="google-map"
+                             src="images/map/google-map.png"/>
+                    </a>
+                  </div>
+                  <div style="width: 20%; text-align: center; margin-bottom: 0;">
+                  </div>
+                </div>
+            </div>
 
-#gallery-cu::after{content: ""; display: block; clear: both;}
+            <div class="k-kakao-map">
+                <div style="font:normal normal 400 12px/normal dotum, sans-serif; width:360px; height:272px; color:#333; position:relative"><div style="height: 240px;"><a href="https://map.kakao.com/?urlX=392909.9999999972&amp;urlY=2943.9999999979045&amp;itemId=27147857&amp;q=%EC%A0%84%EC%9B%90%EC%98%88%EC%8B%9D%EC%9E%A5&amp;srcid=27147857&amp;map_type=TYPE_MAP&amp;from=roughmap" target="_blank"><img class="map" src="http://t1.daumcdn.net/roughmap/imgmap/9f4e7b1ca3c02331c3fe25e3feddb1474ccfc582e4a0c501c29e8aed13dd877d" width="358px" height="238px" style="border:1px solid #ccc;"></a></div><div style="overflow: hidden; padding: 7px 11px; border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 0px 0px 2px 2px; background-color: rgb(249, 249, 249);"><a href="https://map.kakao.com" target="_blank" style="float: left;"><img src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/common/logo_kakaomap.png" width="72" height="16" alt="카카오맵" style="display:block;width:72px;height:16px"></a><div style="float: right; position: relative; top: 1px; font-size: 11px;"><a target="_blank" href="https://map.kakao.com/?from=roughmap&amp;srcid=27147857&amp;confirmid=27147857&amp;q=%EC%A0%84%EC%9B%90%EC%98%88%EC%8B%9D%EC%9E%A5&amp;rv=on" style="float:left;height:15px;padding-top:1px;line-height:15px;color:#000;text-decoration: none;">로드뷰</a><span style="width: 1px;padding: 0;margin: 0 8px 0 9px;height: 11px;vertical-align: top;position: relative;top: 2px;border-left: 1px solid #d0d0d0;float: left;"></span><a target="_blank" href="https://map.kakao.com/?from=roughmap&amp;eName=%EC%A0%84%EC%9B%90%EC%98%88%EC%8B%9D%EC%9E%A5&amp;eX=392909.9999999972&amp;eY=2943.9999999979045" style="float:left;height:15px;padding-top:1px;line-height:15px;color:#000;text-decoration: none;">길찾기</a><span style="width: 1px;padding: 0;margin: 0 8px 0 9px;height: 11px;vertical-align: top;position: relative;top: 2px;border-left: 1px solid #d0d0d0;float: left;"></span><a target="_blank" href="https://map.kakao.com?map_type=TYPE_MAP&amp;from=roughmap&amp;srcid=27147857&amp;itemId=27147857&amp;q=%EC%A0%84%EC%9B%90%EC%98%88%EC%8B%9D%EC%9E%A5&amp;urlX=392909.9999999972&amp;urlY=2943.9999999979045" style="float:left;height:15px;padding-top:1px;line-height:15px;color:#000;text-decoration: none;">지도 크게 보기</a></div></div><div><span style="border-bottom:0px none #333333;position:absolute;left:-25px;top:-136px;width:0px;height:40px"></span></div></div>
 
-#gallery-cu > li{
-            float: left; margin: 0 1px;
+            </div>
+        </div>
+    </div>
 
-    flex: 1 1 calc(30% - 1px); /* 3x4 그리드를 만들기 위해 가로 폭을 25%로 설정 (간격 고려) */
-    box-sizing: border-box; /* 패딩과 테두리가 요소의 너비에 포함되도록 설정 */
-    overflow: hidden; /* 이미지 밖으로 넘치는 부분을 숨김 */
-    aspect-ratio: 1 / 1; /* 이미지를 정사각형으로 만들기 위한 가로세로 비율 설정 */
-    position: relative; /* 이미지 내에서 요소 배치를 위한 기준점 */
-}
+    <div class="k-for-mind">
 
-#gallery-cu > li > a{display: block; text-decoration: none;}
+        <div class="k-text-box ">
+            <h4>신랑 & 신부에게 마음 전하기</h4>
+            <span class="pl-2 text-muted">축하의 의미로 축의금을 전달해보세요</span>
+        </div>
+        <div style="text-align: center; display: flex; justify-content: center;">
+          <button class="btn-hover color-9" id="show" >신랑 측 계좌번호</button>
+         </div>
+        <div style="text-align: center; display: flex; justify-content: center;">
+          <button class="btn-hover color-10" id="show2" >신부 측 계좌번호</button>
+         </div>
 
-#gallery-cu > li > a > img{
-            
-    display: block; /* 이미지를 블록 요소로 만들어 여백 제거 */
-    width: 100%; /* 이미지의 너비를 부모 요소(wrapper)에 맞춤 */
-    height: 100%; /* 이미지의 높이를 부모 요소(wrapper)에 맞춤 */
-    object-fit: cover; /* 이미지의 가로세로 비율을 유지하며 컨테이너를 꽉 채우도록 설정 */
-/*     border-radius: 8px; /* 이미지 모서리를 둥글게 처리 */ 
-/* display: block;  */
-/* width: 120px;  */
-/* height: 120px;  */
-border: 3px solid transparent; 
-/* box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6); */
-}
+          <div class="k-background">
+            <div class="window">
+              <div class="k-popup">
+                <div>
+                  <p class="k-name">신랑 계좌</p>
+                  <hr class="k-hr">
+                  <div class="k-account-info">
+                      <div class="k-account-info-detail">
+                          <p class="k-name-bank">농협 (예금주: 고동현)</p>
+                          <p class="k-name-account" id="text1">3020473478181</p>
+                      </div>
 
-#overlay-cu{
-position: fixed;
-top: 0; right: 0; left: 0; bottom: 0;
+                      <div class="k-copy-div">
+                        <button class="k-copy-button btn-hover color-8" style="width: 150px; margin: 0;" onclick="copyToClipboard('text1')">계좌번호 복사</button>
+                      </div>
+                  </div>
 
-background-color: rgba(0, 0, 0, 0.8);
+                  <p class="k-name">신랑 부 계좌</p>
+                  <hr class="k-hr">
+                  <div class="k-account-info">
+                      <div class="k-account-info-detail">
+                          <p class="k-name-bank">농협 (예금주: 고성수)</p>
+                          <p class="k-name-account" id="text2">3521219269123</p>
+                      </div>
 
-display: none;
-z-index: 100;
-}
+                      <div class="k-copy-div">
+                        <button class="k-copy-button btn-hover color-8" onclick="copyToClipboard('text2')">계좌번호 복사</button>
+                      </div>
+                  </div>
 
-#photo-cu{
-position: absolute;
-top: 50%; left: 50%;
-transform: translate(-50%, -50%);
+                  <p class="k-name">신랑 모 계좌</p>
+                  <hr class="k-hr">
+                  <div class="k-account-info">
+                      <div class="k-account-info-detail">
+                          <p class="k-name-bank">농협 (예금주: 김영자)</p>
+                          <p class="k-name-account" id="text3">90101856024343</p>
+                      </div>
 
-max-width: 80%;
-max-height: 80%;
-border: 10px solid white;
-}
+                      <div class="k-copy-div">
+                        <button class="k-copy-button btn-hover color-8" onclick="copyToClipboard('text3')">계좌번호 복사</button>
+                      </div>
+                  </div>
+                </div>
+                <button class="k-modal-close" id="close">닫기</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="k-background2">
+            <div class="window">
+              <div class="k-popup">
+                <div>
+                  <p class="k-name">신부 계좌</p>
+                  <hr class="k-hr">
+                  <div class="k-account-info">
+                      <div class="k-account-info-detail">
+                          <p class="k-name-bank">농협 (예금주: 이은지)</p>
+                          <p class="k-name-account" id="text3">12345654321</p>
+                      </div>
+
+                      <div class="k-copy-div">
+                        <button class="k-copy-button btn-hover color-8" onclick="copyToClipboard('text4')">계좌번호 복사</button>
+                      </div>
+                  </div>
+
+
+                  <p class="k-name">신부 부 계좌</p>
+                  <hr class="k-hr">
+                  <div class="k-account-info">
+                      <div class="k-account-info-detail">
+                          <p class="k-name-bank">은행 (예금주: 이청길)</p>
+                          <p class="k-name-account" id="text5">1234567890</p>
+                      </div>
+
+                      <div class="k-copy-div">
+                        <button class="k-copy-button btn-hover color-8" onclick="copyToClipboard('text5')">계좌번호 복사</button>
+                      </div>
+                  </div>
+
+                  <p class="k-name">신부 모 계좌</p>
+                  <hr class="k-hr">
+                  <div class="k-account-info">
+                      <div class="k-account-info-detail">
+                          <p class="k-name-bank">은행 (예금주: 신길순)</p>
+                          <p class="k-name-account" id="text6">0987654321</p>
+                      </div>
+
+                      <div class="k-copy-div">
+                        <button class="k-copy-button btn-hover color-8" onclick="copyToClipboard('text6')">계좌번호 복사</button>
+                      </div>
+                  </div>
+                </div>
+                <button class="k-modal-close" id="close2">닫기</button>
+              </div>
+            </div>
+          </div>
+
+                  <script>
+
+                    // 클립보드로 복사하는 기능을 생성
+                    function copyToClipboard(elementId) {
+
+                      // 글을 쓸 수 있는 란을 만든다.
+                      var aux = document.createElement("input");
+
+                      // 지정된 요소의 값을 할당 한다.
+                      aux.setAttribute("value", document.getElementById(elementId).innerHTML);
+
+                      // bdy에 추가한다.
+                      document.body.appendChild(aux);
+
+                      // 지정된 내용을 강조한다.
+                      aux.select();
+
+                      // 텍스트를 카피 하는 변수를 생성
+                      document.execCommand("copy");
+
+                      // body 로 부터 다시 반환 한다.
+                      document.body.removeChild(aux);
+
+                    }
+                                
+                    function show () {
+                      document.querySelector(".k-background").className = "k-background show";
+                      document.body.style.overflow = 'hidden';
+                    }
+
+                    function close () {
+                      document.querySelector(".k-background").className = "k-background";
+                      document.body.style.overflow = 'auto';
+                    }
+
+                      document.querySelector("#show").addEventListener("click", show);
+                      document.querySelector("#close").addEventListener("click", close);
+
+
+                    function show2 () {
+                      document.querySelector(".k-background2").className = "k-background2 show";
+                      document.body.style.overflow = 'hidden';
+                    }
+
+                    function close2 () {
+                      document.querySelector(".k-background2").className = "k-background2";
+                      document.body.style.overflow = 'auto';
+                    }
+
+                      document.querySelector("#show2").addEventListener("click", show2);
+                      document.querySelector("#close2").addEventListener("click", close2);
+                    </script>
+     </div> 
+
+     <div class="k-music/">
+<iframe width="360" height="240" src="https://www.youtube.com/embed/KHKMfZpozQ4?si=FvDZwhkhDdMozDRe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+     </div>
+</div>
+
+
+<footer></footer>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/parallax.min.js"></script>
+<script src="js/ekko-lightbox.min.js"></script>
+<script src="scripts/main.js"></script>
+
+    <div class="k-audio-onoff">
+        <div class="bottom_left">
+
+            <audio id="player" src="mus.mp3"></audio>
+            <div>
+                <i class="fa fa-music fa-2x" style="color: lightcoral;" id="toggleButton"></i>
+            </div>
+            <script type="text/javascript">
+
+                const audio = document.getElementById("player");
+                audio.autoplay = true;
+                audio.loop = true;
+                audio.play();
+
+                const toggleButton = document.getElementById("toggleButton");
+
+                toggleButton.addEventListener("click", function() {
+                    // 오디오가 일시 정지 상태(paused가 true)이면 재생합니다.
+                    if (audio.paused) {
+                        audio.play();
+                        // toggleButton.textContent = "음악 일시 정지";
+                    }
+                    // 오디오가 재생 중 상태(paused가 false)이면 일시 정지합니다.
+                    else {
+                        audio.pause();
+                        // toggleButton.textContent = "음악 재생";
+                    }
+                });
+            </script>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
