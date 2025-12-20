@@ -483,10 +483,10 @@
             </div>
             <div class="k-text-box k-detail-vanue" style="color: black;">
                 <span class="pl-2 text-muted">제주 정원</span>
-                <span class="pl-2 text-muted">2026년 1월 23일, 11:00 AM</span>
+                <span class="pl-2 text-muted">2026년 1월 23일</span>
             </div>
 
-            <img alt="Wedding Party" class="img-fluid" src="images/wedding-party.jpg"/>
+            <img alt="Wedding Party" class="img-fluid" src="images/out/location.jpg"/>
         </div>
 
         <div class="k-lunch-location">
@@ -496,6 +496,7 @@
             <div class="k-text-box k-detail-vanue" style="color: black;">
                 <span class="pl-2 text-muted">그리츠</span>
                 <span class="pl-2 text-muted">2026년 1월 17일, 11:00 AM</span>
+                <span class="pl-2 text-muted">서울 영등포구 여의도동 17-5</span>
             </div>
 
             <div class="k-text-box broom-bride" id="" style="color: black">
@@ -504,15 +505,15 @@
                      
                   </div>
                   <div class="k-various-map" style="width: 60%; text-align: center;">
-                    <a href="http://naver.me/5pTy3HCa">
+                    <a href="https://naver.me/xucpPdSG">
                         <img alt="naver-map" class="map-icon" id="naver-map"
                              src="images/map/naver-map.png"/>
                     </a>
-                    <a href="http://dmaps.kr/2bms8">
+                    <a href="https://kko.to/ECZj1u2VXY">
                         <img alt="kakao-map" class="map-icon" id="kakao-map"
                              src="images/map/kakao-map.png"/>
                     </a>
-                    <a href="https://maps.app.goo.gl/jfDxw">
+                    <a href="https://maps.app.goo.gl/phonH4xu7E5qiKcb9">
                         <img alt="google-map" class="map-icon" id="google-map"
                              src="images/map/google-map.png"/>
                     </a>
@@ -599,10 +600,12 @@
                                 
                     function show () {
                       document.querySelector(".k-background").className = "k-background show";
+                      document.body.style.overflow = 'hidden';
                     }
 
                     function close () {
                       document.querySelector(".k-background").className = "k-background";
+                      document.body.style.overflow = 'auto';
                     }
 
                       document.querySelector("#show").addEventListener("click", show);
