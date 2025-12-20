@@ -589,6 +589,11 @@ padding-top: 5px;
     padding-left: 30px;
 
 }
+.k-account-info-detail {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
 .k-copy-div {
     padding-right: 30px;
     display: flex;
