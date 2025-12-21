@@ -186,16 +186,7 @@ position: relative;
     transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
 }
 .k-disapear {
-    
-    animation: disapear 1s linear;
-}
-@keyframes disapear {
-    from {
-        height: fit-content;
-    }
-    to {
-        height: 0;
-    }
+    height: 0 !important;
 }
 
 /* 사라진 후의 스타일 (투명도 0, 보이지 않음) */
@@ -204,7 +195,18 @@ position: relative;
     visibility: hidden;
     display: none;
 }
-
+.k-on-off-music {
+    width: 30px;
+    height: 30px;
+}
+  .k-fixed-bottom-left {
+    position: fixed; /* 화면을 기준으로 고정 */
+    bottom: 20px;    /* 하단에서 20px 떨어짐 */
+    left: 20px;      /* 왼쪽에서 20px 떨어짐 */
+    background-color: #0000;
+    border: 0;
+    z-index: 100; /* 다른 요소 위에 표시되도록 설정 (선택 사항) */
+  }
 .fade-in-box {
   display: inline-block;
   /*background: yellow;*/
