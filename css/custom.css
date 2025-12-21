@@ -49,7 +49,7 @@ body {
     transform: translateY(0); /* 시작과 끝은 원래 위치 */
   }
   50% {
-    transform: translateY(-20px); /* 중간에 위로 20px 이동 */
+    transform: translateY(-10px); /* 중간에 위로 20px 이동 */
   }
 }
 /*조개 움직이기*/   
