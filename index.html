@@ -855,14 +855,15 @@
     });
   }
 
-
-$(document).ready() {
+$(document).ready(function() {
+  // DOM 로드 후 실행할 코드 (jQuery)
     console.log("ready : " + player_import); 
     if (!player_import) {
         player_import = true;
         onYouTubeIframeAPIReady();
     }
-}
+});
+
   var playing = false;
 
   // 이 함수는 플레이어가 준비되면 호출됩니다.
