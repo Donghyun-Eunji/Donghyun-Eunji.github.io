@@ -791,6 +791,7 @@
   // 이 함수는 플레이어가 준비되면 호출됩니다.
   function onPlayerReady(event) {
     document.getElementById('custom-play-button').addEventListener('click', function() {
+        console.log("playing AA state : " + playing);
         openInvitation();
         console.log("playing state : " + playing);
         if (playing) {
