@@ -835,6 +835,7 @@
 
   function onYouTubeIframeAPIReady() {
     console.log("onYouTubeIframeAPIReady : " + player_import); 
+    document.body.style.overflow = 'hidden';   
     player_import = true;
     console.log("onYouTubeIframeAPIReady : " + player_import); 
     player = new YT.Player('youtube-player', {
@@ -874,6 +875,7 @@ $(document).ready(function() {
         player.playVideo();
         console.log("playing state : " + playing);
         openInvitation();
+        document.body.style.overflow = 'auto';    
     });
   }
 
