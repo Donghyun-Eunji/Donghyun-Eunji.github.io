@@ -1,5 +1,6 @@
 body {
     /* 기본 margin과 padding을 제거하여 일관된 시작점을 만듭니다 */
+    height: 100vh;
     margin: 0;
     padding: 0;
     background-color: white;
