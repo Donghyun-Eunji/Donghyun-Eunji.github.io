@@ -27,6 +27,9 @@ body {
     display: flex;
 
 }
+.k-opening-button {
+
+}
 
 @keyframes bounce {
   0%, 100% {
@@ -51,8 +54,6 @@ body {
   height: 100%;
 }
 #custom-play-button {
-  color: white;
-  padding: 10px 20px;
   cursor: pointer;
   z-index: 10; /* iframe 위에 표시되도록 */
 }
