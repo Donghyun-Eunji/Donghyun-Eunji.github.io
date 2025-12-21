@@ -53,7 +53,7 @@
     <div class="k-full-div" >
 
 
-        <div class="k-section" id="message-box">
+        <div class="k-section" id="k-opening-box">
             <div class="k-opening">
                 <div class="">알림장이 도착했습니다<span style="color: red;">♥</span></div>
 
@@ -61,12 +61,12 @@
                     <img alt="google-map" class="otter" id="custom-play-button"
                          src="images/out/free-icon-just-married-7281609.png"/>
                 </a>
-                
+
     <a href="https://www.flaticon.com/kr/free-icons/-" title="좋은 소식 아이콘">좋은 소식 아이콘 제작자: Freepik - Flaticon</a>
             </div>
         </div>
 
-        <div class="k-section" id="message-box">
+        <div class="k-section hidden" id="message-box">
             <div id="k-typing" class="">저희, 결혼합니다<span style="color: red;">♥</span></div>
         </div>
 
@@ -731,13 +731,17 @@
      <script type="text/javascript">
 
         funtion openInvitation() {
-            document.getElementById('k-opening').classList.add('fade-out-box');
-            document.getElementById('k-typing').classList.add('typing');
+            document.getElementById('k-opening-box').classList.add('fade-out-box');
+            // document.getElementById('k-opening').classList.add('fade-out-box');
 
+            const messageBox = document.getElementById('message-box');  
+            if (messageBox) {
+                messageBox.classList.remove('hidden');
+                document.getElementById('k-typing-box').classList.add('typing');
+            }
             // 페이지 로드 후 3000ms (3초) 후에 실행될 함수
             setTimeout(function() {
                 // 'message-box' ID를 가진 요소를 가져옴
-                const messageBox = document.getElementById('message-box');
                 // 요소에 'hidden' 클래스를 추가하여 사라지게 함
                 if (messageBox) {
                     messageBox.classList.add('fade-out-box');
