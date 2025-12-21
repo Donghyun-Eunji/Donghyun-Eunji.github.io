@@ -21,7 +21,10 @@ body {
 /*.k-kakao-map * {
     width: 300px !important;
 }*/
-
+.k-ref {
+    color: black;
+    font-size: 8px;
+}
 /* CSS */
 .k-opening {
     display: flex;
