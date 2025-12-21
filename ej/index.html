@@ -11,9 +11,9 @@
 <!--     <meta property="fb:app_id" content="781066922265598" /> -->
     <meta property="fb:app_id" content="32132132135598" />
     <meta property="fb:admins" content="Choi.Anderson"/>
-    <link href="images/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
-    <link href="images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
-    <link href="images/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+    <link href="./../images/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="./../images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="./../images/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Dosis:400,500" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
     <link href="css/ekko-lightbox.css" rel="stylesheet">
@@ -52,7 +52,7 @@
 
 <div class="page-content">
 
-    <div class="k-full-div" style="height: 100vh;" id="k-landing" >
+    <div class="k-full-div-whole" id="k-landing" >
 
         <div class="k-section k-opening-box-section" id="k-opening-box">
             <div class="k-opening">
@@ -66,6 +66,7 @@
             </div>
             <div class="k-text-box notice-ment">
             <a class="k-ref" href="https://www.flaticon.com/kr/free-icons/" title="결혼 아이콘">결혼 아이콘 제작자: Futuer - Flaticon</a>
+            <a  class="k-ref"  href="https://www.flaticon.com/kr/free-icons/" title="음표 아이콘">음표 아이콘 제작자: Freepik - Flaticon</a>
             </div>
 
         </div>
@@ -488,7 +489,7 @@
             <img alt="Wedding Party" class="img-fluid" style="padding: 20px;" src="./../images/out/location.jpg"/>
         </div>
 
-        <div class="k-lunch-location"  style="display: none;" style="margin-top: 30px">
+        <div class="k-lunch-location"  style="display: none;"style="margin-top: 30px">
             <div class="k-text-box ">
                 <h5>피로연(서울)</h5>
             </div>
@@ -528,7 +529,7 @@
             </div>
         </div>
 
-        <div class="k-lunch-location"  style="display: none;">
+        <div class="k-lunch-location" style="display: none;">
             <div class="k-text-box ">
                 <h5>피로연(제주)</h5>
             </div>
@@ -569,7 +570,7 @@
         </div>
     </div>
 
-    <div class="k-for-mind"  style="display: none;">
+    <div class="k-for-mind" style="display: none;">
 
         <div class="k-text-box " style="margin-bottom: 20px;">
             <h4>신랑 & 신부에게 마음 전하기</h4>
@@ -757,10 +758,16 @@
     <div class="k-audio-onoff">
         <div class="bottom_left">
 
-            <audio id="player2" src=""></audio>
-            <div>
+
+        <button class="k-fixed-bottom-left" id="toggleButton">
+            <img class="k-on-off-music"
+                 src="./../images/out/free-icon-musical-note-2995101.png"/>
+        </button>
+
+            <!-- <audio id="player2" src=""></audio> -->
+            <!-- <div>
                 <i class="fa fa-music fa-2x" style="color: lightcoral;" id="toggleButton"></i>
-            </div>
+            </div> -->
             <script type="text/javascript">
                 // https://www.youtube.com/watch?v=SZgoyHtBoUA&list=RDSZgoyHtBoUA&start_radio=1
 
@@ -839,7 +846,7 @@
                     main.classList.remove('hidden');
                     main.classList.add('fade-in-box');
                 }
-            }, 2500); // 3000ms = 3초
+            }, 1500); // 3000ms = 3초
         }   
 
   var player;
