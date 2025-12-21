@@ -56,6 +56,7 @@
 
         <div class="k-section k-opening-box-section" id="k-opening-box">
             <div class="k-opening">
+                <div class="k-text-box notice-ment" style="margin-bottom: 10px;">동현<span style="color: red;"> ♥ </span>은지 결혼</div>
                 <div class="k-text-box notice-ment" style="margin-bottom: 20px;">알림장이 도착했습니다</div>
 
                 <button class="k-opening-button" id="custom-play-button">
@@ -273,10 +274,11 @@
 
             const resultElement = document.getElementById('result');
             var result_text = '';
+            var result_value = (remainingDays * -1);    
             if (remainingDays <= 0) {
-                result_text = '동현<span style="color: red;">♥</span>은지의 결혼 생활이 ' + (remainingDays * -1)+ '일 되었습니다.';
+                result_text = '동현<span style="color: red;">♥</span>은지의 결혼 생활이 ' + result_value + '일 되었습니다.';
             } else {
-                result_text = '동현<span style="color: red;">♥</span>은지의 결혼 생활이 ' + (remainingDays * -1)+ '일 남았습니다.';
+                result_text = '동현<span style="color: red;">♥</span>은지의 결혼 생활이 ' + result_value + '일 남았습니다.';
             }
                 resultElement.innerHTML  =  result_text; 
         </script>
