@@ -186,16 +186,7 @@ position: relative;
     transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
 }
 .k-disapear {
-
-    animation: disapear 1s linear;
-}
-@keyframes disapear {
-    from {
-        height: fit-content !important;
-    }
-    to {
-        height: 0 !important;
-    }
+    height: 0 !important;
 }
 
 /* 사라진 후의 스타일 (투명도 0, 보이지 않음) */
