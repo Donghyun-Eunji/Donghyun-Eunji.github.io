@@ -462,7 +462,14 @@ table th{
     text-align: center;
     margin-bottom: 20px;
 }
- 
+ .k-ending {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+ }
 .k-photo-gallery {
     flex-direction: column;
     display: flex;
