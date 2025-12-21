@@ -579,7 +579,8 @@ table th{
     margin-bottom: 15px;
     display: flex;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: row;    
+    font-size: 0.8rem;
 }
 .k-account-info-detail {
 
@@ -642,11 +643,6 @@ padding-top: 5px;
     margin-bottom: 0;
     padding-left: 30px;
 
-}
-.k-account-info-detail {
-    display: flex;
-    justify-content: left;
-    align-items: center;
 }
 .k-copy-div {
     padding-right: 30px;
@@ -742,7 +738,7 @@ padding-top: 5px;
 
 .btn-hover {
     width: 200px;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 600;
     color: #fff;
     cursor: pointer;
