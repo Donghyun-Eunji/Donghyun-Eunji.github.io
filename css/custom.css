@@ -26,6 +26,14 @@ body {
 .k-opening {
     display: flex;
     flex-direction: column;
+
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+.k-opening-box-section {
+    display: flex;
+    flex-direction: column;
 }
 .k-opening-button {
 
