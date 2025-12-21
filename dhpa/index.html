@@ -63,7 +63,7 @@
                 <div class="k-text-box notice-ment" style="margin-bottom: 20px;">알림장이 도착했습니다</div>
 
                 <button class="k-opening-button" id="custom-play-button">
-                    <img class="otter "
+                    <img id="k-loading-done" class=" "
                          src="./../images/out/free-icon-envelope-2366285.png"/>
                 </button>
                 <div class="k-text-box notice-ment" style="font-size: 0.7rem ;margin-bottom: 20px;">이곳을 눌러 열어보세요</div>
@@ -920,6 +920,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         left: 0,
         behavior: 'smooth' // 부드러운 스크롤 효과를 원할 경우 추가
     });
+            document.getElementById('k-loading-done').classList.add('otter');
 });
 
   // 브라우저가 scrollRestoration을 지원하는지 확인합니다.
