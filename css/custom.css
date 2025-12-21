@@ -25,7 +25,7 @@ body {
 /* CSS */
 .k-opening {
     display: flex;
-
+    flex-direction: column;
 }
 .k-opening-button {
 
