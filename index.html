@@ -855,12 +855,9 @@
 
 
 $(document).ready() {
-    if (player_import) {
-        playing = false;
-        player.pauseVideo();
-    } else {
-        playing = true;
-        player.playVideo();
+    if (!player_import) {
+        player_import = true;
+        onYouTubeIframeAPIReady();
     }
 }
   var playing = false;
