@@ -475,7 +475,7 @@ table th{
     align-items: center;
     justify-content: center;
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
  }
 .k-photo-gallery {
     flex-direction: column;
