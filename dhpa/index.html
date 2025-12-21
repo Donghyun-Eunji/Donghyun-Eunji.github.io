@@ -277,11 +277,13 @@
             const remainingDays = getRemainingDays(target);
 
             const resultElement = document.getElementById('result');
+            const result_text = '';
             if (remainingDays <= 0) {
-                resultElement.innerHTML  = '동현<span style="color: red;">♥<span>은지의 결혼 생활이 ' + (remainingDays * -1)+ '일 되었습니다.'; 
+                const result_text = '' + (remainingDays * -1)+ '일 되었습니다.';
             } else {
-                resultElement.innerHTML  = '동현<span style="color: red;">♥<span>은지의 결혼 생활이 ' + (remainingDays * -1)+ '일 남았습니다.'; 
+                const result_text = '' + (remainingDays * -1)+ '일 남았습니다.';
             }
+                resultElement.innerHTML  = '동현<span style="color: red;">♥</span>은지의 결혼 생활이 ' + result_text; 
         </script>
     </div>
 
