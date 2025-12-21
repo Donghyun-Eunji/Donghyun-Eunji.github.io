@@ -803,6 +803,19 @@
         }
     });
   }
+
+                const toggleButton = document.getElementById("toggleButton");
+
+                toggleButton.addEventListener("click", function() {
+                    console.log("toggleButton state : " + playing);
+                    if (playing) {
+                        playing = false;
+                        player.pauseVideo();
+                    } else {
+                        playing = true;
+                        player.playVideo();
+                    }
+                });
      </script>
 </div>
 
@@ -859,28 +872,12 @@
         //             player.pauseVideo();
         //         }
 
-        //         const audio = document.getElementById("player2");
+                // const audio = document.getElementById("player2");
         //         audio.autoplay = true;
         //         audio.loop = true;
         //         audio.muted = true;
         //         audio.play();
 
-        //         const toggleButton = document.getElementById("toggleButton");
-
-        //         toggleButton.addEventListener("click", function() {
-        //             // 오디오가 일시 정지 상태(paused가 true)이면 재생합니다.
-        //             if (audio.paused) {
-        //                 audio.play();
-        //                 playVideo();
-        //                 // toggleButton.textContent = "음악 일시 정지";
-        //             }
-        //             // 오디오가 재생 중 상태(paused가 false)이면 일시 정지합니다.
-        //             else {
-        //                 audio.pause();
-        //                 pauseVideo();
-        //                 // toggleButton.textContent = "음악 재생";
-        //             }
-        //         });
             </script>
         </div>
     </div>
