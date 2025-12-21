@@ -873,14 +873,17 @@ $(document).ready(function() {
         player_import = true;
         onYouTubeIframeAPIReady();
     }
+});
 
+
+document.addEventListener('DOMContentLoaded', (event) => {
     window.scrollTo({
         top: 0,
         left: 0,
         behavior: 'smooth' // 부드러운 스크롤 효과를 원할 경우 추가
     });
 });
-
+		 
   var playing = false;
 
   // 이 함수는 플레이어가 준비되면 호출됩니다.
