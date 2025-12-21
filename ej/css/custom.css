@@ -164,6 +164,12 @@ position: relative;
 .broom-bride {
 
 }
+button:focus {
+    outline: none; /* 포커스 시 나타나는 파란색 테두리 제거 */
+}
+button:active {
+    box-shadow: none; /* 눌렸을 때 생기는 그림자 효과 제거 */
+}
 .k-parents-relation-box {
     width: 20px;
     text-align: center;
