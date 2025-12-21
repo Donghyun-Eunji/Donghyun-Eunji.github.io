@@ -51,32 +51,17 @@
 
 <div class="page-content">
     <div class="k-full-div" >
-        <script>
-            // 페이지 로드 후 3000ms (3초) 후에 실행될 함수
-            setTimeout(function() {
-                // 'message-box' ID를 가진 요소를 가져옴
-                const messageBox = document.getElementById('message-box');
-                // 요소에 'hidden' 클래스를 추가하여 사라지게 함
-                if (messageBox) {
-                    messageBox.classList.add('fade-out-box');
-                }
-            }, 2500); // 3000ms = 3초
 
-
-            // 페이지 로드 후 3000ms (3초) 후에 실행될 함수
-            setTimeout(function() {
-                // 'message-box' ID를 가진 요소를 가져옴
-                const main = document.getElementById('main-box');
-                // 요소에 'hidden' 클래스를 추가하여 사라지게 함
-                if (main) {
-                    main.classList.remove('hidden');
-                    main.classList.add('fade-in-box');
-                }
-            }, 2500); // 3000ms = 3초
-        </script>
 
         <div class="k-section" id="message-box">
-            <div class="typing">저희, 결혼합니다<span style="color: red;">♥</span></div>
+            <div class="k-opening">
+                <div class="">알림장이 도착했습니다<span style="color: red;">♥</span></div>
+                <button id="custom-play-button">Play</button>
+            </div>
+        </div>
+
+        <div class="k-section" id="message-box">
+            <div id="k-typing" class="">저희, 결혼합니다<span style="color: red;">♥</span></div>
         </div>
 
         <div class="k-section hidden" id="main-box">
@@ -729,19 +714,42 @@
      </div> 
 
      <div class="k-music">   
-        <div>
-            <i class="fa fa-music fa-2x" style="color: lightcoral;" id="custom-play-button2"></i>
-        </div> 
-<button id="custom-play-button">Play</button>
-
-
          <div class="k-music-content">  
              <div id="player"></div>
-        <div id="youtube-player"></div>
+        <div id="youtube-player" style="display: none;"></div>
 <!-- <iframe id="k-youtube-player" width="360" height="240" src="https://www.youtube.com/embed/AILtLcFJPUQ?si=G3GzgPBlsNa5XrPw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
          </div>
      </div>
+        <script>
+        </script>
      <script type="text/javascript">
+
+        funtion openInvitation() {
+            document.getElementById('k-opening').classList.add('fade-out-box');
+            document.getElementById('k-typing').classList.add('typing');
+
+            // 페이지 로드 후 3000ms (3초) 후에 실행될 함수
+            setTimeout(function() {
+                // 'message-box' ID를 가진 요소를 가져옴
+                const messageBox = document.getElementById('message-box');
+                // 요소에 'hidden' 클래스를 추가하여 사라지게 함
+                if (messageBox) {
+                    messageBox.classList.add('fade-out-box');
+                }
+            }, 2500); // 3000ms = 3초
+
+
+            // 페이지 로드 후 3000ms (3초) 후에 실행될 함수
+            setTimeout(function() {
+                // 'message-box' ID를 가진 요소를 가져옴
+                const main = document.getElementById('main-box');
+                // 요소에 'hidden' 클래스를 추가하여 사라지게 함
+                if (main) {
+                    main.classList.remove('hidden');
+                    main.classList.add('fade-in-box');
+                }
+            }, 2500); // 3000ms = 3초
+        }   
 
   var player;
 
@@ -751,38 +759,35 @@
       height: '240',
       width: '360',
       videoId: 'AILtLcFJPUQ', // YouTube 동영상 ID로 바꾸세요
+      playerVars: {
+        autoplay: true,
+        loop: true,
+        controls : 0, // 컨트롤러의 유무
+        showinfo : 0, // 재생영상에 대한 정보 유무
+        rel: 0, // 해당 영상이 종류 된 후, 관련 동영상을 표시할지의 여부
+        playlist: 'AILtLcFJPUQ' ,
+      },
       events: {
         'onReady': onPlayerReady
       }
     });
   }
 
+  var playing = false;
+
   // 이 함수는 플레이어가 준비되면 호출됩니다.
   function onPlayerReady(event) {
     document.getElementById('custom-play-button').addEventListener('click', function() {
-        console.log("AAAAAAA");
-        // var iframe = document.getElementById('k-youtube-player');
-        // iframe.src = "https://www.youtube.com/embed/AILtLcFJPUQ?si=G3GzgPBlsNa5XrPw?autoplay=1&enabledjsapi=1"
-        player.playVideo(); // 사용자 지정 버튼을 클릭하면 동영상을 재생합니다.
+        console.log("playing state : " + playing);
+        if (playing) {
+            playing = false;
+            player.pauseVideo();
+        } else {
+            playing = true;
+            player.playVideo();
+        }
     });
   }
-
-//         // JavaScript
-// var player;
-// function onYouTubeIframeAPIReady() {
-//   player = new YT.Player('youtube-player', {
-//     videoId: 'VIDEO_ID', // 영상 ID
-//     playerVars: {
-//       'autoplay': 0, // 처음에는 자동 재생 끄기
-//       'controls': 0 // 기본 컨트롤 숨기기
-//     }
-//   });
-// }
-
-// document.getElementById('custom-play-button').addEventListener('click', function() {
-//   player.playVideo(); // 버튼 클릭 시 영상 재생
-//   // document.getElementById('custom-play-button').style.display = 'none'; // 버튼 숨기기
-// });
      </script>
 </div>
 
