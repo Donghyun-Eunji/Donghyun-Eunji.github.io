@@ -729,7 +729,7 @@
 <!-- <iframe id="k-youtube-player" width="360" height="240" src="https://www.youtube.com/embed/AILtLcFJPUQ?si=G3GzgPBlsNa5XrPw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
          </div>
      </div>
-     
+
 </div>
 
 
@@ -856,15 +856,10 @@
   function onPlayerReady(event) {
     document.getElementById('custom-play-button').addEventListener('click', function() {
         console.log("playing AA state : " + playing);
-        openInvitation();
+        playing = true; 
+        player.playVideo();
         console.log("playing state : " + playing);
-        if (playing) {
-            playing = false;
-            player.pauseVideo();
-        } else {
-            playing = true;
-            player.playVideo();
-        }
+        openInvitation();
     });
   }
 
