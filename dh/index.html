@@ -274,10 +274,12 @@
 
             const resultElement = document.getElementById('result');
             var result_text = '';
-            var result_value = (remainingDays * -1);    
+            var result_value = 0;    
             if (remainingDays <= 0) {
+                result_value = (remainingDays * -1);   
                 result_text = '동현<span style="color: red;">♥</span>은지의 결혼 생활이 ' + result_value + '일 되었습니다.';
             } else {
+                result_value = (remainingDays);   
                 result_text = '동현<span style="color: red;">♥</span>은지의 결혼 생활이 ' + result_value + '일 남았습니다.';
             }
                 resultElement.innerHTML  =  result_text; 
