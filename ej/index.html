@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <!-- <meta content="width=device-width, initial-scale=1" name="viewport"> -->
     <title>동현 ♥ 은지 ♡ 결혼식 </title>
@@ -51,8 +51,8 @@
 
 
 <div class="page-content">
-    <div class="k-full-div" >
 
+    <div class="k-full-div" style="height: 100vh;" id="k-landing" >
 
         <div class="k-section k-opening-box-section" id="k-opening-box">
             <div class="k-opening">
@@ -69,6 +69,10 @@
             </div>
 
         </div>
+    </div>
+    <div class="k-full-div" >
+
+
 
         <div class="k-section hidden" id="message-box">
             <div id="k-typing" class="">저희, 결혼합니다 ♥</div>
@@ -484,7 +488,7 @@
             <img alt="Wedding Party" class="img-fluid" style="padding: 20px;" src="./../images/out/location.jpg"/>
         </div>
 
-        <div class="k-lunch-location" style="margin-top: 30px">
+        <div class="k-lunch-location"  style="display: none;" style="margin-top: 30px">
             <div class="k-text-box ">
                 <h5>피로연(서울)</h5>
             </div>
@@ -524,7 +528,7 @@
             </div>
         </div>
 
-        <div class="k-lunch-location">
+        <div class="k-lunch-location"  style="display: none;">
             <div class="k-text-box ">
                 <h5>피로연(제주)</h5>
             </div>
@@ -565,7 +569,7 @@
         </div>
     </div>
 
-    <div class="k-for-mind">
+    <div class="k-for-mind"  style="display: none;">
 
         <div class="k-text-box " style="margin-bottom: 20px;">
             <h4>신랑 & 신부에게 마음 전하기</h4>
@@ -753,7 +757,7 @@
     <div class="k-audio-onoff">
         <div class="bottom_left">
 
-            <audio id="player2" src="mus.mp3"></audio>
+            <audio id="player2" src=""></audio>
             <div>
                 <i class="fa fa-music fa-2x" style="color: lightcoral;" id="toggleButton"></i>
             </div>
@@ -806,6 +810,8 @@
      <script type="text/javascript">
 
         function openInvitation() {
+            // document.getElementById('k-landing').classList.add('fade-out-box');
+            document.getElementById('k-landing').classList.add('k-disapear');
             document.getElementById('k-opening-box').classList.add('fade-out-box');
             // document.getElementById('k-opening').classList.add('fade-out-box');
 
@@ -884,6 +890,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
         behavior: 'smooth' // 부드러운 스크롤 효과를 원할 경우 추가
     });
 });
+
+  // 브라우저가 scrollRestoration을 지원하는지 확인합니다.
+  if (history.scrollRestoration) {
+    // 스크롤 복원 기능을 수동(manual)으로 설정하여 브라우저의 자동 복원을 비활성화합니다.
+    window.history.scrollRestoration = 'manual'; 
+  }
+
+  // 사용자가 뒤로가기/앞으로가기 버튼을 클릭하여 페이지가 표시될 때를 감지합니다 (bfcache 관련).
+  window.addEventListener('pageshow', (event) => {
+    // event.persisted가 true이면 bfcache(뒤로가기 캐시)에서 로드된 것입니다.
+    if (event.persisted) {
+          
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth' // 부드러운 스크롤 효과를 원할 경우 추가
+        });
+    }
+  });
 
   var playing = false;
 
