@@ -40,6 +40,12 @@
       // 페이지 로드 시 및 창 크기 변경 시 실행
       // window.addEventListener('resize', setScreenSize);
       setScreenSize();
+
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth' // 부드러운 스크롤 효과를 원할 경우 추가
+        });
     </script>
 </head>
 
@@ -727,7 +733,7 @@
             <h4><span style="color: red;">♥</span> 감사합니다 <span style="color: red;">♥</span></h4>
         </div>
     </div>
-    
+
      <div class="k-music" style="display: none;">   
          <div class="k-music-content">  
              <div id="player"></div>
@@ -865,11 +871,6 @@
 
 $(document).ready(function() {
 
-    window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth' // 부드러운 스크롤 효과를 원할 경우 추가
-    });
 
   // DOM 로드 후 실행할 코드 (jQuery)
     console.log("ready : " + player_import); 
