@@ -857,6 +857,13 @@
   }
 
 $(document).ready(function() {
+
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth' // 부드러운 스크롤 효과를 원할 경우 추가
+    });
+    
   // DOM 로드 후 실행할 코드 (jQuery)
     console.log("ready : " + player_import); 
     if (!player_import) {
