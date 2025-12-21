@@ -834,7 +834,9 @@
   // 이 함수는 API 코드가 다운로드된 후 <iframe>(및 YouTube 플레이어)를 만듭니다.
 
   function onYouTubeIframeAPIReady() {
+    console.log("onYouTubeIframeAPIReady : " + player_import); 
     player_import = true;
+    console.log("onYouTubeIframeAPIReady : " + player_import); 
     player = new YT.Player('youtube-player', {
       height: '240',
       width: '360',
@@ -855,6 +857,7 @@
 
 
 $(document).ready() {
+    console.log("ready : " + player_import); 
     if (!player_import) {
         player_import = true;
         onYouTubeIframeAPIReady();
