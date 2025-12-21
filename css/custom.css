@@ -203,7 +203,7 @@ position: relative;
     position: fixed; /* 화면을 기준으로 고정 */
     bottom: 20px;    /* 하단에서 20px 떨어짐 */
     left: 20px;      /* 왼쪽에서 20px 떨어짐 */
-    background-color: white;
+    background-color: #0000;
     border: 0;
     z-index: 100; /* 다른 요소 위에 표시되도록 설정 (선택 사항) */
   }
