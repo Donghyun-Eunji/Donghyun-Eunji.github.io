@@ -56,7 +56,13 @@
         <div class="k-section" id="message-box">
             <div class="k-opening">
                 <div class="">알림장이 도착했습니다<span style="color: red;">♥</span></div>
-                <button id="custom-play-button">Play</button>
+
+                <a href="#">
+                    <img alt="google-map" class="otter" id="custom-play-button"
+                         src="images/out/free-icon-just-married-7281609.png"/>
+                </a>
+                
+    <a href="https://www.flaticon.com/kr/free-icons/-" title="좋은 소식 아이콘">좋은 소식 아이콘 제작자: Freepik - Flaticon</a>
             </div>
         </div>
 
@@ -778,6 +784,7 @@
   // 이 함수는 플레이어가 준비되면 호출됩니다.
   function onPlayerReady(event) {
     document.getElementById('custom-play-button').addEventListener('click', function() {
+        openInvitation();
         console.log("playing state : " + playing);
         if (playing) {
             playing = false;
