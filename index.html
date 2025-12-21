@@ -51,8 +51,8 @@
 
 
 <div class="page-content">
-    <div class="k-full-div" >
 
+    <div class="k-full-div" style="height: 100vh;" id="k-landing" >
 
         <div class="k-section k-opening-box-section" id="k-opening-box">
             <div class="k-opening">
@@ -69,6 +69,10 @@
             </div>
 
         </div>
+    </div>
+    <div class="k-full-div" >
+
+
 
         <div class="k-section hidden" id="message-box">
             <div id="k-typing" class="">저희, 결혼합니다 ♥</div>
@@ -806,6 +810,7 @@
      <script type="text/javascript">
 
         function openInvitation() {
+            document.getElementById('k-landing').classList.add('fade-out-box');
             document.getElementById('k-opening-box').classList.add('fade-out-box');
             // document.getElementById('k-opening').classList.add('fade-out-box');
 
