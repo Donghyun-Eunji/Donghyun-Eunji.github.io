@@ -23,6 +23,24 @@ body {
 }*/
 
 /* CSS */
+.k-opening {
+    display: flex;
+
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* 시작과 끝은 원래 위치 */
+  }
+  50% {
+    transform: translateY(-20px); /* 중간에 위로 20px 이동 */
+  }
+}
+/*조개 움직이기*/   
+.otter {
+    animation: bounce 0.6s cubic-bezier(0, 0, 0.18, 0.99) infinite alternate;
+}
+
 .video-wrapper {
   position: relative;
   width: 560px;
