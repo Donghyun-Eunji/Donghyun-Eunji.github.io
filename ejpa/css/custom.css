@@ -134,7 +134,7 @@ position: relative;
     height: 100%;
 }
 .k-delimeter {
-    margin-top: 15px;
+    margin-top: 25px;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -378,6 +378,7 @@ button:active {
 */
 
 .k-calendar {
+    margin-top: 15px;
     padding: 40px;
     display: flex;
     text-align: center;
