@@ -1,0 +1,885 @@
+body {
+    /* 기본 margin과 padding을 제거하여 일관된 시작점을 만듭니다 */
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    /* (선택 사항) 배경색을 설정하여 컨테이너 바깥쪽 공간을 구분할 수 있습니다 */
+}
+.page-content {
+    width: 100%;
+}
+.page-content * {
+    width: 100%;
+}
+.k-kakao-map {
+    display: flex;
+    justify-content: center;
+}
+/*.k-kakao-map * {
+    width: 300px !important;
+}*/
+/*.k-kakao-map * {
+    width: 300px !important;
+}*/
+.k-ref {
+    color: black;
+    font-size: 8px;
+}
+/* CSS */
+.k-opening {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+.k-opening-box-section {
+    display: flex;
+    flex-direction: column;
+}
+.k-opening-button {
+
+    border: 0;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* 시작과 끝은 원래 위치 */
+  }
+  50% {
+    transform: translateY(-10px); /* 중간에 위로 20px 이동 */
+  }
+}
+/*조개 움직이기*/   
+.otter {
+    animation: bounce 0.6s cubic-bezier(0, 0, 0.18, 0.99) infinite alternate;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 560px;
+  height: 315px;
+}
+#youtube-player {
+  width: 100%;
+  height: 100%;
+}
+#custom-play-button {
+  cursor: pointer;
+  z-index: 10; /* iframe 위에 표시되도록 */
+}
+
+
+.k-top {
+position: relative;
+    display: flex;  
+    max-width: 480px;
+  width: 100%;      /* 작은 화면에서 부모 너비를 모두 사용하도록 설정 */
+  margin: 0 auto;   /* 좌우 마진을 자동으로 설정하여 가운데 정렬 */
+  box-sizing: border-box; /* 패딩이 너비에 포함되도록 설정 */
+/*    display: flex;
+    justify-content: center; /* 가로축 기준으로 가운데 정렬 */*/
+}
+
+.k-full-div {
+    width: 100%;
+    /*height: 100vh;*/
+    height: calc(var(--vh, 1vh) * 100); /* JS로 계산된 높이 사용 */
+}
+
+.k-full-div-whole {
+    width: 100%;
+    /*height: 100vh;*/
+    height: 100vh; /* JS로 계산된 높이 사용 */
+}
+
+.k-main-image {
+
+    /*background-position: center; 
+    /*background-repeat: no-repeat; 
+
+    /*background-image: url(images/main.jpg);*/
+    /*background-size: cover;*/
+    /*background-position: center center;*/
+
+
+  max-width: 100%; /* Ensures it doesn't overflow its container */
+  width: 100%;
+  height: 100%;
+    /*object-fit: contain; */
+    object-fit: cover; /* 이미지가 컨테이너를 꽉 채우되 비율 유지 (잘림 발생) */ 
+  object-position: center; /* 이미지가 중앙을 기준으로 표시됨 */
+}
+
+.k-main-image-container {
+    /*height: 90%; */
+    /*max-height: 600px;*/
+    height: calc(var(--vh, 1vh) * 100 - 100px);
+    overflow: hidden;
+}
+
+.k-section {
+    position: absolute;
+    width: 100%;
+    /*height: 100vh;*/
+    height: calc(var(--vh, 1vh) * 100); /* JS로 계산된 높이 사용 */
+}
+.k-container {
+    position: relative;
+    height: 100%;
+}
+.k-delimeter {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.k-delimeter-image {
+    width: 60%;
+}
+.k-date-location-box {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.k-text-box {
+    color: lightcoral;
+    text-align: center;
+}
+.k-detail-vanue {    
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+.k-parents-box {
+    margin-top: 25px;
+    margin-bottom: 0px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.broom-bride {
+
+}
+.k-parents-relation-box {
+    width: 20px;
+    text-align: center;
+}
+/* 사라질 요소의 초기 스타일 */
+#message-box {
+    /*background-color: lightcoral;*/
+    padding: 20px;
+    
+    max-width: 480px;
+
+    display: flex; align-items: center;
+    text-align: center;
+
+    justify-content: center;
+
+    color: lightcoral;
+    /*font-size: 12px;*/
+    /* 부드러운 전환 효과를 위한 transition 설정 */
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+.k-disapear {
+    height: 0 !important;
+}
+
+/* 사라진 후의 스타일 (투명도 0, 보이지 않음) */
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+.k-on-off-music {
+    width: 30px;
+    height: 30px;
+}
+  .k-fixed-bottom-left {
+    position: fixed; /* 화면을 기준으로 고정 */
+    bottom: 20px;    /* 하단에서 20px 떨어짐 */
+    left: 20px;      /* 왼쪽에서 20px 떨어짐 */
+    background-color: #0000;
+    border: 0;
+    z-index: 100; /* 다른 요소 위에 표시되도록 설정 (선택 사항) */
+  }
+.fade-in-box {
+  display: inline-block;
+  /*background: yellow;*/
+  padding: 10px;
+  animation: fadein 1s;
+  -moz-animation: fadein 1s; /* Firefox */
+  -webkit-animation: fadein 1s; /* Safari and Chrome */
+  -o-animation: fadein 1s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-out-box {
+  display: inline-block;
+  /*background: yellow;*/
+  padding: 10px;
+  animation: fadeout 1s;
+  -moz-animation: fadeout 1s; /* Firefox */
+  -webkit-animation: fadeout 1s; /* Safari and Chrome */
+  -o-animation: fadeout 1s; /* Opera */
+  animation-fill-mode: forwards;
+}
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@-moz-keyframes fadeout { /* Firefox */
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@-webkit-keyframes fadeout { /* Safari and Chrome */
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@-o-keyframes fadeout { /* Opera */
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+#main-box {
+    padding: 20px;
+    max-width: 480px;
+}
+/* 사라진 후의 스타일 (투명도 0, 보이지 않음) */
+.showkk {
+    /*opacity: 0;*/
+    /*visibility: hidden;*/
+
+    background-position: center; 
+    background-repeat: no-repeat; 
+
+    background-image: url(./../images/main.jpg);
+    background-size: cover;
+    height: calc(100vh - 20px)
+    /*background-position: center center;*/
+}
+.k-vanue  {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.k-bottom {
+    height: 10px;
+    position: absolute;
+    bottom: 0;
+}
+.typing {
+  width: 20ch;
+  animation: typing 1.5s steps(15), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  /*font-family: monospace;*/
+  font-size: 1.5em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+/*
+
+.slider {
+    margin: 0 auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.slick-dots {
+    bottom: 10px;
+}
+
+.slick-dots li button:before {
+    font-size: 10px;
+    line-height: 10px;
+    color: lightcoral;
+}
+
+.slick-track {
+    display: flex !important;
+    align-items: center; 
+}
+
+.slick-slide {
+    display: flex !important;
+    height: inherit !important; 
+    align-items: center; 
+    justify-content: center;
+}
+*/
+
+.k-calendar {
+    padding: 40px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+@import url("https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Roboto:ital,wght@0,300;0,400;1,300&display=swap");
+ 
+.holiday {
+  color: red;
+}
+.important {
+    /* 너비와 높이를 같게 설정하여 정사각형으로 만듭니다 */
+    width: 26px;
+    height: 26px;
+    
+    /* 배경색을 분홍색으로 설정합니다 */
+    background-color: #ff69b4; /* 핫핑크 색상 예시 */
+    
+    /* border-radius를 50%로 설정하여 원 모양으로 만듭니다 */
+    border-radius: 50%;
+    
+    /* flexbox를 사용하여 텍스트를 원의 정중앙에 배치합니다 */
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center;     /* 세로 중앙 정렬 */
+    
+    /* 선택 사항: 텍스트 스타일링 */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+ 
+h1 {
+  text-align: center;
+  font-family: grape nuts;
+  margin-top: 50px;
+  font-size: 50px;
+  color: azure;
+}
+ 
+caption {
+  margin-bottom: 15px;
+  font-size: 25px;
+}
+ 
+td:nth-child(1),
+th:nth-child(1) {
+  color: red;
+  width: 20px;
+  margin:auto;
+}
+td:nth-child(2),
+th:nth-child(2) {
+  width: 20px;
+  margin:auto;
+}
+td:nth-child(3),
+th:nth-child(3) {
+  width: 20px;
+  margin:auto;
+}
+td:nth-child(4),
+th:nth-child(4) {
+  width: 20px;
+  margin:auto;
+}
+td:nth-child(5),
+th:nth-child(5) {
+  width: 20px;
+  margin:auto;
+}
+td:nth-child(6),
+th:nth-child(6) {
+  width: 20px;
+  margin:auto;
+}
+td:nth-child(7),
+th:nth-child(7) {
+  width: 20px;
+  margin:auto;
+  color: blue;
+}
+ 
+.wrapper {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: grape nuts;
+}
+ 
+table {
+  color: black;
+}
+table td{
+    font-size: 16px;  
+    width: 20px;      
+}
+table th{
+    width: 20px;    
+}
+.k-countdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+ .k-ending {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 40px;
+ }
+.k-photo-gallery {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.k-photo-gallery-content {
+    flex-direction: row;
+    align-items: center;
+    /*height: calc(90vh);*/
+}
+.slider img{
+    margin: 0 auto; /* it centers any block level element */
+    display:flex;
+    height: 100%;
+    max-height: calc(100vh - 200px);
+    width: auto;
+    object-fit: cover; /* 이미지가 컨테이너를 꽉 채우되 비율 유지 (잘림 발생) */ 
+    object-position: center; /* 이미지가 중앙을 기준으로 표시됨 */
+}
+ 
+ .k-modal {
+    /*position:absolute;*/
+    display:none;
+    align-items: center;
+    
+    position:fixed;     
+    z-index: 1; /* 모달창을 제일 앞에 두기 */
+    left: 0; top: 0;
+    justify-content: center;
+    /*top:0;*/
+    /*left:0;*/
+
+    width:100%;
+    height:100vh;
+    background-color: rgba(0,0,0,0.4);      
+ }
+ .k-modal-body{
+            /*top:50%; //모달을 화면가운데 놓기위함. */
+        
+            top: 150px;
+            width: 100%;
+            height: 90%;
+
+            padding:40px;  
+
+            text-align: center;
+
+            background-color: rgb(255,255,255); //모달창 배경색 흰색
+            border-radius:10px; //테두리 
+            box-shadow:0 2px 3px 0 rgba(34,36,38,0.15); //테두리 그림자 
+
+            transform:translateY(-50%); //모듈창열었을때 위치설정 가운데로 
+        }
+
+
+.slidera {
+  height: calc(var(--vh, 1vh) * 100 - 250px) !important;
+  display: flex  !important;
+  text-align: center  !important;
+  align-items : center  !important;
+  justify-content: center; /* 가로 중앙 정렬 (필요 시) */
+/*    width: 300px; */
+}
+.slidera img {
+/*   width: 100%; */
+  max-width: 100%;
+  max-height: 100lvh;
+  margin: 0 auto;
+  vertical-align:middle;
+  width: 100%;
+  height: 100%;
+    object-fit: contain; /* 가로/세로 비율을 유지하며 컨테이너를 꽉 채우도록 크기 조절 (넘치는 부분은 잘림) */
+  object-position: center; /* 이미지를 중앙에 위치시킴 (기본값이지만 명시적으로 설정 가능) */
+
+}
+
+.slidert {
+  display: flex;
+  width: 100px  !important;
+  height: 100px  !important;
+  padding: 5px;
+}
+.slidert img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+  margin: 0 auto;
+    object-fit: cover; /* 가로/세로 비율을 유지하며 컨테이너를 꽉 채우도록 크기 조절 (넘치는 부분은 잘림) */
+  object-position: center; /* 이미지를 중앙에 위치시킴 (기본값이지만 명시적으로 설정 가능) */
+
+}
+
+.fade-class {
+  position: relative;
+  top: 15px;
+  opacity: 0;
+  transition: top 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s linear;
+}
+.fade-in {
+  transition: top 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s linear;
+  bottom: 0px;
+  opacity: 1;
+}
+.k-hr {
+    margin-left: 30px;
+    width: calc(80% - 30px);
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.k-account-info {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;    
+    font-size: 0.8rem;
+}
+.k-account-info-detail {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.k-background {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  /*height: calc(var(--vh, 1vh) * 100); */
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  
+  /* 숨기기 */
+  z-index: -1;
+  opacity: 0;
+}
+
+.k-background2 {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  /*height: calc(var(--vh, 1vh) * 100); */
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  
+  /* 숨기기 */
+  z-index: -1;
+  opacity: 0;
+}
+.k-name {
+margin-bottom: 0px;
+padding-bottom: 5px;
+padding-top: 5px;
+  font-weight: bold;
+    padding-left: 30px;
+}
+.k-name-bank {
+    margin-bottom: 0;
+    padding-left: 30px;
+}
+.k-name-account{
+    margin-bottom: 0;
+    padding-left: 30px;
+
+}
+.k-copy-div {
+    padding-right: 30px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.k-copy-button {
+
+}
+.k-modal-close {
+        margin-top: 20px;
+    color: black;
+    background: white;
+    border-color: lightgrey;
+    box-shadow: none;
+
+    margin-left: 30px;
+    /*margin-right: 30px;*/
+    width: calc(100% - 60px);
+}
+
+.window {
+  /*position: relative;*/
+  width: 90%;
+  height: 90%;
+  max-height: 500px;
+}
+
+.show {
+  opacity: 1;
+  z-index: 1000;
+  transition: all .5s;
+}
+.k-popup {
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    height: 100%;
+  /*position: absolute;*/
+  /*top: 50%;*/
+  /*left: 50%;*/
+  /*transform: translate(-50%, -50%);*/
+  background-color: #ffffff;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+  
+  /* 임시 지정 */
+  /*width: 100%;*/
+  
+  /* 초기에 약간 아래에 배치 */
+  /*transform: translate(-50%, -40%);*/
+}
+
+.show .popup {
+  transform: translate(-50%, -50%);
+  transition: all .5s;
+}
+
+.k-various-map {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.k-for-mind {
+
+    margin-top: 130px;
+    margin-bottom: 80px;
+}
+
+.k-music {
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    height: 240px;
+    align-items: center;
+
+}
+.k-music-content {
+    display: flex;
+    justify-content: center;
+    max-width: 360px;
+    height: 240px;
+    align-items: center;
+
+}
+
+
+.buttons {
+    margin: 10%;
+    text-align: center;
+}
+
+.btn-hover {
+    width: 200px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+.btn-hover.color-8 {
+    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+.btn-hover.color-9 {
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+.btn-hover.color-10 {
+        background-image: linear-gradient(to right, #ed6ea0, #ec8c69, #f7186a , #FBB03B);
+    box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+}
+
+.k-various-map a {
+    width: 45px;
+    margin: 8px;
+
+}
+.k-lunch-location {
+    margin-top: 100px;
+}
+
+.photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 1em;
+}
+
+#gallery-cu{          
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+/*             display: flex; 
+/*             flex-wrap: wrap; /* 이미지가 줄을 넘어가면 다음 줄로 넘어가도록 설정  
+/*             justify-content: center; */
+            
+    display: flex; /* 이미지를 가로로 나열하기 위한 flex 컨테이너 */
+    flex-wrap: wrap; /* 이미지가 줄을 넘어가면 다음 줄로 넘어가도록 설정 */
+    width: 100%; /* 갤러리 컨테이너의 너비 설정 */
+    gap: 2px; /* 이미지 간의 간격 */
+}
+
+#gallery-cu::after{content: ""; display: block; clear: both;}
+
+#gallery-cu > li{
+            float: left; margin: 0 1px;
+
+    flex: 1 1 calc(30% - 1px); /* 3x4 그리드를 만들기 위해 가로 폭을 25%로 설정 (간격 고려) */
+    box-sizing: border-box; /* 패딩과 테두리가 요소의 너비에 포함되도록 설정 */
+    overflow: hidden; /* 이미지 밖으로 넘치는 부분을 숨김 */
+    aspect-ratio: 1 / 1; /* 이미지를 정사각형으로 만들기 위한 가로세로 비율 설정 */
+    position: relative; /* 이미지 내에서 요소 배치를 위한 기준점 */
+}
+
+#gallery-cu > li > a{display: block; text-decoration: none;}
+
+#gallery-cu > li > a > img{
+            
+    display: block; /* 이미지를 블록 요소로 만들어 여백 제거 */
+    width: 100%; /* 이미지의 너비를 부모 요소(wrapper)에 맞춤 */
+    height: 100%; /* 이미지의 높이를 부모 요소(wrapper)에 맞춤 */
+    object-fit: cover; /* 이미지의 가로세로 비율을 유지하며 컨테이너를 꽉 채우도록 설정 */
+/*     border-radius: 8px; /* 이미지 모서리를 둥글게 처리 */ 
+/* display: block;  */
+/* width: 120px;  */
+/* height: 120px;  */
+border: 3px solid transparent; 
+/* box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6); */
+}
+
+#overlay-cu{
+position: fixed;
+top: 0; right: 0; left: 0; bottom: 0;
+
+background-color: rgba(0, 0, 0, 0.8);
+
+display: none;
+z-index: 100;
+}
+
+#photo-cu{
+position: absolute;
+top: 50%; left: 50%;
+transform: translate(-50%, -50%);
+
+max-width: 80%;
+max-height: 80%;
+border: 10px solid white;
+}
