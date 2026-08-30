@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>우리 가방 이야기 👶</title>
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #f5e6d3 0%, #e8d4c4 100%);
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 40px;
+        animation: fadeIn 0.8s ease-in;
+      }
+
+      .header h1 {
+        font-size: 2em;
+        color: #c55a7d;
+        margin-bottom: 10px;
+        font-weight: 300;
+        letter-spacing: 1px;
+        word-break: keep-all;
+      }
+
+      .header .subtitle {
+        font-size: 1.1em;
+        color: #8b5a6b;
+        margin-bottom: 20px;
+      }
+
+      .progress-info {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 16px;
+        border-radius: 12px;
+        display: block;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        margin: 0 auto;
+        max-width: 100%;
+      }
+
+      .progress-info p {
+        font-size: 1em;
+        color: #555;
+        margin: 6px 0;
+        word-break: keep-all;
+      }
+
+      .progress-info strong {
+        color: #c55a7d;
+        font-size: 1.05em;
+      }
+
+      /* Timeline Styles */
+      .timeline {
+        position: relative;
+        padding: 20px 0;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 18px;
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(to bottom, #c55a7d, #e8b4c8);
+        border-radius: 2px;
+      }
+
+      .timeline-item {
+        margin-bottom: 30px;
+        animation: slideIn 0.6s ease-out;
+        position: relative;
+      }
+
+      .timeline-item:nth-child(odd) .timeline-content,
+      .timeline-item:nth-child(even) .timeline-content {
+        width: 100%;
+        margin-left: 42px;
+        margin-right: 0;
+        padding: 20px;
+        text-align: left;
+      }
+
+      .timeline-marker {
+        position: absolute;
+        left: 18px;
+        transform: translateX(-50%);
+        width: 18px;
+        height: 18px;
+        background: #c55a7d;
+        border: 3px solid #f5e6d3;
+        border-radius: 50%;
+        top: 25px;
+        z-index: 1;
+        box-shadow: 0 0 0 3px rgba(197, 90, 125, 0.2);
+        transition: all 0.3s ease;
+      }
+
+      .timeline-item:active .timeline-marker {
+        width: 24px;
+        height: 24px;
+        top: 22px;
+        box-shadow: 0 0 0 6px rgba(197, 90, 125, 0.3);
+      }
+
+      .timeline-content {
+        background: white;
+        padding: 18px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+      }
+
+      .timeline-item:active .timeline-content {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+        transform: translateY(-3px);
+      }
+
+      .timeline-date {
+        font-size: 1.15em;
+        color: #c55a7d;
+        font-weight: bold;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+        word-break: keep-all;
+      }
+
+      .timeline-date::before {
+        content: "📅";
+        font-size: 1.1em;
+        flex-shrink: 0;
+      }
+
+      .media-container {
+        margin: 15px 0;
+        border-radius: 10px;
+        overflow: hidden;
+        background: #f9f9f9;
+        padding: 8px;
+      }
+
+      .media-container img,
+      .media-container video {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        max-height: 300px;
+        object-fit: cover;
+      }
+
+      .timeline-description {
+        font-size: 1em;
+        color: #555;
+        margin-top: 12px;
+        padding: 12px;
+        background: #f9f9f9;
+        border-left: 4px solid #c55a7d;
+        border-radius: 5px;
+        line-height: 1.6;
+        word-break: keep-all;
+      }
+
+      .timeline-icon {
+        font-size: 1.8em;
+        margin-bottom: 8px;
+        display: block;
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateX(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .timeline-item:nth-child(even) {
+        animation-delay: 0.1s;
+      }
+
+      .timeline-item:nth-child(3n) {
+        animation-delay: 0.2s;
+      }
+
+      /* Responsive - Tablet (768px 이상) */
+      @media (min-width: 768px) {
+        .container {
+          padding: 40px 20px;
+        }
+
+        .header {
+          margin-bottom: 50px;
+        }
+
+        .header h1 {
+          font-size: 2.5em;
+          letter-spacing: 1.5px;
+        }
+
+        .header .subtitle {
+          font-size: 1.2em;
+        }
+
+        .progress-info {
+          display: inline-block;
+          padding: 20px;
+        }
+
+        .progress-info p {
+          font-size: 1.05em;
+          margin: 8px 0;
+        }
+
+        .timeline::before {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        .timeline-item {
+          margin-bottom: 40px;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+          margin-left: 0;
+          margin-right: auto;
+          padding-right: 50px;
+          width: 48%;
+          text-align: right;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+          margin-left: auto;
+          margin-right: 0;
+          padding-left: 50px;
+          width: 48%;
+          text-align: left;
+        }
+
+        .timeline-marker {
+          left: 50%;
+          transform: translateX(-50%);
+          width: 20px;
+          height: 20px;
+          border: 4px solid #f5e6d3;
+          top: 25px;
+          box-shadow: 0 0 0 4px rgba(197, 90, 125, 0.2);
+        }
+
+        .timeline-item:hover .timeline-marker {
+          width: 26px;
+          height: 26px;
+          top: 23px;
+          box-shadow: 0 0 0 6px rgba(197, 90, 125, 0.3);
+        }
+
+        .timeline-item:active .timeline-marker {
+          width: 26px;
+          height: 26px;
+          top: 23px;
+          box-shadow: 0 0 0 6px rgba(197, 90, 125, 0.3);
+        }
+
+        .timeline-content {
+          padding: 25px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-item:hover .timeline-content {
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+          transform: translateY(-5px);
+        }
+
+        .timeline-date {
+          font-size: 1.2em;
+          margin-bottom: 15px;
+          gap: 10px;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-date {
+          justify-content: flex-end;
+        }
+
+        .timeline-item:nth-child(even) .timeline-date {
+          justify-content: flex-start;
+        }
+
+        .media-container {
+          margin: 20px 0;
+          padding: 10px;
+        }
+
+        .media-container img,
+        .media-container video {
+          max-height: 350px;
+        }
+
+        .timeline-description {
+          font-size: 1.05em;
+          margin-top: 15px;
+          padding: 15px;
+        }
+
+        .timeline-icon {
+          font-size: 2em;
+          margin-bottom: 10px;
+        }
+      }
+
+      /* Desktop (1024px 이상) */
+      @media (min-width: 1024px) {
+        .container {
+          max-width: 900px;
+          padding: 40px 20px;
+        }
+
+        .header {
+          margin-bottom: 60px;
+        }
+
+        .header h1 {
+          font-size: 3em;
+          letter-spacing: 2px;
+        }
+
+        .header .subtitle {
+          font-size: 1.3em;
+        }
+
+        .timeline-item {
+          margin-bottom: 50px;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+          padding-right: 60px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+          padding-left: 60px;
+        }
+
+        .timeline-description {
+          font-size: 1.1em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <h1>우리 가방이 이야기 👶</h1>
+        <p class="subtitle">새로운 생명을 기다리며</p>
+        <div class="progress-info">
+          <p>태명: <strong>가방이</strong> 🎒</p>
+          <!-- <p>계산 시작일: <strong id="pregnancyStartDate">2026년 7월 9일</strong></p> -->
+          <p>현재 주차: <strong id="pregnancyWeek">0주 0일차</strong></p>
+          <!-- <p>오늘: <strong id="todayDate">오늘 날짜</strong></p> -->
+        </div>
+      </div>
+
+      <!-- Timeline -->
+      <div class="timeline">
+        <!-- Item 1: 임신 테스트기 -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2026년 7월 31일</div>
+            <!-- <span class="timeline-icon">🧪</span> -->
+
+            <div class="media-container">
+              <img src="images/test-kit.jpg" alt="임신 테스트기 사진" />
+            </div>
+
+            <div class="timeline-description">
+              ✨ 임신 테스트기 두줄 확인<br />
+              <small
+                >드디어 두 개의 줄이 보인다! 우리의 새로운 여정이
+                시작되었다.</small
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: 아기집 확인 -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2026년 8월 10일</div>
+            <span class="timeline-icon">👶</span>
+
+            <div class="media-container">
+              <img src="images/gestational-sac.jpg" alt="아기집 사진" />
+            </div>
+
+            <div class="timeline-description">
+              🏠 아기집 확인<br />
+              <small
+                >초음파에서 처음으로 우리 가방이의 집을 볼 수 있었다!</small
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: 심장 소리 확인 -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2026년 8월 25일</div>
+
+            <div class="media-container">
+              <video controls playsinline muted>
+                <source src="images/ultrasound.mp4" type="video/mp4" />
+                브라우저가 비디오를 지원하지 않습니다.
+              </video>
+            </div>
+
+            <div class="timeline-description">
+              💗 심장 소리 확인<br />
+              <small
+                >빠르게 뛰는 가방이의 심장 소리. 정말 우리 아기가 여기
+                있다!</small
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const pregnancyStartDate = new Date(2026, 6, 9);
+
+      function formatKoreanDate(date) {
+        const year = date.getFullYear();
+        const month = date.getMonth() + 1;
+        const day = date.getDate();
+        return `${year}년 ${month}월 ${day}일`;
+      }
+
+      function updatePregnancyInfo() {
+        const today = new Date();
+        const diffInDays = Math.max(
+          0,
+          Math.floor((today - pregnancyStartDate) / (1000 * 60 * 60 * 24)),
+        );
+        const weeks = Math.floor(diffInDays / 7);
+        const days = diffInDays % 7;
+
+        const pregnancyStartText =
+          document.getElementById("pregnancyStartDate");
+        const pregnancyWeekText = document.getElementById("pregnancyWeek");
+        const todayText = document.getElementById("todayDate");
+
+        if (pregnancyStartText) {
+          pregnancyStartText.textContent = formatKoreanDate(pregnancyStartDate);
+        }
+
+        if (pregnancyWeekText) {
+          pregnancyWeekText.textContent = `${weeks}주 ${days}일차`;
+        }
+
+        if (todayText) {
+          todayText.textContent = formatKoreanDate(today);
+        }
+      }
+
+      updatePregnancyInfo();
+
+      // 간단한 인터랙션 효과
+      document.querySelectorAll(".timeline-item").forEach((item, index) => {
+        item.style.animationDelay = `${index * 0.2}s`;
+      });
+
+      // 스크롤 시 아이템 나타나기
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".timeline-item").forEach((item) => {
+        observer.observe(item);
+      });
+    </script>
+  </body>
+</html>
