@@ -58,16 +58,118 @@
         max-width: 100%;
       }
 
+      .progress-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
       .progress-info p {
         font-size: 1em;
         color: #555;
         margin: 6px 0;
         word-break: keep-all;
+        flex: 1 1 0;
+        min-width: 0;
+      }
+
+      .tag-name {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0;
+        flex: 1 1 0;
       }
 
       .progress-info strong {
         color: #c55a7d;
         font-size: 1.05em;
+      }
+
+      .name-help-button {
+        width: 24px;
+        height: 24px;
+        border: none;
+        border-radius: 50%;
+        background: #d86a8c;
+        color: #fff;
+        font-size: 0.9rem;
+        font-weight: 700;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(197, 90, 125, 0.25);
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      .name-help-button:hover,
+      .name-help-button:focus {
+        transform: translateY(-1px) scale(1.05);
+        box-shadow: 0 4px 12px rgba(197, 90, 125, 0.35);
+        outline: none;
+      }
+
+      .name-modal {
+        position: fixed;
+        inset: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        background: rgba(51, 51, 51, 0.6);
+        z-index: 1000;
+      }
+
+      .name-modal.open {
+        display: flex;
+      }
+
+      .name-modal-content {
+        position: relative;
+        width: min(90vw, 460px);
+        background: #fff;
+        border-radius: 16px;
+        padding: 18px;
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+      }
+
+      .name-modal-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 28px;
+        height: 28px;
+        border: none;
+        border-radius: 50%;
+        background: #f3d3dc;
+        color: #7a3c4f;
+        font-size: 1.1rem;
+        cursor: pointer;
+      }
+
+      .name-modal-content img {
+        width: 100%;
+        display: block;
+        border-radius: 12px;
+      }
+
+      .imagine-image {
+        margin-top: 18px;
+        width: 100%;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      .imagine-image img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
       }
 
       /* Timeline Styles */
@@ -388,13 +490,50 @@
     <div class="container">
       <!-- Header -->
       <div class="header">
-        <h1>👶 가방이 이야기</h1>
+        <h1>💗가방이💗 이야기</h1>
         <p class="subtitle">새로운 생명을 기다리며</p>
         <div class="progress-info">
-          <p>태명: <strong>가방이</strong></p>
-          <!-- <p>계산 시작일: <strong id="pregnancyStartDate">2026년 7월 9일</strong></p> -->
-          <p>현재 주차: <strong id="pregnancyWeek">0주 0일차</strong></p>
-          <!-- <p>오늘: <strong id="todayDate">오늘 날짜</strong></p> -->
+          <div class="progress-row">
+            <p class="tag-name">
+              <span>✨ 태명:</span>
+              <strong>가방이</strong>
+              <button
+                id="nameHelpButton"
+                class="name-help-button"
+                type="button"
+                aria-label="가방이 이름 뜻 보기"
+                title="가방이 이름 보기"
+              >
+                ?
+              </button>
+            </p>
+            <!-- <p>계산 시작일: <strong id="pregnancyStartDate">2026년 7월 9일</strong></p> -->
+            <p>✨ 현재 주차: <strong id="pregnancyWeek">0주 0일차</strong></p>
+            <!-- <p>오늘: <strong id="todayDate">오늘 날짜</strong></p> -->
+          </div>
+
+          <div class="imagine-image">
+            <img src="images/imagine.jpg" alt="가방이를 상상하는 이미지" />
+          </div>
+        </div>
+      </div>
+
+      <div id="nameModal" class="name-modal" aria-hidden="true">
+        <div
+          class="name-modal-content"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="nameModalTitle"
+        >
+          <button
+            id="nameModalClose"
+            class="name-modal-close"
+            type="button"
+            aria-label="닫기"
+          >
+            ×
+          </button>
+          <img src="images/name.jpg" alt="가방이 이름 이미지" />
         </div>
       </div>
 
@@ -431,8 +570,18 @@
             <div class="timeline-description">
               🏠 아기집 확인<br />
               <small
-                >초음파에서 처음으로 우리 가방이의 집을 볼 수 있었다!</small
+                >초음파에서 처음으로 우리 가방이의 집을 볼 수 있었다!<br />
+                아기집이 어디일까 찾아보세요</small
               >
+              <button
+                id="sacAnswerHelpButton"
+                class="sacAnswer-help-button"
+                type="button"
+                aria-label="아기집 정답보기"
+                title="가방이 이름 보기"
+              >
+                정답 확인
+              </button>
             </div>
           </div>
         </div>
@@ -514,6 +663,40 @@
       }
 
       updatePregnancyInfo();
+
+      const nameHelpButton = document.getElementById("nameHelpButton");
+      const nameModal = document.getElementById("nameModal");
+      const nameModalClose = document.getElementById("nameModalClose");
+
+      if (nameHelpButton && nameModal) {
+        nameHelpButton.addEventListener("click", () => {
+          nameModal.classList.add("open");
+          nameModal.setAttribute("aria-hidden", "false");
+        });
+      }
+
+      if (nameModalClose && nameModal) {
+        nameModalClose.addEventListener("click", () => {
+          nameModal.classList.remove("open");
+          nameModal.setAttribute("aria-hidden", "true");
+        });
+      }
+
+      if (nameModal) {
+        nameModal.addEventListener("click", (event) => {
+          if (event.target === nameModal) {
+            nameModal.classList.remove("open");
+            nameModal.setAttribute("aria-hidden", "true");
+          }
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && nameModal.classList.contains("open")) {
+            nameModal.classList.remove("open");
+            nameModal.setAttribute("aria-hidden", "true");
+          }
+        });
+      }
 
       // 간단한 인터랙션 효과
       document.querySelectorAll(".timeline-item").forEach((item, index) => {
