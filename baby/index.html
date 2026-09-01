@@ -78,9 +78,60 @@
       .tag-name {
         display: inline-flex;
         align-items: center;
+        justify-content: center;
         gap: 8px;
         margin: 0;
         flex: 1 1 0;
+        line-height: 1.2;
+      }
+
+      .tag-name > span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        line-height: 1.2;
+      }
+
+      @media (max-width: 767px) {
+        .progress-row {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+        }
+
+        .tag-name {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          gap: 4px;
+        }
+
+        .tag-name > span {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 6px;
+          line-height: 1.2;
+        }
+
+        .progress-info .week-text {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          gap: 4px;
+          text-align: center;
+          white-space: nowrap;
+        }
+
+        .name-help-button {
+          margin-top: 2px;
+        }
       }
 
       .progress-info strong {
@@ -218,6 +269,29 @@
         transition: all 0.3s ease;
       }
 
+      @media (max-width: 767px) {
+        .timeline::before {
+          left: 14px;
+          width: 3px;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content,
+        .timeline-item:nth-child(even) .timeline-content {
+          width: calc(100% - 30px);
+          margin-left: 30px;
+          padding: 18px 16px;
+        }
+
+        .timeline-marker {
+          left: 14px;
+          width: 14px;
+          height: 14px;
+          top: 24px;
+          border-width: 2px;
+          box-shadow: 0 0 0 2px rgba(197, 90, 125, 0.15);
+        }
+      }
+
       .timeline-item:active .timeline-marker {
         width: 24px;
         height: 24px;
@@ -285,6 +359,39 @@
         border-radius: 5px;
         line-height: 1.6;
         word-break: keep-all;
+      }
+
+      .sacAnswer-help-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 12px;
+        padding: 10px 18px;
+        border: none;
+        border-radius: 999px;
+        background: linear-gradient(135deg, #d86a8c 0%, #c55a7d 100%);
+        color: #fff;
+        font-size: 0.95rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        cursor: pointer;
+        box-shadow: 0 8px 18px rgba(197, 90, 125, 0.28);
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease,
+          filter 0.2s ease;
+      }
+
+      .sacAnswer-help-button:hover,
+      .sacAnswer-help-button:focus {
+        transform: translateY(-1px);
+        box-shadow: 0 12px 22px rgba(197, 90, 125, 0.35);
+        filter: brightness(1.02);
+        outline: none;
+      }
+
+      .timeline-image {
+        transition: opacity 0.8s ease;
       }
 
       .timeline-icon {
@@ -495,20 +602,23 @@
         <div class="progress-info">
           <div class="progress-row">
             <p class="tag-name">
-              <span>✨ 태명:</span>
-              <strong>가방이</strong>
-              <button
-                id="nameHelpButton"
-                class="name-help-button"
-                type="button"
-                aria-label="가방이 이름 뜻 보기"
-                title="가방이 이름 보기"
+              <span
+                >✨ 태명 : <strong>가방이</strong>
+                <button
+                  id="nameHelpButton"
+                  class="name-help-button"
+                  type="button"
+                  aria-label="가방이 이름 뜻 보기"
+                  title="가방이 이름 보기"
+                >
+                  ?
+                </button></span
               >
-                ?
-              </button>
             </p>
-            <!-- <p>계산 시작일: <strong id="pregnancyStartDate">2026년 7월 9일</strong></p> -->
-            <p>✨ 현재 주차: <strong id="pregnancyWeek">0주 0일차</strong></p>
+            <!-- <p>계산 시작일: <strong id="pregnancyStartDate">2026년 7월 4일</strong></p> -->
+            <p class="week-text">
+              ✨ 현재 주차 : <strong id="pregnancyWeek">0주 0일차</strong>
+            </p>
             <!-- <p>오늘: <strong id="todayDate">오늘 날짜</strong></p> -->
           </div>
 
@@ -552,7 +662,7 @@
 
             <div class="timeline-description">
               ✨ 임신 테스트기 두줄 확인<br />
-              <small>두 개의 줄 확인! 코로나 검사 키트 아니다~</small>
+              <small>두 개의 줄 확인! 코로나 검사 키트 아닙니다~</small>
             </div>
           </div>
         </div>
@@ -564,7 +674,12 @@
             <div class="timeline-date">2026년 8월 10일</div>
 
             <div class="media-container">
-              <img src="images/gestational-sac.jpg" alt="아기집 사진" />
+              <img
+                id="gestationalSacImage"
+                class="timeline-image"
+                src="images/gestational-sac.jpg"
+                alt="아기집 사진"
+              />
             </div>
 
             <div class="timeline-description">
@@ -598,7 +713,7 @@
 
             <div class="media-container">
               <video controls playsinline muted>
-                <source src="images/ultrasound.mp4" type="video/mp4" />
+                <source src="images/ultrasound-7-4.mp4" type="video/mp4" />
                 브라우저가 비디오를 지원하지 않습니다.
               </video>
             </div>
@@ -610,11 +725,35 @@
           </div>
         </div>
 
+        <!-- Item 4: 팔다리 확인 -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2026년 9월 1일</div>
+
+            <div class="media-container">
+              <img src="images/arms_legs.jpg" alt="팔다리 초음파 사진" />
+            </div>
+
+            <div class="media-container">
+              <video controls playsinline muted>
+                <source src="images/ultrasound-8-3.mp4" type="video/mp4" />
+                브라우저가 비디오를 지원하지 않습니다.
+              </video>
+            </div>
+
+            <div class="timeline-description">
+              💗 팔다리 확인<br />
+              <small>가방이의 팔다리가 잘 발달하고 있어요!</small>
+            </div>
+          </div>
+        </div>
+
         <!-- Item 99: 계속 -->
         <div class="timeline-item">
           <div class="timeline-marker"></div>
           <div class="timeline-content">
-            <div class="timeline-date">2027년 4월 16일</div>
+            <div class="timeline-date">2027년 4월</div>
 
             <div class="timeline-description">
               💗 To Be continued<br />
@@ -626,7 +765,7 @@
     </div>
 
     <script>
-      const pregnancyStartDate = new Date(2026, 6, 9);
+      const pregnancyStartDate = new Date(2026, 6, 4);
 
       function formatKoreanDate(date) {
         const year = date.getFullYear();
@@ -667,6 +806,25 @@
       const nameHelpButton = document.getElementById("nameHelpButton");
       const nameModal = document.getElementById("nameModal");
       const nameModalClose = document.getElementById("nameModalClose");
+
+      const gestationalSacImage = document.getElementById(
+        "gestationalSacImage",
+      );
+      const sacAnswerHelpButton = document.getElementById(
+        "sacAnswerHelpButton",
+      );
+
+      if (sacAnswerHelpButton && gestationalSacImage) {
+        sacAnswerHelpButton.addEventListener("click", () => {
+          gestationalSacImage.style.opacity = "0";
+
+          window.setTimeout(() => {
+            gestationalSacImage.src = "images/gestational-sac-answer.jpg";
+            gestationalSacImage.alt = "아기집 정답 이미지";
+            gestationalSacImage.style.opacity = "1";
+          }, 200);
+        });
+      }
 
       if (nameHelpButton && nameModal) {
         nameHelpButton.addEventListener("click", () => {
