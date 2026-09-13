@@ -945,7 +945,8 @@
         const today = new Date();
         const diffInDays = Math.max(
           0,
-          Math.floor((today - pregnancyStartDate) / (1000 * 60 * 60 * 24)),
+          Math.floor((today - pregnancyStartDate) / (1000 * 60 * 60 * 24)) -
+            1,
         );
         const weeks = Math.floor(diffInDays / 7);
         const days = diffInDays % 7;
