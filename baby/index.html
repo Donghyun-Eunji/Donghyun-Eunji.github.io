@@ -906,6 +906,31 @@
           </div>
         </div>
 
+        <!-- Item 6: 움찔움찔거리는 모습 확인 -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2026년 9월 21일</div>
+
+            <div class="media-container">
+              <img src="images/fast_moving.gif" alt="움찔움찔거리는 모습" />
+            </div>
+
+            <div class="media-container">
+              <img src="images/first_3D.jpg" alt="첫 3D 초음파 사진" />
+            </div>
+
+            <div class="timeline-description">
+              💗 움찔움찔거리는 모습<br />
+              <small
+                >가방이가 아주 활발하게 움직이고 있어요! 3D 초음파에서도 이제
+                형태가 보이고 있어요</small
+              ><br />
+              <small>가방이 CRL: 3.91cm</small>
+            </div>
+          </div>
+        </div>
+
         <!-- Item 99: 계속 -->
         <div class="timeline-item">
           <div class="timeline-marker"></div>
@@ -945,8 +970,7 @@
         const today = new Date();
         const diffInDays = Math.max(
           0,
-          Math.floor((today - pregnancyStartDate) / (1000 * 60 * 60 * 24)) -
-            1,
+          Math.floor((today - pregnancyStartDate) / (1000 * 60 * 60 * 24)) - 1,
         );
         const weeks = Math.floor(diffInDays / 7);
         const days = diffInDays % 7;
