@@ -133,10 +133,8 @@
       }
 
       .latest-story {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
+        display: grid;
+        gap: 8px;
         margin-bottom: 30px;
         padding: 20px 24px;
         border: 2px solid #f2a05a;
@@ -147,14 +145,25 @@
       }
 
       .latest-story h2 {
-        margin-bottom: 4px;
+        margin: 0;
         color: #a84b55;
         font-size: 1.25rem;
+        white-space: nowrap;
       }
 
-      .latest-story p {
+      .latest-story-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 10px;
+        min-width: 0;
+      }
+
+      .latest-story-row p {
         color: #526461;
-        word-break: keep-all;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
 
       .latest-story-link {
@@ -163,7 +172,7 @@
         align-items: center;
         justify-content: center;
         min-height: 44px;
-        padding: 10px 18px;
+        padding: 10px 12px;
         border-radius: 999px;
         background: #d86a5e;
         color: #fff;
@@ -845,13 +854,13 @@
       </div>
 
       <section class="latest-story" aria-labelledby="latestStoryTitle">
-        <div>
-          <h2 id="latestStoryTitle">가방이의 새로운 이야기</h2>
-          <p>손을 모으고 고개를 리듬에 맞춰 움직이는 가방이를 만나보세요.</p>
+        <h2 id="latestStoryTitle">가방이의 새로운 이야기</h2>
+        <div class="latest-story-row">
+          <p>손을 모으고 고개를...</p>
+          <a class="latest-story-link" href="#latest-update"
+            >확인하기 <span aria-hidden="true">→</span></a
+          >
         </div>
-        <a class="latest-story-link" href="#latest-update"
-          >확인하기 <span aria-hidden="true">→</span></a
-        >
       </section>
 
       <div id="nameModal" class="name-modal" aria-hidden="true">
